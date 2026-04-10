@@ -3,6 +3,7 @@ table FACT_SRE_BREEAM_CERTIFICATE
 
 	column S_PK_FACT_SRE_BREEAM_CERTIFICATE
 		dataType: string
+		isHidden
 		lineageTag: f10bc827-c1cd-4670-9f88-6b33326be98b
 		summarizeBy: none
 		sourceColumn: S_PK_FACT_SRE_BREEAM_CERTIFICATE
@@ -11,6 +12,7 @@ table FACT_SRE_BREEAM_CERTIFICATE
 
 	column S_DK_BUILDING_ID
 		dataType: double
+		isHidden
 		lineageTag: 75d1c0a5-8d18-4510-9c25-683a1ecc2141
 		summarizeBy: count
 		sourceColumn: S_DK_BUILDING_ID
@@ -21,6 +23,7 @@ table FACT_SRE_BREEAM_CERTIFICATE
 
 	column S_DK_VALUATION_DATE
 		dataType: dateTime
+		isHidden
 		formatString: Long Date
 		lineageTag: 450f6bc5-01f4-4f1c-913f-5ac1e3e1350e
 		summarizeBy: none
@@ -37,6 +40,7 @@ table FACT_SRE_BREEAM_CERTIFICATE
 
 	column S_DK_CERTIFICATE_NO
 		dataType: string
+		isHidden
 		lineageTag: 2faaba31-0711-4fec-a0e0-739f35290e15
 		summarizeBy: none
 		sourceColumn: S_DK_CERTIFICATE_NO
@@ -45,6 +49,7 @@ table FACT_SRE_BREEAM_CERTIFICATE
 
 	column S_FK_DIM_SRE_PROPERTY
 		dataType: string
+		isHidden
 		lineageTag: 6ae0075d-539e-4a28-82fa-eab769d1aabf
 		summarizeBy: none
 		sourceColumn: S_FK_DIM_SRE_PROPERTY
@@ -53,6 +58,7 @@ table FACT_SRE_BREEAM_CERTIFICATE
 
 	column S_FK_DIM_SRE_BREEAM_CERTIFICATE
 		dataType: string
+		isHidden
 		lineageTag: 9137d734-33e2-47cf-a935-29bc9216f149
 		summarizeBy: none
 		sourceColumn: S_FK_DIM_SRE_BREEAM_CERTIFICATE
@@ -61,6 +67,7 @@ table FACT_SRE_BREEAM_CERTIFICATE
 
 	column S_FK_DIM_DATE
 		dataType: string
+		isHidden
 		lineageTag: 94b2b544-70fe-4681-b9fb-fb1bf8591149
 		summarizeBy: none
 		sourceColumn: S_FK_DIM_DATE
@@ -244,6 +251,7 @@ table FACT_SRE_BREEAM_CERTIFICATE
 
 	column S_FK_DIM_SRE_PRODUCT
 		dataType: string
+		isHidden
 		lineageTag: 89200a5c-e080-4bdb-8084-8e0861f52128
 		summarizeBy: none
 		sourceColumn: S_FK_DIM_SRE_PRODUCT
