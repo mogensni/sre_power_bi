@@ -312,7 +312,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 		annotation SummarizationSetBy = Automatic
 
-	column CHANGE_IN_VALUE_QUARTER
+	column 'Change in Value (Quarter)'
 		dataType: double
 		lineageTag: 48f03a08-380c-43a8-a4c1-d6aa386ab284
 		summarizeBy: sum
@@ -322,7 +322,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column DEBT
+	column 'Debt'
 		dataType: double
 		lineageTag: 807d3e7a-82c2-4f2c-9181-72a8b0429650
 		summarizeBy: sum
@@ -332,7 +332,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column DIRECT_RETURN_QUARTER
+	column 'Direct Return (Quarter)'
 		dataType: double
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: c2760298-af9f-4c4a-a7e0-342e40bdc943
@@ -341,7 +341,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 		annotation SummarizationSetBy = Automatic
 
-	column DIRECT_RETURN_YEAR
+	column 'Direct Return (Year)'
 		dataType: double
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 6ffcfaaa-5159-4c2f-9e2f-1930f1becb11
@@ -350,7 +350,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 		annotation SummarizationSetBy = Automatic
 
-	column ENTERPRISE_VALUE
+	column 'Enterprise Value'
 		dataType: double
 		lineageTag: 9c6f8068-15bb-4201-83dc-e1c6463c9dc9
 		summarizeBy: sum
@@ -360,7 +360,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column FINANCE_GAIN_LOSS_QUARTER
+	column 'Finance Gain/Loss (Quarter)'
 		dataType: double
 		lineageTag: a7320de1-c1d6-4f6e-93b8-712e171945af
 		summarizeBy: sum
@@ -370,7 +370,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column PROFIT_LOSS_QUARTER
+	column 'Profit/Loss (Quarter)'
 		dataType: double
 		lineageTag: 90c2df9b-c2f8-46c6-ba70-2b88d128d4e0
 		summarizeBy: sum
@@ -380,7 +380,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column TOTAL_RETURN_QUARTER
+	column 'Total Return (Quarter)'
 		dataType: double
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 045d56e2-7157-4f12-9943-8f8a20749f4b
@@ -389,7 +389,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 		annotation SummarizationSetBy = Automatic
 
-	column TOTAL_RETURN_YEAR
+	column 'Total Return (Year)'
 		dataType: double
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 126c2e87-055f-4136-a684-e8f126d7bf5b
@@ -398,7 +398,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 		annotation SummarizationSetBy = Automatic
 
-	column VEK
+	column 'Weighted Equity Capital'
 		dataType: double
 		lineageTag: e4c8e160-04ef-467f-9a8c-4123c1437d57
 		summarizeBy: sum

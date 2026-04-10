@@ -74,7 +74,7 @@ table FACT_SRE_BREEAM_CERTIFICATE
 
 		annotation SummarizationSetBy = Automatic
 
-	column SCORE
+	column 'BREEAM Score'
 		dataType: double
 		lineageTag: acd62090-a84d-466c-aef2-9cc61f50091f
 		summarizeBy: sum
@@ -84,7 +84,7 @@ table FACT_SRE_BREEAM_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column INUSE_SCORE_HEALTH_WELLBEING
+	column 'In-Use Score: Health & Wellbeing'
 		dataType: double
 		lineageTag: 8cca6055-bc92-44aa-b7c4-7dede283aa31
 		summarizeBy: sum
@@ -94,7 +94,7 @@ table FACT_SRE_BREEAM_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column INUSE_SCORE_ENERGY
+	column 'In-Use Score: Energy'
 		dataType: double
 		lineageTag: 11d3f179-2bd9-4ae8-80cb-e1fc6f642bae
 		summarizeBy: sum
@@ -104,7 +104,7 @@ table FACT_SRE_BREEAM_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column INUSE_SCORE_TRANSPORT
+	column 'In-Use Score: Transport'
 		dataType: double
 		lineageTag: 82796bd5-dacf-48de-8f28-5272b1e84379
 		summarizeBy: sum
@@ -114,7 +114,7 @@ table FACT_SRE_BREEAM_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column INUSE_SCORE_WATER
+	column 'In-Use Score: Water'
 		dataType: double
 		lineageTag: 2e0e748a-e43e-4ad0-a81d-2d65e462bb47
 		summarizeBy: sum
@@ -124,7 +124,7 @@ table FACT_SRE_BREEAM_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column INUSE_SCORE_RESOURCES
+	column 'In-Use Score: Resources'
 		dataType: double
 		lineageTag: 3ab53dc9-3505-4e20-826d-db36592417a0
 		summarizeBy: sum
@@ -134,7 +134,7 @@ table FACT_SRE_BREEAM_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column INUSE_SCORE_RESILIENCE
+	column 'In-Use Score: Resilience'
 		dataType: double
 		lineageTag: 6a3ad836-005d-474d-a6c8-fa03c01f5403
 		summarizeBy: sum
@@ -144,7 +144,7 @@ table FACT_SRE_BREEAM_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column INUSE_SCORE_LAND_USE_AND_ECOLOGY
+	column 'In-Use Score: Land Use & Ecology'
 		dataType: double
 		lineageTag: a96f8d98-533f-469c-9381-794d986594e1
 		summarizeBy: sum
@@ -154,7 +154,7 @@ table FACT_SRE_BREEAM_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column INUSE_SCORE_POLLUTION
+	column 'In-Use Score: Pollution'
 		dataType: double
 		lineageTag: cf1089fe-69a8-4d12-81fc-f137ff633c90
 		summarizeBy: sum
@@ -164,7 +164,7 @@ table FACT_SRE_BREEAM_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column INUSE_SCORE_EXEMPLARY
+	column 'In-Use Score: Exemplary'
 		dataType: double
 		lineageTag: e160d096-0e22-4991-82c2-3723e2cca83f
 		summarizeBy: sum
@@ -174,7 +174,7 @@ table FACT_SRE_BREEAM_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column TOTAL_AREA_ASSESSED
+	column 'Total Area Assessed (m²)'
 		dataType: double
 		lineageTag: 2c754c17-d3fc-4d45-984f-405656393c5e
 		summarizeBy: sum
@@ -184,7 +184,7 @@ table FACT_SRE_BREEAM_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column TOTAL_BUILDING_HEATED_AREA
+	column 'Total Building Heated Area (m²)'
 		dataType: double
 		lineageTag: a22c5ea0-6153-4e91-b831-c301de9efbfd
 		summarizeBy: sum
@@ -194,7 +194,7 @@ table FACT_SRE_BREEAM_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column TOTAL_BUILDING_CATEGORY_HEATED_AREA
+	column 'Total Building Category Heated Area (m²)'
 		dataType: double
 		formatString: #,0
 		lineageTag: 73586f30-1e56-4e2a-90fc-9eed86e75023
@@ -205,7 +205,7 @@ table FACT_SRE_BREEAM_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	column HEATED_AREA_INUSE
+	column 'Heated Area In-Use (m²)'
 		dataType: double
 		formatString: #,0
 		lineageTag: 769517f6-dd48-4f29-b291-ac056f747128
@@ -216,7 +216,7 @@ table FACT_SRE_BREEAM_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	column HEATED_AREA_NOR
+	column 'Heated Area NOR (m²)'
 		dataType: double
 		formatString: #,0
 		lineageTag: 2607fce2-5333-4f65-ae08-459916cf3aee
@@ -227,7 +227,7 @@ table FACT_SRE_BREEAM_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	column BUILDING_VALUE
+	column 'Building Value'
 		dataType: double
 		formatString: #,0
 		lineageTag: ac43e451-c32c-4390-a815-6070a34e5026
@@ -238,7 +238,7 @@ table FACT_SRE_BREEAM_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	column CERTIFIED_VALUE
+	column 'Certified Building Value'
 		dataType: double
 		formatString: #,0
 		lineageTag: 9af75016-82af-4844-a88b-54b5f9e7bead

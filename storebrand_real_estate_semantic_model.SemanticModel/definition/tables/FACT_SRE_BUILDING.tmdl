@@ -285,7 +285,7 @@ table FACT_SRE_BUILDING
 
 		annotation SummarizationSetBy = Automatic
 
-	column VALUATION_NOK
+	column 'Valuation (NOK)'
 		dataType: double
 		formatString: #,0
 		lineageTag: 38b6d8c2-9f0a-45de-9497-99efce4ef4e0
@@ -296,7 +296,7 @@ table FACT_SRE_BUILDING
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	column AREA_GFA
+	column 'Gross Floor Area (m²)'
 		dataType: double
 		formatString: #,0
 		lineageTag: a8f8ae7c-7ffa-4e97-8cba-b5b860bf44c2
