@@ -3,6 +3,7 @@ table DIM_SRE_PROPERTY
 
 	column S_PK_DIM_SRE_PROPERTY
 		dataType: string
+		isHidden
 		lineageTag: a792a265-bffe-48b4-a35b-545c4eb99568
 		summarizeBy: none
 		sourceColumn: S_PK_DIM_SRE_PROPERTY
@@ -11,6 +12,7 @@ table DIM_SRE_PROPERTY
 
 	column S_DK_BUILDING_ID
 		dataType: string
+		isHidden
 		lineageTag: fcdfef8b-8755-4dd0-a6f7-b865758f2469
 		summarizeBy: none
 		sourceColumn: S_DK_BUILDING_ID
@@ -25,7 +27,7 @@ table DIM_SRE_PROPERTY
 
 		annotation SummarizationSetBy = Automatic
 
-	column B_NO
+	column 'Parcel Number'
 		dataType: string
 		lineageTag: 85bfc658-e3ad-4735-8ee6-d039e2daa125
 		summarizeBy: none
@@ -81,7 +83,7 @@ table DIM_SRE_PROPERTY
 
 		annotation SummarizationSetBy = Automatic
 
-	column G_NO
+	column 'Farm Number'
 		dataType: string
 		lineageTag: 919c5acc-2223-4139-bccf-e67aab9a5b8c
 		summarizeBy: none
@@ -89,7 +91,7 @@ table DIM_SRE_PROPERTY
 
 		annotation SummarizationSetBy = Automatic
 
-	column K_NO
+	column 'Municipality Number'
 		dataType: string
 		lineageTag: db2333a9-866c-4b17-99ef-c3c2a774463c
 		summarizeBy: none
@@ -181,7 +183,7 @@ table DIM_SRE_PROPERTY
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column S_NO
+	column 'Section Number'
 		dataType: string
 		lineageTag: 4a3d7f5c-9a3c-4760-a544-948a1dc7597d
 		summarizeBy: none
