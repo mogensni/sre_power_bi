@@ -7,6 +7,7 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 	column S_PK_DIM_SRE_ENOVA_CERTIFICATE
 		dataType: string
+		isHidden
 		lineageTag: abbd78b5-327a-4f55-b899-517c9d1555f8
 		summarizeBy: none
 		sourceColumn: S_PK_DIM_SRE_ENOVA_CERTIFICATE
@@ -15,13 +16,14 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 	column S_DK_CERTIFICATE_NO
 		dataType: string
+		isHidden
 		lineageTag: 7b61ad9d-24cd-4d30-bb47-fcf8ffcee2cd
 		summarizeBy: none
 		sourceColumn: S_DK_CERTIFICATE_NO
 
 		annotation SummarizationSetBy = Automatic
 
-	column K_NO
+	column 'Municipality Number'
 		dataType: double
 		lineageTag: 02fc2eb3-949e-4025-b43d-37864ef21ba4
 		summarizeBy: sum
@@ -31,7 +33,7 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column G_NO
+	column 'Farm Number'
 		dataType: double
 		lineageTag: 7b90ca83-b54e-4e38-a1c4-cb3c01fb3266
 		summarizeBy: sum
@@ -41,7 +43,7 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column B_NO
+	column 'Parcel Number'
 		dataType: double
 		lineageTag: f708cfc0-6da9-4497-a453-85be004bb9ae
 		summarizeBy: sum
@@ -51,7 +53,7 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column S_NO
+	column 'Section Number'
 		dataType: double
 		lineageTag: 68b4d7f0-4c95-45b6-a7f9-f69ba32efca5
 		summarizeBy: sum
@@ -61,7 +63,7 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column F_NO
+	column 'Lease Number'
 		dataType: double
 		lineageTag: 1269dfec-1184-4f49-b438-4a57e1c3cbfd
 		summarizeBy: sum
@@ -71,7 +73,7 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column ANDELSNUMMER
+	column 'Share Number'
 		dataType: double
 		lineageTag: 22ec7cc2-85ea-46fb-8629-9bbe385fb057
 		summarizeBy: sum
@@ -81,7 +83,7 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column BRUKS_ENHETS_NUMMER
+	column 'Usage Unit Number'
 		dataType: string
 		lineageTag: 7f0d633d-2517-4f51-98d3-7c2bbbc0b157
 		summarizeBy: none
@@ -251,6 +253,7 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 	column DBT_LAST_LOADED_DATETIME
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		lineageTag: f5f93148-f9ff-4c6c-9623-d389486f5c5a
 		summarizeBy: none
