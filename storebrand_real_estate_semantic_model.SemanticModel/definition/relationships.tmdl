@@ -104,17 +104,17 @@ relationship AutoDetected_f7057f6b-9fe9-404c-a9a6-52b1979673d4
 
 relationship d5c8c9ae-ce6a-4de7-bb7f-970e956f9daf
 	joinOnDateBehavior: datePartOnly
-	fromColumn: DIM_SRE_BREEAM_CERTIFICATE.CERT_DATE
+	fromColumn: DIM_SRE_BREEAM_CERTIFICATE.'Certification Date'
 	toColumn: LocalDateTable_265afa6e-64d4-4917-8794-300733dbd965.Date
 
 relationship 7a64133b-e18f-43f5-b020-07716fd21070
 	joinOnDateBehavior: datePartOnly
-	fromColumn: DIM_SRE_BREEAM_CERTIFICATE.CERT_UNTIL_DATE
+	fromColumn: DIM_SRE_BREEAM_CERTIFICATE.'Certificate Valid Until'
 	toColumn: LocalDateTable_2227d73c-44f8-48d2-8cf5-2e2924fd7a04.Date
 
 relationship 4af7c809-662c-4787-8e33-05167756b24e
 	joinOnDateBehavior: datePartOnly
-	fromColumn: DIM_SRE_BREEAM_CERTIFICATE.VALID_UNTIL_DATE
+	fromColumn: DIM_SRE_BREEAM_CERTIFICATE.'Valid Until Date'
 	toColumn: LocalDateTable_bda8164b-53b6-4866-b9c7-e2cbfb65e162.Date
 
 relationship 8f633aeb-599e-4c6e-a797-7d09f7258403
@@ -212,6 +212,6 @@ relationship 7b3026ac-23ba-494c-adef-8351f4d93ed1
 
 relationship b4502982-c037-4ebf-a418-b1a6a6850e00
 	joinOnDateBehavior: datePartOnly
-	fromColumn: DIM_SRE_BREEAM_CERTIFICATE.CERT_UNTIL_DATE_CALC
+	fromColumn: DIM_SRE_BREEAM_CERTIFICATE.'Calculated Valid Until Date'
 	toColumn: LocalDateTable_70fdbb3e-c6f3-4350-b5b0-3746393b5081.Date
 
