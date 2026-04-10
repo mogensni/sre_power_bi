@@ -19,7 +19,7 @@ table DIM_SRE_BREEAM_CERTIFICATE
 
 		annotation SummarizationSetBy = Automatic
 
-	column ASSESSOR_NAME
+	column 'Assessor Name'
 		dataType: string
 		lineageTag: aa1bc549-7803-4625-92db-15ffeb979f5b
 		summarizeBy: none
@@ -27,7 +27,7 @@ table DIM_SRE_BREEAM_CERTIFICATE
 
 		annotation SummarizationSetBy = Automatic
 
-	column BUILDING_NAME
+	column 'Building Name'
 		dataType: string
 		lineageTag: 95f86329-1ba7-42ee-b802-9d7aae672e26
 		summarizeBy: none
@@ -35,7 +35,7 @@ table DIM_SRE_BREEAM_CERTIFICATE
 
 		annotation SummarizationSetBy = Automatic
 
-	column POSTAL_NO
+	column 'Postal Code'
 		dataType: double
 		lineageTag: 9221e04c-91b5-4863-b74f-8391cda0a276
 		summarizeBy: sum
@@ -45,7 +45,7 @@ table DIM_SRE_BREEAM_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column STREET_ADDRESS
+	column 'Street Address'
 		dataType: string
 		lineageTag: 56814f52-73ae-421b-9b89-9b7892b088c8
 		summarizeBy: none
@@ -53,7 +53,7 @@ table DIM_SRE_BREEAM_CERTIFICATE
 
 		annotation SummarizationSetBy = Automatic
 
-	column BUILDING_CATEGORY
+	column 'Building Category'
 		dataType: string
 		lineageTag: 2343710b-a607-4139-962b-3efd42a9ffa0
 		summarizeBy: none
@@ -61,7 +61,7 @@ table DIM_SRE_BREEAM_CERTIFICATE
 
 		annotation SummarizationSetBy = Automatic
 
-	column CERTIFICATE_TYPE
+	column 'Certificate Type'
 		dataType: string
 		lineageTag: 6bc7925e-67af-4b36-9133-0261d6ff5381
 		summarizeBy: none
@@ -69,7 +69,7 @@ table DIM_SRE_BREEAM_CERTIFICATE
 
 		annotation SummarizationSetBy = Automatic
 
-	column RATING
+	column 'Rating'
 		dataType: string
 		lineageTag: 0c6eab5b-63fd-4a6a-8c18-f374608b5e0a
 		summarizeBy: none
@@ -77,7 +77,7 @@ table DIM_SRE_BREEAM_CERTIFICATE
 
 		annotation SummarizationSetBy = Automatic
 
-	column BREEAM_SCHEME
+	column 'BREEAM Scheme'
 		dataType: string
 		lineageTag: 011590d9-0a53-44f0-b829-f4760f9e69a4
 		summarizeBy: none
@@ -85,7 +85,7 @@ table DIM_SRE_BREEAM_CERTIFICATE
 
 		annotation SummarizationSetBy = Automatic
 
-	column CERT_DATE
+	column 'Certification Date'
 		dataType: dateTime
 		formatString: Long Date
 		lineageTag: 7a654816-7d19-4394-a506-1cf0e7bb9e74
@@ -101,7 +101,7 @@ table DIM_SRE_BREEAM_CERTIFICATE
 
 		annotation UnderlyingDateTimeDataType = Date
 
-	column CERT_UNTIL_DATE
+	column 'Certificate Valid Until'
 		dataType: dateTime
 		formatString: Long Date
 		lineageTag: 20b066eb-3559-47a8-9e7e-99d29b7cf31b
@@ -117,7 +117,7 @@ table DIM_SRE_BREEAM_CERTIFICATE
 
 		annotation UnderlyingDateTimeDataType = Date
 
-	column VALID_UNTIL_DATE
+	column 'Valid Until Date'
 		dataType: dateTime
 		formatString: Long Date
 		lineageTag: 8de3c11f-16dc-4f2c-aedd-d9cbaa53da37
@@ -148,7 +148,7 @@ table DIM_SRE_BREEAM_CERTIFICATE
 
 		annotation SummarizationSetBy = Automatic
 
-	column CERT_UNTIL_DATE_CALC
+	column 'Calculated Valid Until Date'
 		dataType: dateTime
 		formatString: Long Date
 		lineageTag: 1290f221-ec2b-419a-80aa-84a59cb20384
