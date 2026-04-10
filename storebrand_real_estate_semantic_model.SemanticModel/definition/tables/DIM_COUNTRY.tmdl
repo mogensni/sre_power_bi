@@ -27,7 +27,7 @@ table DIM_COUNTRY
 
 		annotation SummarizationSetBy = Automatic
 
-	column COUNTRY_CODE_ALFA3
+	column 'Country Code (3 letters)'
 		dataType: string
 		lineageTag: 6d188aa0-aa40-4190-8999-a7846f6a35d6
 		summarizeBy: none
@@ -35,7 +35,7 @@ table DIM_COUNTRY
 
 		annotation SummarizationSetBy = Automatic
 
-	column COUNTRY_NO
+	column 'Country Number'
 		dataType: double
 		lineageTag: 91c81f1f-bafd-416b-867b-939f8fdcfb61
 		summarizeBy: sum
@@ -64,7 +64,7 @@ table DIM_COUNTRY
 
 		annotation SummarizationSetBy = Automatic
 
-	column COUNTRY_NAME_LONG
+	column 'Country Name - Long Form'
 		dataType: string
 		lineageTag: 5cd2bd0d-1e4d-4957-a47b-6c8c924ec8dc
 		summarizeBy: none
@@ -72,7 +72,7 @@ table DIM_COUNTRY
 
 		annotation SummarizationSetBy = Automatic
 
-	column COUNTRY_NAME_SE
+	column 'Country Name (Swedish)'
 		dataType: string
 		lineageTag: c8b38875-6785-46a0-adf8-75c84dfd75d3
 		summarizeBy: none
@@ -121,7 +121,7 @@ table DIM_COUNTRY
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column PARTICIPATING_IN_EEA
+	column 'Participating in EEA'
 		dataType: string
 		lineageTag: 3cc66a16-98b3-4de9-9061-84ba7996e6ab
 		summarizeBy: none
@@ -129,7 +129,7 @@ table DIM_COUNTRY
 
 		annotation SummarizationSetBy = Automatic
 
-	column SOURCE
+	column 'Data Source'
 		dataType: string
 		lineageTag: 8208bff9-516c-4472-b807-4e5747342895
 		summarizeBy: none

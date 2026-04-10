@@ -19,7 +19,7 @@ table DIM_SRE_PRODUCT
 
 		annotation SummarizationSetBy = Automatic
 
-	column COUNTRY
+	column 'Country'
 		dataType: string
 		lineageTag: 0b1beb03-4415-43e1-a45e-17bcc6f4de1e
 		summarizeBy: none
@@ -27,7 +27,7 @@ table DIM_SRE_PRODUCT
 
 		annotation SummarizationSetBy = Automatic
 
-	column CURRENCY
+	column 'Currency'
 		dataType: string
 		lineageTag: 85edd2b9-4bf9-4502-afdc-f98a3d894d69
 		summarizeBy: none
@@ -35,7 +35,7 @@ table DIM_SRE_PRODUCT
 
 		annotation SummarizationSetBy = Automatic
 
-	column PORTFOLIO_ID
+	column 'Portfolio ID'
 		dataType: string
 		lineageTag: a2a8edd8-a00b-4fc7-8deb-1fba1fbd8cd8
 		summarizeBy: none
@@ -43,7 +43,7 @@ table DIM_SRE_PRODUCT
 
 		annotation SummarizationSetBy = Automatic
 
-	column PRODUCT_NAME
+	column 'Product Name'
 		dataType: string
 		lineageTag: c244ec87-984e-444f-978c-c437d28b058f
 		summarizeBy: none
@@ -51,7 +51,7 @@ table DIM_SRE_PRODUCT
 
 		annotation SummarizationSetBy = Automatic
 
-	column PRODUCT_TYPE
+	column 'Product Type'
 		dataType: string
 		lineageTag: 4bf334b7-6f41-4438-9da0-da653690258c
 		summarizeBy: none
@@ -59,7 +59,7 @@ table DIM_SRE_PRODUCT
 
 		annotation SummarizationSetBy = Automatic
 
-	column SCD_PARTY_ID
+	column 'Party ID'
 		dataType: string
 		lineageTag: 85ce8954-efda-448f-ac4b-1b6c20970462
 		summarizeBy: none
@@ -67,7 +67,7 @@ table DIM_SRE_PRODUCT
 
 		annotation SummarizationSetBy = Automatic
 
-	column SUB_PORTFOLIO_ID
+	column 'Sub-Portfolio ID'
 		dataType: string
 		lineageTag: 9c2d2147-ff19-4b66-a7b9-ca0754351365
 		summarizeBy: none

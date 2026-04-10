@@ -1,7 +1,7 @@
 table DIM_SRE_ENOVA_CERTIFICATE
 	lineageTag: 6f2da375-9da1-4325-bcef-fb28eef98d20
 
-	measure CERT_UNTIL_DATE = DATEADD ( DIM_SRE_ENOVA_CERTIFICATE[CERT_DATE], 10, YEAR )
+	measure CERT_UNTIL_DATE = DATEADD ( DIM_SRE_ENOVA_CERTIFICATE[Certification Date], 10, YEAR )
 		formatString: General Date
 		lineageTag: 058c51d5-8bf2-4424-b426-30ca354f4b14
 
@@ -91,7 +91,7 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 		annotation SummarizationSetBy = Automatic
 
-	column BUILDING_NUMBER
+	column 'Building Number'
 		dataType: double
 		lineageTag: febb0bb1-4ecb-42b3-8b6c-6c075f090154
 		summarizeBy: sum
@@ -101,7 +101,7 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column STREET_ADDRESS
+	column 'Street Address'
 		dataType: string
 		lineageTag: 1f896129-425c-4d82-a972-27695f9579b5
 		summarizeBy: none
@@ -109,7 +109,7 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 		annotation SummarizationSetBy = Automatic
 
-	column POSTAL_CODE
+	column 'Postal Code'
 		dataType: double
 		lineageTag: 55f56d4d-b215-4373-b89c-2370361de7be
 		summarizeBy: sum
@@ -119,7 +119,7 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column POSTAL_AREA
+	column 'Postal Area'
 		dataType: string
 		lineageTag: 577caaec-6c98-45b5-98f0-6efcae206752
 		summarizeBy: none
@@ -127,7 +127,7 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 		annotation SummarizationSetBy = Automatic
 
-	column ORGANIZATION_NO
+	column 'Organization Number'
 		dataType: double
 		lineageTag: 028bd787-15d0-455e-870a-7018298c4518
 		summarizeBy: sum
@@ -137,7 +137,7 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column BUILDING_CATEGORY
+	column 'Building Category'
 		dataType: string
 		lineageTag: 3afc77c0-a0d3-4078-9091-36a7c9241c55
 		summarizeBy: none
@@ -145,7 +145,7 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 		annotation SummarizationSetBy = Automatic
 
-	column BUILDING_TYPE
+	column 'Building Type'
 		dataType: string
 		lineageTag: 0afb70ec-3dd5-4271-b8cc-ae8fa268b86c
 		summarizeBy: none
@@ -153,7 +153,7 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 		annotation SummarizationSetBy = Automatic
 
-	column TYPE_OF_BUILDING
+	column 'Type of Building'
 		dataType: string
 		lineageTag: d040aaae-5420-47c3-af33-13e011971dc1
 		summarizeBy: none
@@ -161,7 +161,7 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 		annotation SummarizationSetBy = Automatic
 
-	column TEK_STANDARD
+	column 'TEK Standard'
 		dataType: string
 		lineageTag: 117f4d32-9363-4438-9c50-8445af241088
 		summarizeBy: none
@@ -169,7 +169,7 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 		annotation SummarizationSetBy = Automatic
 
-	column YEAR_BUILT
+	column 'Year Built'
 		dataType: double
 		lineageTag: 55bf5da6-300a-4550-b0e2-feede858b3cb
 		summarizeBy: sum
@@ -179,7 +179,7 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column ENERGY_CHARACTER
+	column 'Energy Character'
 		dataType: string
 		lineageTag: a7317efa-d947-435e-87bb-118f06d94278
 		summarizeBy: none
@@ -187,7 +187,7 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 		annotation SummarizationSetBy = Automatic
 
-	column HEATING_CHARACTER
+	column 'Heating Character'
 		dataType: string
 		lineageTag: e3739479-08b7-4fbc-9de0-9586e5d64f16
 		summarizeBy: none
@@ -195,7 +195,7 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 		annotation SummarizationSetBy = Automatic
 
-	column CERT_DATE
+	column 'Certification Date'
 		dataType: dateTime
 		formatString: Long Date
 		lineageTag: 3183a6de-0a78-4650-a7ac-c727abdd232c
@@ -211,7 +211,7 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 		annotation UnderlyingDateTimeDataType = Date
 
-	column VALID_UNTIL_DATE
+	column 'Valid Until Date'
 		dataType: dateTime
 		formatString: Long Date
 		lineageTag: 4336133b-4119-4bfc-b242-03a24e0e324c
@@ -227,7 +227,7 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 		annotation UnderlyingDateTimeDataType = Date
 
-	column CERTIFICATE_NO
+	column 'Certificate Number'
 		dataType: string
 		lineageTag: 1b4104f5-7451-4d90-9752-1bff6527f827
 		summarizeBy: none
@@ -235,7 +235,7 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 		annotation SummarizationSetBy = Automatic
 
-	column DATE_LEAKAGE_VALUE
+	column 'Date of Leakage Value'
 		dataType: dateTime
 		formatString: Long Date
 		lineageTag: 6fac891c-30a7-4a16-9d1a-2b058467add5
@@ -266,7 +266,7 @@ table DIM_SRE_ENOVA_CERTIFICATE
 
 		annotation SummarizationSetBy = Automatic
 
-	column CERT_UNTIL_DATE_CALC
+	column 'Calculated Valid Until Date'
 		dataType: dateTime
 		formatString: Long Date
 		lineageTag: f32bafb9-c6fe-40df-9d83-cb8f42499c49
