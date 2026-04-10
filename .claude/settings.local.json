@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git tag:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(grep -n \"^\\\\tcolumn [A-Z_][A-Z_]*$\" storebrand_real_estate_semantic_model.SemanticModel/definition/tables/DIM_*.tmdl storebrand_real_estate_semantic_model.SemanticModel/definition/tables/FACT_*.tmdl)",
+      "Bash(grep -v \"S_PK\\\\|S_FK\\\\|S_DK\\\\|_IK$\")",
+      "Bash(git commit:*)",
+      "Bash(grep -r \"displayName:\" storebrand_real_estate_semantic_model.SemanticModel/definition/tables/*.tmdl)",
+      "Bash(grep -n \"displayName:\" *.tmdl)",
+      "Bash(git:*)",
+      "Bash(grep:*)"
+    ]
+  }
+}
