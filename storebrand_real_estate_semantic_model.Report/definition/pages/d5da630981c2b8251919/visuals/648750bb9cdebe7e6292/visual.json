@@ -23,10 +23,10 @@
                       "Entity": "DIM_SRE_PRODUCT"
                     }
                   },
-                  "Property": "SUB_PORTFOLIO_ID"
+                  "Property": "Sub-Portfolio ID"
                 }
               },
-              "queryRef": "DIM_SRE_PRODUCT.SUB_PORTFOLIO_ID",
+              "queryRef": "DIM_SRE_PRODUCT.Sub-Portfolio ID",
               "nativeQueryRef": "Portfolio",
               "displayName": "Portfolio"
             },
@@ -70,7 +70,7 @@
                           "Entity": "FACT_SRE_BUILDING"
                         }
                       },
-                      "Property": "AREA_GFA"
+                      "Property": "Gross Floor Area (m²)"
                     }
                   },
                   "Function": 0
@@ -120,7 +120,7 @@
                           "Entity": "FACT_SRE_BUILDING"
                         }
                       },
-                      "Property": "VALUATION_NOK"
+                      "Property": "Valuation (NOK)"
                     }
                   },
                   "Function": 0

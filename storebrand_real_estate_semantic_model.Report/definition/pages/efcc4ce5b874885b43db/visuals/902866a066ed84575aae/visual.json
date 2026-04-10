@@ -63,7 +63,7 @@
                           "Entity": "FACT_SRE_BREEAM_CERTIFICATE"
                         }
                       },
-                      "Property": "CERTIFIED_VALUE"
+                      "Property": "Certified Building Value"
                     }
                   },
                   "Function": 0

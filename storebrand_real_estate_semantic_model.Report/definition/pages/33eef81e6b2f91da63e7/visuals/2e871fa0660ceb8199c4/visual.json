@@ -23,10 +23,10 @@
                       "Entity": "DIM_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "ENERGY_CHARACTER"
+                  "Property": "Energy Character"
                 }
               },
-              "queryRef": "DIM_SRE_ENOVA_CERTIFICATE.ENERGY_CHARACTER",
+              "queryRef": "DIM_SRE_ENOVA_CERTIFICATE.Energy Character",
               "nativeQueryRef": "Karakter",
               "active": true,
               "displayName": "Karakter"
@@ -90,7 +90,7 @@
                           "Entity": "FACT_SRE_BUILDING"
                         }
                       },
-                      "Property": "VALUATION_NOK"
+                      "Property": "Valuation (NOK)"
                     }
                   },
                   "Function": 0
@@ -110,7 +110,7 @@
                           "Entity": "FACT_SRE_ENOVA_CERTIFICATE"
                         }
                       },
-                      "Property": "CERTIFIED_VALUE"
+                      "Property": "Certified Building Value"
                     }
                   },
                   "Function": 0
@@ -148,7 +148,7 @@
                     "Entity": "DIM_SRE_ENOVA_CERTIFICATE"
                   }
                 },
-                "Property": "ENERGY_CHARACTER"
+                "Property": "Energy Character"
               }
             },
             "direction": "Descending"
@@ -188,7 +188,7 @@
                       "Entity": "DIM_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "ENERGY_CHARACTER"
+                  "Property": "Energy Character"
                 }
               }
             ],
@@ -314,7 +314,7 @@
             }
           },
           "selector": {
-            "metadata": "DIM_SRE_ENOVA_CERTIFICATE.ENERGY_CHARACTER"
+            "metadata": "DIM_SRE_ENOVA_CERTIFICATE.Energy Character"
           }
         },
         {

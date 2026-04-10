@@ -16,7 +16,7 @@
                 "Entity": "DIM_SRE_PRODUCT"
               }
             },
-            "Property": "SUB_PORTFOLIO_ID"
+            "Property": "Sub-Portfolio ID"
           }
         },
         "type": "Categorical",
@@ -31,7 +31,7 @@
                 "Entity": "DIM_SRE_PRODUCT"
               }
             },
-            "Property": "PORTFOLIO_ID"
+            "Property": "Portfolio ID"
           }
         },
         "type": "Categorical",
@@ -56,7 +56,7 @@
                             "Source": "d"
                           }
                         },
-                        "Property": "PORTFOLIO_ID"
+                        "Property": "Portfolio ID"
                       }
                     }
                   ],
@@ -107,7 +107,7 @@
                 "Entity": "DIM_SRE_PRODUCT"
               }
             },
-            "Property": "SUB_PORTFOLIO_ID"
+            "Property": "Sub-Portfolio ID"
           }
         }
       },
@@ -121,7 +121,7 @@
                 "Entity": "DIM_SRE_PRODUCT"
               }
             },
-            "Property": "PORTFOLIO_ID"
+            "Property": "Portfolio ID"
           }
         }
       },

@@ -38,10 +38,10 @@
                       "Entity": "DIM_SRE_PROPERTY"
                     }
                   },
-                  "Property": "CONSTRUCTED_YEAR"
+                  "Property": "Constructed Year"
                 }
               },
-              "queryRef": "DIM_SRE_PROPERTY.CONSTRUCTED_YEAR",
+              "queryRef": "DIM_SRE_PROPERTY.Constructed Year",
               "nativeQueryRef": "Byggeår",
               "displayName": "Byggeår"
             },
@@ -55,7 +55,7 @@
                           "Entity": "FACT_SRE_BUILDING"
                         }
                       },
-                      "Property": "AREA_GFA"
+                      "Property": "Gross Floor Area (m²)"
                     }
                   },
                   "Function": 0
@@ -73,10 +73,10 @@
                       "Entity": "DIM_SRE_PROPERTY"
                     }
                   },
-                  "Property": "MAIN_BUILDING_SEGMENT"
+                  "Property": "Main Building Segment"
                 }
               },
-              "queryRef": "DIM_SRE_PROPERTY.MAIN_BUILDING_SEGMENT",
+              "queryRef": "DIM_SRE_PROPERTY.Main Building Segment",
               "nativeQueryRef": "Bygningstype",
               "displayName": "Bygningstype"
             },
@@ -120,7 +120,7 @@
                           "Entity": "FACT_SRE_BUILDING"
                         }
                       },
-                      "Property": "VALUATION_NOK"
+                      "Property": "Valuation (NOK)"
                     }
                   },
                   "Function": 0
@@ -140,7 +140,7 @@
                           "Entity": "FACT_SRE_ENOVA_CERTIFICATE"
                         }
                       },
-                      "Property": "CERTIFIED_VALUE"
+                      "Property": "Certified Building Value"
                     }
                   },
                   "Function": 0
@@ -182,7 +182,7 @@
             }
           },
           "selector": {
-            "metadata": "DIM_SRE_PROPERTY.CONSTRUCTED_YEAR"
+            "metadata": "DIM_SRE_PROPERTY.Constructed Year"
           }
         }
       ]

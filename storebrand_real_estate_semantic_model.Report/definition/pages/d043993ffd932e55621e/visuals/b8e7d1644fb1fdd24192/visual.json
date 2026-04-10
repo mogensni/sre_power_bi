@@ -23,10 +23,10 @@
                       "Entity": "DIM_SRE_PROPERTY"
                     }
                   },
-                  "Property": "PROPERTY_NAME"
+                  "Property": "Property Name"
                 }
               },
-              "queryRef": "DIM_SRE_PROPERTY.PROPERTY_NAME",
+              "queryRef": "DIM_SRE_PROPERTY.Property Name",
               "nativeQueryRef": "Eiendom",
               "displayName": "Eiendom"
             },
@@ -68,10 +68,10 @@
                       "Entity": "DIM_SRE_PROPERTY"
                     }
                   },
-                  "Property": "MAIN_BUILDING_SEGMENT"
+                  "Property": "Main Building Segment"
                 }
               },
-              "queryRef": "DIM_SRE_PROPERTY.MAIN_BUILDING_SEGMENT",
+              "queryRef": "DIM_SRE_PROPERTY.Main Building Segment",
               "nativeQueryRef": "Segment",
               "displayName": "Segment"
             },
@@ -85,7 +85,7 @@
                           "Entity": "FACT_SRE_BUILDING"
                         }
                       },
-                      "Property": "AREA_GFA"
+                      "Property": "Gross Floor Area (m²)"
                     }
                   },
                   "Function": 0
@@ -105,7 +105,7 @@
                           "Entity": "FACT_SRE_BUILDING"
                         }
                       },
-                      "Property": "VALUATION_NOK"
+                      "Property": "Valuation (NOK)"
                     }
                   },
                   "Function": 0
@@ -128,7 +128,7 @@
                     "Entity": "DIM_SRE_PROPERTY"
                   }
                 },
-                "Property": "PROPERTY_NAME"
+                "Property": "Property Name"
               }
             },
             "direction": "Ascending"
@@ -149,7 +149,7 @@
             }
           },
           "selector": {
-            "metadata": "DIM_SRE_PROPERTY.PROPERTY_NAME"
+            "metadata": "DIM_SRE_PROPERTY.Property Name"
           }
         },
         {

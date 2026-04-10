@@ -53,7 +53,7 @@
                       "Entity": "DIM_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "BUILDING_CATEGORY"
+                  "Property": "Building Category"
                 }
               },
               "queryRef": "DIM_SRE_ENOVA_CERTIFICATE.BUILDING_CATEGORY",
@@ -98,10 +98,10 @@
                       "Entity": "DIM_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "ENERGY_CHARACTER"
+                  "Property": "Energy Character"
                 }
               },
-              "queryRef": "DIM_SRE_ENOVA_CERTIFICATE.ENERGY_CHARACTER",
+              "queryRef": "DIM_SRE_ENOVA_CERTIFICATE.Energy Character",
               "nativeQueryRef": "Energikarakter",
               "displayName": "Energikarakter"
             },
@@ -133,10 +133,10 @@
                       "Entity": "DIM_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "HEATING_CHARACTER"
+                  "Property": "Heating Character"
                 }
               },
-              "queryRef": "DIM_SRE_ENOVA_CERTIFICATE.HEATING_CHARACTER",
+              "queryRef": "DIM_SRE_ENOVA_CERTIFICATE.Heating Character",
               "nativeQueryRef": "Oppv.karakter",
               "displayName": "Oppv.karakter"
             },
@@ -148,7 +148,7 @@
                       "Entity": "DIM_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "CERT_DATE"
+                  "Property": "Certification Date"
                 }
               },
               "queryRef": "DIM_SRE_ENOVA_CERTIFICATE.CERT_DATE",
@@ -164,7 +164,7 @@
                       "Entity": "DIM_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "CERT_UNTIL_DATE_CALC"
+                  "Property": "Calculated Valid Until Date"
                 }
               },
               "queryRef": "DIM_SRE_ENOVA_CERTIFICATE.CERT_UNTIL_DATE_CALC",
@@ -276,7 +276,7 @@
             }
           },
           "selector": {
-            "metadata": "DIM_SRE_ENOVA_CERTIFICATE.ENERGY_CHARACTER"
+            "metadata": "DIM_SRE_ENOVA_CERTIFICATE.Energy Character"
           }
         },
         {
@@ -290,7 +290,7 @@
             }
           },
           "selector": {
-            "metadata": "DIM_SRE_ENOVA_CERTIFICATE.HEATING_CHARACTER"
+            "metadata": "DIM_SRE_ENOVA_CERTIFICATE.Heating Character"
           }
         },
         {
@@ -320,7 +320,7 @@
             }
           },
           "selector": {
-            "metadata": "DIM_SRE_ENOVA_CERTIFICATE.ENERGY_CHARACTER"
+            "metadata": "DIM_SRE_ENOVA_CERTIFICATE.Energy Character"
           }
         }
       ]

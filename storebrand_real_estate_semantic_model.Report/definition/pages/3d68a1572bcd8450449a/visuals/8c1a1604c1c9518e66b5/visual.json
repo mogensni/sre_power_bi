@@ -23,10 +23,10 @@
                       "Entity": "DIM_SRE_PRODUCT"
                     }
                   },
-                  "Property": "PORTFOLIO_ID"
+                  "Property": "Portfolio ID"
                 }
               },
-              "queryRef": "DIM_SRE_PRODUCT.PORTFOLIO_ID",
+              "queryRef": "DIM_SRE_PRODUCT.Portfolio ID",
               "nativeQueryRef": "Portfolio1",
               "active": true,
               "displayName": "Portfolio"
@@ -39,10 +39,10 @@
                       "Entity": "DIM_SRE_PRODUCT"
                     }
                   },
-                  "Property": "SUB_PORTFOLIO_ID"
+                  "Property": "Sub-Portfolio ID"
                 }
               },
-              "queryRef": "DIM_SRE_PRODUCT.SUB_PORTFOLIO_ID",
+              "queryRef": "DIM_SRE_PRODUCT.Sub-Portfolio ID",
               "nativeQueryRef": "Subportfolio",
               "active": true,
               "displayName": "Subportfolio"
@@ -76,7 +76,7 @@
                           "Entity": "FACT_SRE_BUILDING"
                         }
                       },
-                      "Property": "AREA_GFA"
+                      "Property": "Gross Floor Area (m²)"
                     }
                   },
                   "Function": 0
@@ -126,7 +126,7 @@
                           "Entity": "FACT_SRE_BUILDING"
                         }
                       },
-                      "Property": "VALUATION_NOK"
+                      "Property": "Valuation (NOK)"
                     }
                   },
                   "Function": 0
@@ -189,7 +189,7 @@
                       "Entity": "DIM_SRE_PRODUCT"
                     }
                   },
-                  "Property": "PORTFOLIO_ID"
+                  "Property": "Portfolio ID"
                 }
               }
             ],
@@ -208,7 +208,7 @@
                       "Entity": "DIM_SRE_PRODUCT"
                     }
                   },
-                  "Property": "SUB_PORTFOLIO_ID"
+                  "Property": "Sub-Portfolio ID"
                 }
               }
             ],

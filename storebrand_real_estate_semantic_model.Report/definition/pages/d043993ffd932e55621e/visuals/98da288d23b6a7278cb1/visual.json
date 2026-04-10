@@ -53,10 +53,10 @@
                       "Entity": "DIM_SRE_BREEAM_CERTIFICATE"
                     }
                   },
-                  "Property": "BUILDING_CATEGORY"
+                  "Property": "Building Category"
                 }
               },
-              "queryRef": "DIM_SRE_BREEAM_CERTIFICATE.BUILDING_CATEGORY",
+              "queryRef": "DIM_SRE_BREEAM_CERTIFICATE.Building Category",
               "nativeQueryRef": "Bygningskat.",
               "displayName": "Bygningskat."
             },
@@ -70,7 +70,7 @@
                           "Entity": "FACT_SRE_BREEAM_CERTIFICATE"
                         }
                       },
-                      "Property": "HEATED_AREA_INUSE"
+                      "Property": "Heated Area In-Use (m²)"
                     }
                   },
                   "Function": 0
@@ -90,7 +90,7 @@
                           "Entity": "FACT_SRE_BREEAM_CERTIFICATE"
                         }
                       },
-                      "Property": "HEATED_AREA_NOR"
+                      "Property": "Heated Area NOR (m²)"
                     }
                   },
                   "Function": 0
@@ -110,7 +110,7 @@
                           "Entity": "FACT_SRE_BREEAM_CERTIFICATE"
                         }
                       },
-                      "Property": "CERTIFIED_VALUE"
+                      "Property": "Certified Building Value"
                     }
                   },
                   "Function": 0
@@ -128,10 +128,10 @@
                       "Entity": "DIM_SRE_BREEAM_CERTIFICATE"
                     }
                   },
-                  "Property": "RATING"
+                  "Property": "Rating"
                 }
               },
-              "queryRef": "DIM_SRE_BREEAM_CERTIFICATE.RATING",
+              "queryRef": "DIM_SRE_BREEAM_CERTIFICATE.Rating",
               "nativeQueryRef": "Vurdering",
               "displayName": "Vurdering"
             },
@@ -145,7 +145,7 @@
                           "Entity": "FACT_SRE_BREEAM_CERTIFICATE"
                         }
                       },
-                      "Property": "SCORE"
+                      "Property": "BREEAM Score"
                     }
                   },
                   "Function": 0
@@ -164,10 +164,10 @@
                       "Entity": "DIM_SRE_BREEAM_CERTIFICATE"
                     }
                   },
-                  "Property": "CERT_DATE"
+                  "Property": "Certification Date"
                 }
               },
-              "queryRef": "DIM_SRE_BREEAM_CERTIFICATE.CERT_DATE",
+              "queryRef": "DIM_SRE_BREEAM_CERTIFICATE.Certification Date",
               "nativeQueryRef": "Sert. dato",
               "displayName": "Sert. dato",
               "format": "d"
@@ -180,10 +180,10 @@
                       "Entity": "DIM_SRE_BREEAM_CERTIFICATE"
                     }
                   },
-                  "Property": "CERT_UNTIL_DATE_CALC"
+                  "Property": "Calculated Valid Until Date"
                 }
               },
-              "queryRef": "DIM_SRE_BREEAM_CERTIFICATE.CERT_UNTIL_DATE_CALC",
+              "queryRef": "DIM_SRE_BREEAM_CERTIFICATE.Calculated Valid Until Date",
               "nativeQueryRef": "Utløpsdato",
               "displayName": "Utløpsdato",
               "format": "d"
@@ -222,7 +222,7 @@
             }
           },
           "selector": {
-            "metadata": "DIM_SRE_BREEAM_CERTIFICATE.RATING"
+            "metadata": "DIM_SRE_BREEAM_CERTIFICATE.Rating"
           }
         },
         {
@@ -236,7 +236,7 @@
             }
           },
           "selector": {
-            "metadata": "DIM_SRE_BREEAM_CERTIFICATE.CERT_DATE"
+            "metadata": "DIM_SRE_BREEAM_CERTIFICATE.Certification Date"
           }
         },
         {
@@ -292,7 +292,7 @@
             }
           },
           "selector": {
-            "metadata": "DIM_SRE_BREEAM_CERTIFICATE.BUILDING_CATEGORY"
+            "metadata": "DIM_SRE_BREEAM_CERTIFICATE.Building Category"
           }
         }
       ],
