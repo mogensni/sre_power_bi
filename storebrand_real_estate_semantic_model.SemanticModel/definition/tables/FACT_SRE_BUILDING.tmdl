@@ -3,8 +3,8 @@ table FACT_SRE_BUILDING
 
 	measure 'Number of Properties' =
 			CALCULATE (
-			            DISTINCTCOUNT ( DIM_SRE_PROPERTY[PROPERTY_NAME] ),
-			            FILTER ( 'FACT_SRE_BUILDING', [VALUATION_NOK] > 0 )
+			            DISTINCTCOUNT ( DIM_SRE_PROPERTY['Property Name'] ),
+			            FILTER ( 'FACT_SRE_BUILDING', ['Valuation (NOK)'] > 0 )
 			        )
 		formatString: 0
 		lineageTag: 72ca50f5-61d1-415d-812f-94acf57a4df2
@@ -12,8 +12,8 @@ table FACT_SRE_BUILDING
 	measure 'Quarterly Market Value' = ```
 
 			    calculate(
-			        sum(FACT_SRE_BUILDING[VALUATION_NOK]),
-			        FACT_SRE_BUILDING[VALUATION_NOK] > 0
+			        sum(FACT_SRE_BUILDING['Valuation (NOK)']),
+			        FACT_SRE_BUILDING['Valuation (NOK)'] > 0
 			    )
 			```
 		lineageTag: 6122fb15-aca4-42f2-bcab-4dbff4f03f19
@@ -161,10 +161,10 @@ table FACT_SRE_BUILDING
 	measure 'Segment Share' = ```
 
 			    DIVIDE(
-			        SUM(FACT_SRE_BUILDING[VALUATION_NOK]),
+			        SUM(FACT_SRE_BUILDING['Valuation (NOK)']),
 			        CALCULATE(
-			            SUM(FACT_SRE_BUILDING[VALUATION_NOK]),
-			            REMOVEFILTERS(DIM_SRE_PROPERTY[MAIN_BUILDING_SEGMENT])
+			            SUM(FACT_SRE_BUILDING['Valuation (NOK)']),
+			            REMOVEFILTERS(DIM_SRE_PROPERTY['Main Building Segment'])
 			        )
 			)
 			```
@@ -176,10 +176,10 @@ table FACT_SRE_BUILDING
 	measure 'Location Share' = ```
 
 			    DIVIDE(
-			        SUM(FACT_SRE_BUILDING[VALUATION_NOK]),
+			        SUM(FACT_SRE_BUILDING['Valuation (NOK)']),
 			        CALCULATE(
-			            SUM(FACT_SRE_BUILDING[VALUATION_NOK]),
-			            REMOVEFILTERS(DIM_SRE_PROPERTY[LOCATION])
+			            SUM(FACT_SRE_BUILDING['Valuation (NOK)']),
+			            REMOVEFILTERS(DIM_SRE_PROPERTY['Location'])
 			        )
 			)
 			```
@@ -191,9 +191,9 @@ table FACT_SRE_BUILDING
 	measure 'Subportfolio Share' = ```
 
 			    DIVIDE(
-			        SUM(FACT_SRE_BUILDING[VALUATION_NOK]),
+			        SUM(FACT_SRE_BUILDING['Valuation (NOK)']),
 			        CALCULATE(
-			            SUM(FACT_SRE_BUILDING[VALUATION_NOK]),
+			            SUM(FACT_SRE_BUILDING['Valuation (NOK)']),
 			            REMOVEFILTERS(DIM_SRE_PRODUCT[SUB_PORTFOLIO_ID])
 			        )
 			)

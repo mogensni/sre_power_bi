@@ -1,7 +1,7 @@
 table FACT_SRE_ENOVA_CERTIFICATE
 	lineageTag: b1769385-77f6-463e-815d-a4a408c40fb0
 
-	measure 'Heated Area' = sum( FACT_SRE_ENOVA_CERTIFICATE[HEATED_GIA])
+	measure 'Heated Area' = sum( FACT_SRE_ENOVA_CERTIFICATE['Heated GIA (m²)'])
 		formatString: #,0
 		lineageTag: 710ace9d-f1a4-4cde-87c0-0161d357f524
 
@@ -17,7 +17,7 @@ table FACT_SRE_ENOVA_CERTIFICATE
 		displayFolder: Measures
 		lineageTag: 1508cb18-7abd-4889-9594-05b6fea63340
 
-	measure 'Certified Value' = sum( FACT_SRE_ENOVA_CERTIFICATE[CERTIFIED_VALUE])
+	measure 'Certified Value' = sum( FACT_SRE_ENOVA_CERTIFICATE['Certified Building Value'])
 		formatString: #,0
 		lineageTag: 9a79f07d-389d-4e1b-98af-6cf9458de837
 
