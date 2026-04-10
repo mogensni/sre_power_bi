@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Bærekraft_3_0_beta"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "29483baa-95bd-4ed1-a5df-1a6eebee5e4c"
+  }
+}

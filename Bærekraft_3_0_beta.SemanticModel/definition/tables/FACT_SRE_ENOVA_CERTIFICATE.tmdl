@@ -1,0 +1,246 @@
+table FACT_SRE_ENOVA_CERTIFICATE
+	lineageTag: b1769385-77f6-463e-815d-a4a408c40fb0
+
+	measure Mål_heated_area = sum( FACT_SRE_ENOVA_CERTIFICATE[HEATED_GIA])
+		formatString: #,0
+		lineageTag: 710ace9d-f1a4-4cde-87c0-0161d357f524
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure Mål_total_heated_bra = calculate( [Mål_heated_area], ALLSELECTED( ))
+		lineageTag: 68a3fb70-13d3-418d-b4a5-8ad39c7e675b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Mål_heated_andel = [Mål_heated_area]/[Mål_total_heated_bra]
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Measures
+		lineageTag: 1508cb18-7abd-4889-9594-05b6fea63340
+
+	measure Mål_certified_value = sum( FACT_SRE_ENOVA_CERTIFICATE[CERTIFIED_VALUE])
+		formatString: #,0
+		lineageTag: 9a79f07d-389d-4e1b-98af-6cf9458de837
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure Mål_total_certified_value = calculate( [Mål_certified_value], ALLSELECTED() )
+		lineageTag: 51411235-131d-46c5-ba5d-f5bf10656a84
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Mål_certified_andel = [Mål_certified_value]/[Mål_total_certified_value]
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		lineageTag: 72b0f081-0517-4b4d-9b86-5fe97c84e487
+
+	column S_PK_FACT_SRE_ENOVA_CERTIFICATE
+		dataType: string
+		lineageTag: 387ca562-0b0b-4e1a-9982-7fc3681a2648
+		summarizeBy: none
+		sourceColumn: S_PK_FACT_SRE_ENOVA_CERTIFICATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_DK_BUILDING_ID
+		dataType: double
+		lineageTag: 09ef8705-1811-4421-9745-0279c1359f2a
+		summarizeBy: count
+		sourceColumn: S_DK_BUILDING_ID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column S_DK_CERTIFICATE_NO
+		dataType: string
+		lineageTag: 6dea9493-f87f-4d3c-9ae4-cc26c6aa2cf9
+		summarizeBy: none
+		sourceColumn: S_DK_CERTIFICATE_NO
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_DK_VALUATION_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ffa774f5-abbe-4e03-836d-5d3ce829f01b
+		summarizeBy: none
+		sourceColumn: S_DK_VALUATION_DATE
+
+		variation Variasjon
+			isDefault
+			relationship: 2a43bad5-e953-4ad4-a0c1-301f4924c1d3
+			defaultHierarchy: LocalDateTable_ec461a17-820a-4d4c-8043-ab05f19e8df0.Datohierarki
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column S_FK_DIM_SRE_PROPERTY
+		dataType: string
+		lineageTag: ab5840f0-ded5-4b47-b08d-2e218812f986
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_SRE_PROPERTY
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_FK_DIM_SRE_ENOVA_CERTIFICATE
+		dataType: string
+		lineageTag: 38d462df-5044-43d9-a1aa-47cd133475b1
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_SRE_ENOVA_CERTIFICATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_FK_DIM_DATE
+		dataType: string
+		lineageTag: 785aa84a-d2c5-4ad4-8a82-3e9a17ab9f19
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column CALC_DELIVERED_ENERGY_TOTAL_KWHM2
+		dataType: double
+		lineageTag: f76c5189-681d-4307-82e9-a4ff4e50f2d6
+		summarizeBy: sum
+		sourceColumn: CALC_DELIVERED_ENERGY_TOTAL_KWHM2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AREA_OUTER_WALLS
+		dataType: double
+		lineageTag: a21b82bb-7529-4ca5-bab2-cdd5bec34a5b
+		summarizeBy: sum
+		sourceColumn: AREA_OUTER_WALLS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AREA_ROOF
+		dataType: double
+		lineageTag: 07baf0ef-107e-486d-9f93-0f5f934bea87
+		summarizeBy: sum
+		sourceColumn: AREA_ROOF
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AREA_FLOOR
+		dataType: double
+		lineageTag: 590c8daf-3276-4180-bdbd-eefd2b68fd25
+		summarizeBy: sum
+		sourceColumn: AREA_FLOOR
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AREA_WINDOWS_DOORS_GLASS_FIELDS
+		dataType: double
+		lineageTag: ccffce68-a6c9-491a-967a-2d31c99e6f73
+		summarizeBy: sum
+		sourceColumn: AREA_WINDOWS_DOORS_GLASS_FIELDS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column HEATED_AIR_VOLUME
+		dataType: double
+		lineageTag: 2dd8950a-efe5-40ef-bc76-fa220c166cb3
+		summarizeBy: sum
+		sourceColumn: HEATED_AIR_VOLUME
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LEAKAGE_VALUE
+		dataType: double
+		lineageTag: 636a8df5-2983-471a-821b-883d1279ce81
+		summarizeBy: sum
+		sourceColumn: LEAKAGE_VALUE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BUILDING_VALUE
+		dataType: double
+		formatString: #,0
+		lineageTag: 659759d0-cace-4deb-b74a-4e1c427efbd8
+		summarizeBy: sum
+		sourceColumn: BUILDING_VALUE
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column TOTAL_HEATED_AREA
+		dataType: double
+		formatString: #,0
+		lineageTag: ad346f36-9953-4557-a783-b78a4fa606a7
+		summarizeBy: sum
+		sourceColumn: TOTAL_HEATED_AREA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column CERTIFIED_VALUE
+		dataType: double
+		formatString: #,0
+		lineageTag: fc20b08c-c975-436e-b111-a805a7284984
+		summarizeBy: sum
+		sourceColumn: CERTIFIED_VALUE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column S_FK_DIM_SRE_PRODUCT
+		dataType: string
+		lineageTag: e2d389e8-51af-4c49-85f6-400c22404e78
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_SRE_PRODUCT
+
+		annotation SummarizationSetBy = Automatic
+
+	column HEATED_GIA
+		dataType: double
+		lineageTag: 9c6153c7-fadc-44f3-aa6f-f09587e2c54a
+		summarizeBy: sum
+		sourceColumn: HEATED_GIA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TOTAL_GIA
+		dataType: double
+		lineageTag: b8742afc-0723-40e9-92af-dbcc11a8979b
+		summarizeBy: sum
+		sourceColumn: TOTAL_GIA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition FACT_SRE_ENOVA_CERTIFICATE = m
+		mode: import
+		source =
+				let
+				    Kilde = Snowflake.Databases("cb20535.west-europe.azure.snowflakecomputing.com","ANALYSIS_SAM_WH",[Implementation="2.0"]),
+				    DWH_SAM_Database = Kilde{[Name="DWH_SAM",Kind="Database"]}[Data],
+				    REAL_ESTATE_Schema = DWH_SAM_Database{[Name="REAL_ESTATE",Kind="Schema"]}[Data],
+				    FACT_SRE_ENOVA_CERTIFICATE_View = REAL_ESTATE_Schema{[Name="FACT_SRE_ENOVA_CERTIFICATE",Kind="View"]}[Data]
+				in
+				    FACT_SRE_ENOVA_CERTIFICATE_View
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigasjon
+

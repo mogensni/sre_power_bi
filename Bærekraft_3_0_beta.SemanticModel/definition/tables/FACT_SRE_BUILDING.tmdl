@@ -1,0 +1,316 @@
+table FACT_SRE_BUILDING
+	lineageTag: 5a939af5-6882-4c3d-b2a5-1be1ebed47c8
+
+	measure AntallEiendom =
+			CALCULATE (
+			            DISTINCTCOUNT ( DIM_SRE_PROPERTY[PROPERTY_NAME] ),
+			            FILTER ( 'FACT_SRE_BUILDING', [VALUATION_NOK] > 0 )
+			        )
+		formatString: 0
+		lineageTag: 72ca50f5-61d1-415d-812f-94acf57a4df2
+
+	measure Kvartal_MarkedsVerdi = ```
+			
+			    calculate(
+			        sum(FACT_SRE_BUILDING[VALUATION_NOK]),
+			        FACT_SRE_BUILDING[VALUATION_NOK] > 0
+			    )
+			```
+		lineageTag: 6122fb15-aca4-42f2-bcab-4dbff4f03f19
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure YoY_MarkedsVerdi_% = ```
+			
+			VAR CY = [Kvartal_MarkedsVerdi]
+			VAR PY = 
+			    CALCULATE(
+			        [Kvartal_MarkedsVerdi],
+			        OFFSET(
+			            -4,
+			            ALL(DIM_DATE[FULL_YEAR_QUARTER_NAME]),
+			            ORDERBY( DIM_DATE[FULL_YEAR_QUARTER_NAME], ASC)
+			        )
+			    )
+			VAR _perc = DIVIDE( CY-PY, PY )
+			VAR _format = FORMAT( _perc, "0.00 %;0.00 %" )
+			RETURN
+			IF(
+			    ISBLANK(PY),
+			    "",
+			    IF(
+			        _perc > 0,
+			        _format & " " & UNICHAR(129029),
+			        IF(
+			            _perc < 0,
+			            _format & "  " & UNICHAR(129031),
+			            _format & "  " & UNICHAR(129030)
+			        )
+			    )
+			)
+			```
+		lineageTag: 6f788e80-77d7-4b8e-b4d2-b2dbe8e496a2
+
+	measure PQ =
+			CALCULATE(
+			        [Kvartal_MarkedsVerdi],
+			        OFFSET(
+			            -1,
+			            ALL(DIM_DATE[FULL_YEAR_QUARTER_NAME]),
+			            ORDERBY( DIM_DATE[FULL_YEAR_QUARTER_NAME], ASC)
+			        )
+			    )
+		lineageTag: d71b8dee-e959-4578-b802-ca3295003f7b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure QoQ_MarkedsVerdi_% = ```
+			
+			VAR CY = [Kvartal_MarkedsVerdi]
+			VAR PY = 
+			    CALCULATE(
+			        [Kvartal_MarkedsVerdi],
+			        OFFSET(
+			            -1,
+			            ALL(DIM_DATE[FULL_YEAR_QUARTER_NAME]),
+			            ORDERBY( DIM_DATE[FULL_YEAR_QUARTER_NAME], ASC)
+			        )
+			    )
+			VAR _perc = DIVIDE( CY-PY, PY )
+			VAR _format = FORMAT( _perc, "0.00 %;0.00 %" )
+			RETURN
+			IF(
+			    ISBLANK(PY),
+			    "",
+			    IF(
+			        _perc > 0,
+			        _format & " " & UNICHAR(129029),
+			        IF(
+			            _perc < 0,
+			            _format & "  " & UNICHAR(129031),
+			            _format & "  " & UNICHAR(129030)
+			        )
+			    )
+			)
+			```
+		lineageTag: 05d45fb7-b955-4c27-9d99-d90b359f81ee
+
+	measure QoQ_MarkedsVerdi_ColorFormat = ```
+			
+			VAR CY = [Kvartal_MarkedsVerdi]
+			VAR PY = 
+			    CALCULATE(
+			        [Kvartal_MarkedsVerdi],
+			        OFFSET(
+			            -1,
+			            ALL(DIM_DATE[FULL_YEAR_QUARTER_NAME]),
+			            ORDERBY( DIM_DATE[FULL_YEAR_QUARTER_NAME], ASC)
+			        )
+			    )
+			VAR _perc = DIVIDE( CY-PY, PY )
+			VAR _format = FORMAT( _perc, "0.0%;0.0%" )
+			RETURN
+			IF(
+			    _perc > 0,
+			    "Green",
+			    IF(
+			        _perc < 0,
+			        "Red",
+			        "Automatic"
+			    )
+			)
+			```
+		lineageTag: a52947a9-bd27-4c9f-adf7-e0553aec3eab
+
+	measure YoY_MarkedsVerdi_ColorFormat = ```
+			
+			VAR CY = [Kvartal_MarkedsVerdi]
+			VAR PY = 
+			    CALCULATE(
+			        [Kvartal_MarkedsVerdi],
+			        OFFSET(
+			            -4,
+			            ALL(DIM_DATE[FULL_YEAR_QUARTER_NAME]),
+			            ORDERBY( DIM_DATE[FULL_YEAR_QUARTER_NAME], ASC)
+			        )
+			    )
+			VAR _perc = DIVIDE( CY-PY, PY )
+			VAR _format = FORMAT( _perc, "0.0%;0.0%" )
+			RETURN
+			IF(
+			    _perc > 0,
+			    "Green",
+			    "Red"
+			)
+			```
+		lineageTag: a8763ef2-760b-4b4c-bf7f-b8a090ac3433
+
+	measure PY =
+			CALCULATE(
+			        [Kvartal_MarkedsVerdi],
+			        OFFSET(
+			            -4,
+			            ALL(DIM_DATE[FULL_YEAR_QUARTER_NAME]),
+			            ORDERBY( DIM_DATE[FULL_YEAR_QUARTER_NAME], ASC)
+			        )
+			    )
+		lineageTag: 5b942c51-7117-4812-95b0-880a2d072917
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure AndelSegment = ```
+			
+			    DIVIDE(
+			        SUM(FACT_SRE_BUILDING[VALUATION_NOK]),
+			        CALCULATE(
+			            SUM(FACT_SRE_BUILDING[VALUATION_NOK]),
+			            REMOVEFILTERS(DIM_SRE_PROPERTY[MAIN_BUILDING_SEGMENT])
+			        )
+			)
+			```
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: acce8c39-4d97-4b2b-ab63-4aac53e5e21c
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure AndelLokasjon = ```
+			
+			    DIVIDE(
+			        SUM(FACT_SRE_BUILDING[VALUATION_NOK]),
+			        CALCULATE(
+			            SUM(FACT_SRE_BUILDING[VALUATION_NOK]),
+			            REMOVEFILTERS(DIM_SRE_PROPERTY[LOCATION])
+			        )
+			)
+			```
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 88bc5e80-7dfe-4db3-a204-8015a38cabf0
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure AndelSubportfolio = ```
+			
+			    DIVIDE(
+			        SUM(FACT_SRE_BUILDING[VALUATION_NOK]),
+			        CALCULATE(
+			            SUM(FACT_SRE_BUILDING[VALUATION_NOK]),
+			            REMOVEFILTERS(DIM_SRE_PRODUCT[SUB_PORTFOLIO_ID])
+			        )
+			)
+			```
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 8372d6ed-7971-458f-a2ed-4416507f7533
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column S_PK_FACT_SRE_BUILDING
+		dataType: string
+		lineageTag: 0878be12-1f22-474e-9a02-9691183d716d
+		summarizeBy: none
+		sourceColumn: S_PK_FACT_SRE_BUILDING
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_DK_BUILDING_ID
+		dataType: double
+		lineageTag: 07ff3424-aace-4505-a5b7-05500c83d134
+		summarizeBy: count
+		sourceColumn: S_DK_BUILDING_ID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column S_DK_VALUATION_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 921abe0f-fc1f-49fd-a133-5e95ad7ff0e6
+		summarizeBy: none
+		sourceColumn: S_DK_VALUATION_DATE
+
+		variation Variasjon
+			isDefault
+			relationship: 2534c879-7000-4c20-8622-68df29e40034
+			defaultHierarchy: LocalDateTable_8740628d-2bc5-435a-bf30-551c1e4d607e.Datohierarki
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column S_FK_DIM_SRE_PROPERTY
+		dataType: string
+		lineageTag: 4e3024b9-6c07-4102-9520-78479901b6b3
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_SRE_PROPERTY
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_FK_DIM_COUNTRY_PRODUCT_COUNTRY
+		dataType: string
+		lineageTag: ff6bc587-b397-42e4-856a-db27a8fdb5fa
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_COUNTRY_PRODUCT_COUNTRY
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_FK_DIM_CURRENCY_PRODUCT_CURRENCY
+		dataType: string
+		lineageTag: aa06893a-2774-4d8e-bed5-4055525e2710
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_CURRENCY_PRODUCT_CURRENCY
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_FK_DIM_DATE_VALUATION_DATE
+		dataType: string
+		lineageTag: 4de85725-0d9d-4677-8554-c70379fa8192
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_DATE_VALUATION_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_FK_DIM_SRE_PRODUCT
+		dataType: string
+		lineageTag: a02fc215-37f7-46c8-866e-708adfbca155
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_SRE_PRODUCT
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUATION_NOK
+		dataType: double
+		formatString: #,0
+		lineageTag: 38b6d8c2-9f0a-45de-9497-99efce4ef4e0
+		summarizeBy: sum
+		sourceColumn: VALUATION_NOK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column AREA_GFA
+		dataType: double
+		formatString: #,0
+		lineageTag: a8f8ae7c-7ffa-4e97-8cba-b5b860bf44c2
+		summarizeBy: sum
+		sourceColumn: AREA_GFA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	partition FACT_SRE_BUILDING = m
+		mode: import
+		source =
+				let
+				    Kilde = Snowflake.Databases("cb20535.west-europe.azure.snowflakecomputing.com","ANALYSIS_SAM_WH",[Implementation="2.0"]),
+				    DWH_SAM_Database = Kilde{[Name="DWH_SAM",Kind="Database"]}[Data],
+				    REAL_ESTATE_Schema = DWH_SAM_Database{[Name="REAL_ESTATE",Kind="Schema"]}[Data],
+				    FACT_SRE_BUILDING_View = REAL_ESTATE_Schema{[Name="FACT_SRE_BUILDING",Kind="View"]}[Data]
+				in
+				    FACT_SRE_BUILDING_View
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigasjon
+

@@ -1,0 +1,178 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1333,
+            "y": 431.34375
+          },
+          "nodeIndex": "DIM_SRE_PROPERTY",
+          "nodeLineageTag": "0a735f37-437f-4def-ae75-bf4f7b8e06df",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1333.75,
+            "y": 796.09375
+          },
+          "nodeIndex": "DIM_SRE_ENOVA_CERTIFICATE",
+          "nodeLineageTag": "6f2da375-9da1-4325-bcef-fb28eef98d20",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 697,
+            "y": 34.09375
+          },
+          "nodeIndex": "FACT_SRE_BUILDING",
+          "nodeLineageTag": "5a939af5-6882-4c3d-b2a5-1be1ebed47c8",
+          "size": {
+            "height": 347,
+            "width": 244
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 698.75,
+            "y": 459.84375
+          },
+          "nodeIndex": "FACT_SRE_ENOVA_CERTIFICATE",
+          "nodeLineageTag": "b1769385-77f6-463e-815d-a4a408c40fb0",
+          "size": {
+            "height": 378.75,
+            "width": 244
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 698,
+            "y": 894.34375
+          },
+          "nodeIndex": "FACT_SRE_BREEAM_CERTIFICATE",
+          "nodeLineageTag": "821d7a91-b774-42b4-917a-1f8a0f98bf92",
+          "size": {
+            "height": 400,
+            "width": 242.75
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 1335,
+            "y": 1156.34375
+          },
+          "nodeIndex": "DIM_SRE_BREEAM_CERTIFICATE",
+          "nodeLineageTag": "2c19235c-00fb-48a5-8796-6567eb6b0133",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1826,
+            "y": 1239.96875
+          },
+          "nodeIndex": "RATING_SORT_ORDER",
+          "nodeLineageTag": "58642e61-337d-43e4-9cc1-87aa97597d83",
+          "size": {
+            "height": 145,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 108.75,
+            "y": 906.84375
+          },
+          "nodeIndex": "DIM_DATE",
+          "nodeLineageTag": "91cf7335-0171-4c68-864f-f4f22c5a2d6f",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 107.5,
+            "y": 491.25
+          },
+          "nodeIndex": "DIM_COUNTRY",
+          "nodeLineageTag": "22864518-8fd4-4bdd-ae43-600351cd1023",
+          "size": {
+            "height": 312.5,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 111.5,
+            "y": 27.09375
+          },
+          "nodeIndex": "DIM_CURRENCY",
+          "nodeLineageTag": "fd1b6fb6-3b49-4bcf-8ffa-cf71f10f19ff",
+          "size": {
+            "height": 327.5,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 1331,
+            "y": 0
+          },
+          "nodeIndex": "DIM_SRE_PRODUCT",
+          "nodeLineageTag": "65b1716e-ec44-40f5-8b09-d7a1bd949caf",
+          "size": {
+            "height": 312.25,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 651.81818962097168,
+            "y": 1345.8991451263428
+          },
+          "nodeIndex": "FACT_SRE_PRODUCT_PERFORMANCE",
+          "nodeLineageTag": "2e43da7a-4fb0-4405-96b9-46800f452f8e",
+          "size": {
+            "height": 300,
+            "width": 321.5
+          },
+          "zIndex": 11
+        }
+      ],
+      "name": "Alle tabeller",
+      "zoomValue": 80,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Alle tabeller",
+  "defaultDiagram": "Alle tabeller"
+}
