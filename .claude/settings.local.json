@@ -10,7 +10,8 @@
       "Bash(grep -r \"displayName:\" storebrand_real_estate_semantic_model.SemanticModel/definition/tables/*.tmdl)",
       "Bash(grep -n \"displayName:\" *.tmdl)",
       "Bash(git:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(find:*)"
     ]
   }
 }
