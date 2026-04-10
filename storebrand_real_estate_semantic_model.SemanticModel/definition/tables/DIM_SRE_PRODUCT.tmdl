@@ -3,6 +3,7 @@ table DIM_SRE_PRODUCT
 
 	column S_PK_DIM_SRE_PRODUCT
 		dataType: string
+		isHidden
 		lineageTag: d0a7d5ba-22a4-4af4-8dd7-43e41c3c73a1
 		summarizeBy: none
 		sourceColumn: S_PK_DIM_SRE_PRODUCT
@@ -11,6 +12,7 @@ table DIM_SRE_PRODUCT
 
 	column S_DK_SUB_PORTFOLIO_ID
 		dataType: string
+		isHidden
 		lineageTag: aade2c9c-0026-41bd-9910-1aa2cc4a195f
 		summarizeBy: none
 		sourceColumn: S_DK_SUB_PORTFOLIO_ID
