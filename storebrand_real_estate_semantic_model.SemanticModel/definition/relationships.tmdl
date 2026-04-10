@@ -5,17 +5,17 @@ relationship 2a43bad5-e953-4ad4-a0c1-301f4924c1d3
 
 relationship 20714c42-1be4-49c8-894c-594fb008d8b6
 	joinOnDateBehavior: datePartOnly
-	fromColumn: DIM_SRE_ENOVA_CERTIFICATE.CERT_DATE
+	fromColumn: DIM_SRE_ENOVA_CERTIFICATE.'Certification Date'
 	toColumn: LocalDateTable_9af9cedd-cae4-42a2-a15d-cc78732b53a0.Date
 
 relationship bb4f2dd6-263c-4a92-a609-fccaa072ac07
 	joinOnDateBehavior: datePartOnly
-	fromColumn: DIM_SRE_ENOVA_CERTIFICATE.VALID_UNTIL_DATE
+	fromColumn: DIM_SRE_ENOVA_CERTIFICATE.'Valid Until Date'
 	toColumn: LocalDateTable_bd44100e-aac3-46b2-bb62-a0499fe8eb71.Date
 
 relationship 5acf1acf-45af-4e3c-93b4-d146a4a53d1a
 	joinOnDateBehavior: datePartOnly
-	fromColumn: DIM_SRE_ENOVA_CERTIFICATE.DATE_LEAKAGE_VALUE
+	fromColumn: DIM_SRE_ENOVA_CERTIFICATE.'Date of Leakage Value'
 	toColumn: LocalDateTable_75c469ac-9535-4b5f-979d-7f7e748890d6.Date
 
 relationship a97340e1-fb13-45bb-aadb-338093d38051
@@ -207,7 +207,7 @@ relationship de1b05ef-ce73-d0a0-28c7-69bad278105d
 
 relationship 7b3026ac-23ba-494c-adef-8351f4d93ed1
 	joinOnDateBehavior: datePartOnly
-	fromColumn: DIM_SRE_ENOVA_CERTIFICATE.CERT_UNTIL_DATE_CALC
+	fromColumn: DIM_SRE_ENOVA_CERTIFICATE.'Calculated Valid Until Date'
 	toColumn: LocalDateTable_e1ccb8fa-26e6-4161-9ced-e20e000583b8.Date
 
 relationship b4502982-c037-4ebf-a418-b1a6a6850e00
