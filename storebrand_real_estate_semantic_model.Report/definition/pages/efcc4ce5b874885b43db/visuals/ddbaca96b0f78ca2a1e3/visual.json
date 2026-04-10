@@ -23,10 +23,10 @@
                       "Entity": "DIM_SRE_BREEAM_CERTIFICATE"
                     }
                   },
-                  "Property": "BUILDING_CATEGORY"
+                  "Property": "Building Category"
                 }
               },
-              "queryRef": "DIM_SRE_BREEAM_CERTIFICATE.BUILDING_CATEGORY",
+              "queryRef": "DIM_SRE_BREEAM_CERTIFICATE.Building Category",
               "nativeQueryRef": "Bygningskategori",
               "active": true,
               "displayName": "Bygningskategori"
@@ -128,7 +128,7 @@
                 "Entity": "DIM_SRE_BREEAM_CERTIFICATE"
               }
             },
-            "Property": "BUILDING_CATEGORY"
+            "Property": "Building Category"
           }
         },
         "type": "Advanced",
@@ -156,7 +156,7 @@
                                   "Source": "d"
                                 }
                               },
-                              "Property": "BUILDING_CATEGORY"
+                              "Property": "Building Category"
                             }
                           },
                           "Right": {
@@ -179,7 +179,7 @@
                                   "Source": "d"
                                 }
                               },
-                              "Property": "BUILDING_CATEGORY"
+                              "Property": "Building Category"
                             }
                           },
                           "Right": {

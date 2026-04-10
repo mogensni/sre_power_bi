@@ -3,6 +3,7 @@ table DIM_SRE_PROPERTY
 
 	column S_PK_DIM_SRE_PROPERTY
 		dataType: string
+		isHidden
 		lineageTag: a792a265-bffe-48b4-a35b-545c4eb99568
 		summarizeBy: none
 		sourceColumn: S_PK_DIM_SRE_PROPERTY
@@ -11,13 +12,14 @@ table DIM_SRE_PROPERTY
 
 	column S_DK_BUILDING_ID
 		dataType: string
+		isHidden
 		lineageTag: fcdfef8b-8755-4dd0-a6f7-b865758f2469
 		summarizeBy: none
 		sourceColumn: S_DK_BUILDING_ID
 
 		annotation SummarizationSetBy = Automatic
 
-	column ADDRESS
+	column 'Address'
 		dataType: string
 		lineageTag: 8a7fcf0c-cd83-4179-8688-150b8ccd836f
 		summarizeBy: none
@@ -25,7 +27,7 @@ table DIM_SRE_PROPERTY
 
 		annotation SummarizationSetBy = Automatic
 
-	column B_NO
+	column 'Parcel Number'
 		dataType: string
 		lineageTag: 85bfc658-e3ad-4735-8ee6-d039e2daa125
 		summarizeBy: none
@@ -33,7 +35,7 @@ table DIM_SRE_PROPERTY
 
 		annotation SummarizationSetBy = Automatic
 
-	column BUILDING_NAME
+	column 'Building Name'
 		dataType: string
 		lineageTag: c615670e-eda7-4e2e-b175-3cffa9c8fea7
 		summarizeBy: none
@@ -41,7 +43,7 @@ table DIM_SRE_PROPERTY
 
 		annotation SummarizationSetBy = Automatic
 
-	column BUILDING_PERMIT_DATE
+	column 'Building Permit Date'
 		dataType: string
 		lineageTag: bd6c46e0-9a4c-4235-bbe7-881568fa87c8
 		summarizeBy: none
@@ -49,7 +51,7 @@ table DIM_SRE_PROPERTY
 
 		annotation SummarizationSetBy = Automatic
 
-	column CONSTRUCTED_YEAR
+	column 'Constructed Year'
 		dataType: string
 		lineageTag: c299a0a1-589a-40bc-9bfa-749f801afbf7
 		summarizeBy: none
@@ -57,7 +59,7 @@ table DIM_SRE_PROPERTY
 
 		annotation SummarizationSetBy = Automatic
 
-	column CURRENCY
+	column 'Currency'
 		dataType: string
 		lineageTag: 7882ea61-f8af-4255-bdb3-0730c215a918
 		summarizeBy: none
@@ -65,7 +67,7 @@ table DIM_SRE_PROPERTY
 
 		annotation SummarizationSetBy = Automatic
 
-	column DISPOSITION_DATE
+	column 'Disposition Date'
 		dataType: string
 		lineageTag: 88013eeb-0655-46ac-8b6b-e845d37c0337
 		summarizeBy: none
@@ -73,7 +75,7 @@ table DIM_SRE_PROPERTY
 
 		annotation SummarizationSetBy = Automatic
 
-	column EXTERNAL_BUILDING_NO
+	column 'External Building Number'
 		dataType: string
 		lineageTag: bde23fed-b7c4-4a11-b908-cd083fd7f171
 		summarizeBy: none
@@ -81,7 +83,7 @@ table DIM_SRE_PROPERTY
 
 		annotation SummarizationSetBy = Automatic
 
-	column G_NO
+	column 'Farm Number'
 		dataType: string
 		lineageTag: 919c5acc-2223-4139-bccf-e67aab9a5b8c
 		summarizeBy: none
@@ -89,7 +91,7 @@ table DIM_SRE_PROPERTY
 
 		annotation SummarizationSetBy = Automatic
 
-	column K_NO
+	column 'Municipality Number'
 		dataType: string
 		lineageTag: db2333a9-866c-4b17-99ef-c3c2a774463c
 		summarizeBy: none
@@ -97,7 +99,7 @@ table DIM_SRE_PROPERTY
 
 		annotation SummarizationSetBy = Automatic
 
-	column LOCATION
+	column 'Location'
 		dataType: string
 		lineageTag: ec3e52a8-cecd-41d4-a1bf-916363598bb2
 		summarizeBy: none
@@ -105,7 +107,7 @@ table DIM_SRE_PROPERTY
 
 		annotation SummarizationSetBy = Automatic
 
-	column MAIN_BUILDING_SEGMENT
+	column 'Main Building Segment'
 		dataType: string
 		lineageTag: 1adf7dfc-4fb8-41c0-8c4f-ac36919b15a4
 		summarizeBy: none
@@ -113,7 +115,7 @@ table DIM_SRE_PROPERTY
 
 		annotation SummarizationSetBy = Automatic
 
-	column OWNER_ORG_NO
+	column 'Owner Organization Number'
 		dataType: string
 		lineageTag: f8743b51-acc1-4d7c-b1e4-947fe793ae81
 		summarizeBy: none
@@ -121,7 +123,7 @@ table DIM_SRE_PROPERTY
 
 		annotation SummarizationSetBy = Automatic
 
-	column PLOT_AREA
+	column 'Plot Area (m²)'
 		dataType: double
 		lineageTag: 3b0f5493-5099-4a0d-9165-c6af9be94415
 		summarizeBy: sum
@@ -131,7 +133,7 @@ table DIM_SRE_PROPERTY
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column POSTAL_AREA
+	column 'Postal Area'
 		dataType: string
 		lineageTag: 7e7e132e-79be-4662-8630-72a0a317d246
 		summarizeBy: none
@@ -139,7 +141,7 @@ table DIM_SRE_PROPERTY
 
 		annotation SummarizationSetBy = Automatic
 
-	column POSTAL_NO
+	column 'Postal Code'
 		dataType: string
 		lineageTag: 868a3aed-c148-4f98-b8b3-2ceb5473a8d2
 		summarizeBy: none
@@ -147,7 +149,7 @@ table DIM_SRE_PROPERTY
 
 		annotation SummarizationSetBy = Automatic
 
-	column PROPERTY_MANAGER_NAME
+	column 'Property Manager Name'
 		dataType: string
 		lineageTag: baa04778-f562-45ef-95dd-ec2f358071e4
 		summarizeBy: none
@@ -155,7 +157,7 @@ table DIM_SRE_PROPERTY
 
 		annotation SummarizationSetBy = Automatic
 
-	column PROPERTY_MANAGER
+	column 'Property Manager'
 		dataType: string
 		lineageTag: df3f727d-3ffe-4321-8e37-81506330cc63
 		summarizeBy: none
@@ -163,7 +165,7 @@ table DIM_SRE_PROPERTY
 
 		annotation SummarizationSetBy = Automatic
 
-	column PROPERTY_NAME
+	column 'Property Name'
 		dataType: string
 		lineageTag: 65f43945-bada-4b6e-98e2-1f69acdb60fa
 		summarizeBy: none
@@ -171,7 +173,7 @@ table DIM_SRE_PROPERTY
 
 		annotation SummarizationSetBy = Automatic
 
-	column PURCHASE_PRICE
+	column 'Purchase Price'
 		dataType: double
 		lineageTag: f5a60662-dd32-451f-a01e-f8120d9278cf
 		summarizeBy: sum
@@ -181,7 +183,7 @@ table DIM_SRE_PROPERTY
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column S_NO
+	column 'Section Number'
 		dataType: string
 		lineageTag: 4a3d7f5c-9a3c-4760-a544-948a1dc7597d
 		summarizeBy: none
@@ -189,7 +191,7 @@ table DIM_SRE_PROPERTY
 
 		annotation SummarizationSetBy = Automatic
 
-	column PROPERTY_ID
+	column 'Property ID'
 		dataType: string
 		lineageTag: 2956701b-6c38-42c7-a39e-2051e4c06b61
 		summarizeBy: none
@@ -197,7 +199,7 @@ table DIM_SRE_PROPERTY
 
 		annotation SummarizationSetBy = Automatic
 
-	column ACQUIRED_GFA
+	column 'Acquired GFA (m²)'
 		dataType: double
 		lineageTag: 515f2714-1ccd-485e-a709-afd56d2c8ee4
 		summarizeBy: sum
@@ -207,7 +209,7 @@ table DIM_SRE_PROPERTY
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column ACQUISITION_DATE
+	column 'Acquisition Date'
 		dataType: string
 		lineageTag: 02e0cf19-a484-4316-9dfe-85830b02d787
 		summarizeBy: none
@@ -215,7 +217,7 @@ table DIM_SRE_PROPERTY
 
 		annotation SummarizationSetBy = Automatic
 
-	column SUB_PORTFOLIO_ID
+	column 'Sub-Portfolio ID'
 		dataType: string
 		lineageTag: e3c945f9-4451-4191-a7ae-d7c9fbb1da92
 		summarizeBy: none

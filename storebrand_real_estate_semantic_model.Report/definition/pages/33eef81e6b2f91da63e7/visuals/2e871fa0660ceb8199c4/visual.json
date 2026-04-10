@@ -23,10 +23,10 @@
                       "Entity": "DIM_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "ENERGY_CHARACTER"
+                  "Property": "Energy Character"
                 }
               },
-              "queryRef": "DIM_SRE_ENOVA_CERTIFICATE.ENERGY_CHARACTER",
+              "queryRef": "DIM_SRE_ENOVA_CERTIFICATE.Energy Character",
               "nativeQueryRef": "Karakter",
               "active": true,
               "displayName": "Karakter"
@@ -39,10 +39,10 @@
                       "Entity": "DIM_SRE_PROPERTY"
                     }
                   },
-                  "Property": "ADDRESS"
+                  "Property": "Address"
                 }
               },
-              "queryRef": "DIM_SRE_PROPERTY.ADDRESS",
+              "queryRef": "DIM_SRE_PROPERTY.Address",
               "nativeQueryRef": "ADDRESS",
               "active": true
             }
@@ -58,10 +58,10 @@
                       "Entity": "FACT_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "Mål_heated_area"
+                  "Property": "Heated Area"
                 }
               },
-              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Mål_heated_area",
+              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Heated Area",
               "nativeQueryRef": "Oppv. areal",
               "displayName": "Oppv. areal"
             },
@@ -73,10 +73,10 @@
                       "Entity": "FACT_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "Mål_heated_andel"
+                  "Property": "Heated Area Share"
                 }
               },
-              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Mål_heated_andel",
+              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Heated Area Share",
               "nativeQueryRef": "Andel areal",
               "displayName": "Andel areal"
             },
@@ -90,7 +90,7 @@
                           "Entity": "FACT_SRE_BUILDING"
                         }
                       },
-                      "Property": "VALUATION_NOK"
+                      "Property": "Valuation (NOK)"
                     }
                   },
                   "Function": 0
@@ -110,7 +110,7 @@
                           "Entity": "FACT_SRE_ENOVA_CERTIFICATE"
                         }
                       },
-                      "Property": "CERTIFIED_VALUE"
+                      "Property": "Certified Building Value"
                     }
                   },
                   "Function": 0
@@ -128,10 +128,10 @@
                       "Entity": "FACT_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "Mål_certified_andel"
+                  "Property": "Certified Value Share"
                 }
               },
-              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Mål_certified_andel",
+              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Certified Value Share",
               "nativeQueryRef": "Andel verdi",
               "displayName": "Andel verdi"
             }
@@ -148,7 +148,7 @@
                     "Entity": "DIM_SRE_ENOVA_CERTIFICATE"
                   }
                 },
-                "Property": "ENERGY_CHARACTER"
+                "Property": "Energy Character"
               }
             },
             "direction": "Descending"
@@ -161,7 +161,7 @@
                     "Entity": "DIM_SRE_PROPERTY"
                   }
                 },
-                "Property": "ADDRESS"
+                "Property": "Address"
               }
             },
             "direction": "Descending"
@@ -188,7 +188,7 @@
                       "Entity": "DIM_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "ENERGY_CHARACTER"
+                  "Property": "Energy Character"
                 }
               }
             ],
@@ -314,7 +314,7 @@
             }
           },
           "selector": {
-            "metadata": "DIM_SRE_ENOVA_CERTIFICATE.ENERGY_CHARACTER"
+            "metadata": "DIM_SRE_ENOVA_CERTIFICATE.Energy Character"
           }
         },
         {

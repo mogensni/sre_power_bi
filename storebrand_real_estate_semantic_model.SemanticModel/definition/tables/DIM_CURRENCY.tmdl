@@ -3,6 +3,7 @@ table DIM_CURRENCY
 
 	column S_PK_DIM_CURRENCY
 		dataType: string
+		isHidden
 		lineageTag: 027649de-9fd3-4b69-b7a7-35e73a17a259
 		summarizeBy: none
 		sourceColumn: S_PK_DIM_CURRENCY
@@ -11,6 +12,7 @@ table DIM_CURRENCY
 
 	column S_DK_CURRENCY_IK
 		dataType: double
+		isHidden
 		lineageTag: 8a891e42-d671-4cfb-84fe-c74f4b1ca94b
 		summarizeBy: sum
 		sourceColumn: S_DK_CURRENCY_IK
@@ -21,6 +23,7 @@ table DIM_CURRENCY
 
 	column CREATED_DATE
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		lineageTag: 96170006-b1c5-4775-a895-c5877dac9e3f
 		summarizeBy: none
@@ -33,7 +36,7 @@ table DIM_CURRENCY
 
 		annotation SummarizationSetBy = Automatic
 
-	column CURRENCY
+	column 'Currency Code'
 		dataType: string
 		lineageTag: f6776e18-f89b-4df6-bd16-a54c95ac7dd3
 		summarizeBy: none
@@ -43,6 +46,7 @@ table DIM_CURRENCY
 
 	column CURRENCY_IK
 		dataType: double
+		isHidden
 		lineageTag: 0de413b9-3fa1-4381-aa25-84d52b2a4d6b
 		summarizeBy: sum
 		sourceColumn: CURRENCY_IK
@@ -51,7 +55,7 @@ table DIM_CURRENCY
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column CURRENCY_NAME
+	column 'Currency Name'
 		dataType: string
 		lineageTag: 9d436b54-9f6d-443a-bd5f-057eb3864eff
 		summarizeBy: none
@@ -59,7 +63,7 @@ table DIM_CURRENCY
 
 		annotation SummarizationSetBy = Automatic
 
-	column CURRENCY_NAME_LONG
+	column 'Currency - Full Name'
 		dataType: string
 		lineageTag: 6d82ecf5-1682-4d66-b6a3-42a24a7355b1
 		summarizeBy: none
@@ -69,6 +73,7 @@ table DIM_CURRENCY
 
 	column LAST_CHANGE_TS
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		lineageTag: aa2c6d82-7796-4c24-a61d-a80a1b9c7d85
 		summarizeBy: none
@@ -83,6 +88,7 @@ table DIM_CURRENCY
 
 	column ORIGINATING_SYSTEM_NO
 		dataType: double
+		isHidden
 		lineageTag: 432ce15f-e6e3-4437-9187-8e0783a713fa
 		summarizeBy: sum
 		sourceColumn: ORIGINATING_SYSTEM_NO
@@ -93,6 +99,7 @@ table DIM_CURRENCY
 
 	column DBT_LAST_LOADED_DATETIME
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		lineageTag: b7dfab02-25e4-44ec-9a08-f2b033d10d26
 		summarizeBy: none

@@ -45,7 +45,7 @@
                           "Entity": "FACT_SRE_BUILDING"
                         }
                       },
-                      "Property": "VALUATION_NOK"
+                      "Property": "Valuation (NOK)"
                     }
                   },
                   "Function": 0
@@ -70,7 +70,7 @@
                         "Entity": "FACT_SRE_BUILDING"
                       }
                     },
-                    "Property": "VALUATION_NOK"
+                    "Property": "Valuation (NOK)"
                   }
                 },
                 "Function": 0

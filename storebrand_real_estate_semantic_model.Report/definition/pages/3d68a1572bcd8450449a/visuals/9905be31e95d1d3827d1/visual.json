@@ -23,10 +23,10 @@
                       "Entity": "DIM_SRE_PROPERTY"
                     }
                   },
-                  "Property": "BUILDING_NAME"
+                  "Property": "Building Name"
                 }
               },
-              "queryRef": "DIM_SRE_PROPERTY.BUILDING_NAME",
+              "queryRef": "DIM_SRE_PROPERTY.Building Name",
               "nativeQueryRef": "Bygningsnavn",
               "displayName": "Bygningsnavn"
             },
@@ -38,10 +38,10 @@
                       "Entity": "DIM_SRE_PROPERTY"
                     }
                   },
-                  "Property": "CONSTRUCTED_YEAR"
+                  "Property": "Constructed Year"
                 }
               },
-              "queryRef": "DIM_SRE_PROPERTY.CONSTRUCTED_YEAR",
+              "queryRef": "DIM_SRE_PROPERTY.Constructed Year",
               "nativeQueryRef": "Byggeår",
               "displayName": "Byggeår"
             },
@@ -55,7 +55,7 @@
                           "Entity": "FACT_SRE_BUILDING"
                         }
                       },
-                      "Property": "AREA_GFA"
+                      "Property": "Gross Floor Area (m²)"
                     }
                   },
                   "Function": 0
@@ -73,10 +73,10 @@
                       "Entity": "DIM_SRE_PROPERTY"
                     }
                   },
-                  "Property": "MAIN_BUILDING_SEGMENT"
+                  "Property": "Main Building Segment"
                 }
               },
-              "queryRef": "DIM_SRE_PROPERTY.MAIN_BUILDING_SEGMENT",
+              "queryRef": "DIM_SRE_PROPERTY.Main Building Segment",
               "nativeQueryRef": "Bygningstype",
               "displayName": "Bygningstype"
             },
@@ -88,10 +88,10 @@
                       "Entity": "FACT_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "Mål_heated_area"
+                  "Property": "Heated Area"
                 }
               },
-              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Mål_heated_area",
+              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Heated Area",
               "nativeQueryRef": "Sert. oppv. areal",
               "displayName": "Sert. oppv. areal"
             },
@@ -103,10 +103,10 @@
                       "Entity": "FACT_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "Mål_heated_andel"
+                  "Property": "Heated Area Share"
                 }
               },
-              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Mål_heated_andel",
+              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Heated Area Share",
               "nativeQueryRef": "Andel areal",
               "displayName": "Andel areal"
             },
@@ -120,7 +120,7 @@
                           "Entity": "FACT_SRE_BUILDING"
                         }
                       },
-                      "Property": "VALUATION_NOK"
+                      "Property": "Valuation (NOK)"
                     }
                   },
                   "Function": 0
@@ -140,7 +140,7 @@
                           "Entity": "FACT_SRE_ENOVA_CERTIFICATE"
                         }
                       },
-                      "Property": "CERTIFIED_VALUE"
+                      "Property": "Certified Building Value"
                     }
                   },
                   "Function": 0
@@ -158,10 +158,10 @@
                       "Entity": "FACT_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "Mål_certified_andel"
+                  "Property": "Certified Value Share"
                 }
               },
-              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Mål_certified_andel",
+              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Certified Value Share",
               "nativeQueryRef": "Andel sertifisert",
               "displayName": "Andel sertifisert"
             }
@@ -182,7 +182,7 @@
             }
           },
           "selector": {
-            "metadata": "DIM_SRE_PROPERTY.CONSTRUCTED_YEAR"
+            "metadata": "DIM_SRE_PROPERTY.Constructed Year"
           }
         }
       ]

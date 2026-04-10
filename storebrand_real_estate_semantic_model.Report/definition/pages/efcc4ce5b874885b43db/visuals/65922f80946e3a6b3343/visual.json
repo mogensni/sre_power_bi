@@ -23,10 +23,10 @@
                       "Entity": "DIM_SRE_PROPERTY"
                     }
                   },
-                  "Property": "LOCATION"
+                  "Property": "Location"
                 }
               },
-              "queryRef": "DIM_SRE_PROPERTY.LOCATION",
+              "queryRef": "DIM_SRE_PROPERTY.Location",
               "nativeQueryRef": "Lokasjon",
               "active": true,
               "displayName": "Lokasjon"
@@ -133,7 +133,7 @@
                 "Entity": "DIM_SRE_PROPERTY"
               }
             },
-            "Property": "POSTAL_AREA"
+            "Property": "Postal Area"
           }
         },
         "type": "Advanced",
@@ -161,7 +161,7 @@
                                   "Source": "d"
                                 }
                               },
-                              "Property": "POSTAL_AREA"
+                              "Property": "Postal Area"
                             }
                           },
                           "Right": {
@@ -184,7 +184,7 @@
                                   "Source": "d"
                                 }
                               },
-                              "Property": "POSTAL_AREA"
+                              "Property": "Postal Area"
                             }
                           },
                           "Right": {

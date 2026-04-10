@@ -1,19 +1,19 @@
 table FACT_SRE_BUILDING
 	lineageTag: 5a939af5-6882-4c3d-b2a5-1be1ebed47c8
 
-	measure AntallEiendom =
+	measure 'Number of Properties' =
 			CALCULATE (
-			            DISTINCTCOUNT ( DIM_SRE_PROPERTY[PROPERTY_NAME] ),
-			            FILTER ( 'FACT_SRE_BUILDING', [VALUATION_NOK] > 0 )
+			            DISTINCTCOUNT ( DIM_SRE_PROPERTY['Property Name'] ),
+			            FILTER ( 'FACT_SRE_BUILDING', ['Valuation (NOK)'] > 0 )
 			        )
 		formatString: 0
 		lineageTag: 72ca50f5-61d1-415d-812f-94acf57a4df2
 
-	measure Kvartal_MarkedsVerdi = ```
-			
+	measure 'Quarterly Market Value' = ```
+
 			    calculate(
-			        sum(FACT_SRE_BUILDING[VALUATION_NOK]),
-			        FACT_SRE_BUILDING[VALUATION_NOK] > 0
+			        sum(FACT_SRE_BUILDING['Valuation (NOK)']),
+			        FACT_SRE_BUILDING['Valuation (NOK)'] > 0
 			    )
 			```
 		lineageTag: 6122fb15-aca4-42f2-bcab-4dbff4f03f19
@@ -22,10 +22,10 @@ table FACT_SRE_BUILDING
 
 	measure YoY_MarkedsVerdi_% = ```
 			
-			VAR CY = [Kvartal_MarkedsVerdi]
+			VAR CY = ['Quarterly Market Value']
 			VAR PY = 
 			    CALCULATE(
-			        [Kvartal_MarkedsVerdi],
+			        ['Quarterly Market Value'],
 			        OFFSET(
 			            -4,
 			            ALL(DIM_DATE[FULL_YEAR_QUARTER_NAME]),
@@ -53,7 +53,7 @@ table FACT_SRE_BUILDING
 
 	measure PQ =
 			CALCULATE(
-			        [Kvartal_MarkedsVerdi],
+			        ['Quarterly Market Value'],
 			        OFFSET(
 			            -1,
 			            ALL(DIM_DATE[FULL_YEAR_QUARTER_NAME]),
@@ -66,10 +66,10 @@ table FACT_SRE_BUILDING
 
 	measure QoQ_MarkedsVerdi_% = ```
 			
-			VAR CY = [Kvartal_MarkedsVerdi]
+			VAR CY = ['Quarterly Market Value']
 			VAR PY = 
 			    CALCULATE(
-			        [Kvartal_MarkedsVerdi],
+			        ['Quarterly Market Value'],
 			        OFFSET(
 			            -1,
 			            ALL(DIM_DATE[FULL_YEAR_QUARTER_NAME]),
@@ -97,10 +97,10 @@ table FACT_SRE_BUILDING
 
 	measure QoQ_MarkedsVerdi_ColorFormat = ```
 			
-			VAR CY = [Kvartal_MarkedsVerdi]
+			VAR CY = ['Quarterly Market Value']
 			VAR PY = 
 			    CALCULATE(
-			        [Kvartal_MarkedsVerdi],
+			        ['Quarterly Market Value'],
 			        OFFSET(
 			            -1,
 			            ALL(DIM_DATE[FULL_YEAR_QUARTER_NAME]),
@@ -124,10 +124,10 @@ table FACT_SRE_BUILDING
 
 	measure YoY_MarkedsVerdi_ColorFormat = ```
 			
-			VAR CY = [Kvartal_MarkedsVerdi]
+			VAR CY = ['Quarterly Market Value']
 			VAR PY = 
 			    CALCULATE(
-			        [Kvartal_MarkedsVerdi],
+			        ['Quarterly Market Value'],
 			        OFFSET(
 			            -4,
 			            ALL(DIM_DATE[FULL_YEAR_QUARTER_NAME]),
@@ -147,7 +147,7 @@ table FACT_SRE_BUILDING
 
 	measure PY =
 			CALCULATE(
-			        [Kvartal_MarkedsVerdi],
+			        ['Quarterly Market Value'],
 			        OFFSET(
 			            -4,
 			            ALL(DIM_DATE[FULL_YEAR_QUARTER_NAME]),
@@ -158,13 +158,13 @@ table FACT_SRE_BUILDING
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure AndelSegment = ```
-			
+	measure 'Segment Share' = ```
+
 			    DIVIDE(
-			        SUM(FACT_SRE_BUILDING[VALUATION_NOK]),
+			        SUM(FACT_SRE_BUILDING['Valuation (NOK)']),
 			        CALCULATE(
-			            SUM(FACT_SRE_BUILDING[VALUATION_NOK]),
-			            REMOVEFILTERS(DIM_SRE_PROPERTY[MAIN_BUILDING_SEGMENT])
+			            SUM(FACT_SRE_BUILDING['Valuation (NOK)']),
+			            REMOVEFILTERS(DIM_SRE_PROPERTY['Main Building Segment'])
 			        )
 			)
 			```
@@ -173,13 +173,13 @@ table FACT_SRE_BUILDING
 
 		annotation PBI_FormatHint = {"isCustom":true}
 
-	measure AndelLokasjon = ```
-			
+	measure 'Location Share' = ```
+
 			    DIVIDE(
-			        SUM(FACT_SRE_BUILDING[VALUATION_NOK]),
+			        SUM(FACT_SRE_BUILDING['Valuation (NOK)']),
 			        CALCULATE(
-			            SUM(FACT_SRE_BUILDING[VALUATION_NOK]),
-			            REMOVEFILTERS(DIM_SRE_PROPERTY[LOCATION])
+			            SUM(FACT_SRE_BUILDING['Valuation (NOK)']),
+			            REMOVEFILTERS(DIM_SRE_PROPERTY['Location'])
 			        )
 			)
 			```
@@ -188,12 +188,12 @@ table FACT_SRE_BUILDING
 
 		annotation PBI_FormatHint = {"isCustom":true}
 
-	measure AndelSubportfolio = ```
-			
+	measure 'Subportfolio Share' = ```
+
 			    DIVIDE(
-			        SUM(FACT_SRE_BUILDING[VALUATION_NOK]),
+			        SUM(FACT_SRE_BUILDING['Valuation (NOK)']),
 			        CALCULATE(
-			            SUM(FACT_SRE_BUILDING[VALUATION_NOK]),
+			            SUM(FACT_SRE_BUILDING['Valuation (NOK)']),
 			            REMOVEFILTERS(DIM_SRE_PRODUCT[SUB_PORTFOLIO_ID])
 			        )
 			)
@@ -205,6 +205,7 @@ table FACT_SRE_BUILDING
 
 	column S_PK_FACT_SRE_BUILDING
 		dataType: string
+		isHidden
 		lineageTag: 0878be12-1f22-474e-9a02-9691183d716d
 		summarizeBy: none
 		sourceColumn: S_PK_FACT_SRE_BUILDING
@@ -213,6 +214,7 @@ table FACT_SRE_BUILDING
 
 	column S_DK_BUILDING_ID
 		dataType: double
+		isHidden
 		lineageTag: 07ff3424-aace-4505-a5b7-05500c83d134
 		summarizeBy: count
 		sourceColumn: S_DK_BUILDING_ID
@@ -223,6 +225,7 @@ table FACT_SRE_BUILDING
 
 	column S_DK_VALUATION_DATE
 		dataType: dateTime
+		isHidden
 		formatString: Long Date
 		lineageTag: 921abe0f-fc1f-49fd-a133-5e95ad7ff0e6
 		summarizeBy: none
@@ -239,6 +242,7 @@ table FACT_SRE_BUILDING
 
 	column S_FK_DIM_SRE_PROPERTY
 		dataType: string
+		isHidden
 		lineageTag: 4e3024b9-6c07-4102-9520-78479901b6b3
 		summarizeBy: none
 		sourceColumn: S_FK_DIM_SRE_PROPERTY
@@ -247,6 +251,7 @@ table FACT_SRE_BUILDING
 
 	column S_FK_DIM_COUNTRY_PRODUCT_COUNTRY
 		dataType: string
+		isHidden
 		lineageTag: ff6bc587-b397-42e4-856a-db27a8fdb5fa
 		summarizeBy: none
 		sourceColumn: S_FK_DIM_COUNTRY_PRODUCT_COUNTRY
@@ -255,6 +260,7 @@ table FACT_SRE_BUILDING
 
 	column S_FK_DIM_CURRENCY_PRODUCT_CURRENCY
 		dataType: string
+		isHidden
 		lineageTag: aa06893a-2774-4d8e-bed5-4055525e2710
 		summarizeBy: none
 		sourceColumn: S_FK_DIM_CURRENCY_PRODUCT_CURRENCY
@@ -263,6 +269,7 @@ table FACT_SRE_BUILDING
 
 	column S_FK_DIM_DATE_VALUATION_DATE
 		dataType: string
+		isHidden
 		lineageTag: 4de85725-0d9d-4677-8554-c70379fa8192
 		summarizeBy: none
 		sourceColumn: S_FK_DIM_DATE_VALUATION_DATE
@@ -271,13 +278,14 @@ table FACT_SRE_BUILDING
 
 	column S_FK_DIM_SRE_PRODUCT
 		dataType: string
+		isHidden
 		lineageTag: a02fc215-37f7-46c8-866e-708adfbca155
 		summarizeBy: none
 		sourceColumn: S_FK_DIM_SRE_PRODUCT
 
 		annotation SummarizationSetBy = Automatic
 
-	column VALUATION_NOK
+	column 'Valuation (NOK)'
 		dataType: double
 		formatString: #,0
 		lineageTag: 38b6d8c2-9f0a-45de-9497-99efce4ef4e0
@@ -288,7 +296,7 @@ table FACT_SRE_BUILDING
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	column AREA_GFA
+	column 'Gross Floor Area (m²)'
 		dataType: double
 		formatString: #,0
 		lineageTag: a8f8ae7c-7ffa-4e97-8cba-b5b860bf44c2

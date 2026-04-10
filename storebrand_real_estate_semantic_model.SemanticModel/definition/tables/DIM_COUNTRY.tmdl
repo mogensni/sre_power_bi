@@ -3,6 +3,7 @@ table DIM_COUNTRY
 
 	column S_PK_DIM_COUNTRY
 		dataType: string
+		isHidden
 		lineageTag: 0e34249c-ae00-4c25-ab4f-87cb56be8f23
 		summarizeBy: none
 		sourceColumn: S_PK_DIM_COUNTRY
@@ -11,13 +12,14 @@ table DIM_COUNTRY
 
 	column S_DK_COUNTRY
 		dataType: string
+		isHidden
 		lineageTag: ff46d6d4-72e2-43ce-877b-31706d67672b
 		summarizeBy: none
 		sourceColumn: S_DK_COUNTRY
 
 		annotation SummarizationSetBy = Automatic
 
-	column COUNTRY_CODE_ALFA2
+	column 'Country Code (2 letters)'
 		dataType: string
 		lineageTag: 68886d1d-f41c-45db-82ea-d9d6d2617223
 		summarizeBy: none
@@ -25,7 +27,7 @@ table DIM_COUNTRY
 
 		annotation SummarizationSetBy = Automatic
 
-	column COUNTRY_CODE_ALFA3
+	column 'Country Code (3 letters)'
 		dataType: string
 		lineageTag: 6d188aa0-aa40-4190-8999-a7846f6a35d6
 		summarizeBy: none
@@ -33,7 +35,7 @@ table DIM_COUNTRY
 
 		annotation SummarizationSetBy = Automatic
 
-	column COUNTRY_NO
+	column 'Country Number'
 		dataType: double
 		lineageTag: 91c81f1f-bafd-416b-867b-939f8fdcfb61
 		summarizeBy: sum
@@ -45,6 +47,7 @@ table DIM_COUNTRY
 
 	column COUNTRY_IK
 		dataType: double
+		isHidden
 		lineageTag: f3e560bb-2c19-4bfc-8c3a-c88cdc2faade
 		summarizeBy: sum
 		sourceColumn: COUNTRY_IK
@@ -53,7 +56,7 @@ table DIM_COUNTRY
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column COUNTRY_NAME
+	column 'Country Name'
 		dataType: string
 		lineageTag: 233269d1-2068-43d3-b0d9-329af6fc2551
 		summarizeBy: none
@@ -61,7 +64,7 @@ table DIM_COUNTRY
 
 		annotation SummarizationSetBy = Automatic
 
-	column COUNTRY_NAME_LONG
+	column 'Country Name - Long Form'
 		dataType: string
 		lineageTag: 5cd2bd0d-1e4d-4957-a47b-6c8c924ec8dc
 		summarizeBy: none
@@ -69,7 +72,7 @@ table DIM_COUNTRY
 
 		annotation SummarizationSetBy = Automatic
 
-	column COUNTRY_NAME_SE
+	column 'Country Name (Swedish)'
 		dataType: string
 		lineageTag: c8b38875-6785-46a0-adf8-75c84dfd75d3
 		summarizeBy: none
@@ -79,6 +82,7 @@ table DIM_COUNTRY
 
 	column CREATED_DATE
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		lineageTag: bcbbff5e-060c-42c3-9fbe-354adbe0124c
 		summarizeBy: none
@@ -93,6 +97,7 @@ table DIM_COUNTRY
 
 	column LAST_CHANGE_TS
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		lineageTag: 8f5fd36a-6197-4e87-ac18-81f9cf4a82d4
 		summarizeBy: none
@@ -107,6 +112,7 @@ table DIM_COUNTRY
 
 	column ORIGINATING_SYSTEM_NO
 		dataType: double
+		isHidden
 		lineageTag: b342c132-f8f8-48f8-8f03-7e5f73f03b82
 		summarizeBy: sum
 		sourceColumn: ORIGINATING_SYSTEM_NO
@@ -115,7 +121,7 @@ table DIM_COUNTRY
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column PARTICIPATING_IN_EEA
+	column 'Participating in EEA'
 		dataType: string
 		lineageTag: 3cc66a16-98b3-4de9-9061-84ba7996e6ab
 		summarizeBy: none
@@ -123,7 +129,7 @@ table DIM_COUNTRY
 
 		annotation SummarizationSetBy = Automatic
 
-	column SOURCE
+	column 'Data Source'
 		dataType: string
 		lineageTag: 8208bff9-516c-4472-b807-4e5747342895
 		summarizeBy: none
@@ -133,6 +139,7 @@ table DIM_COUNTRY
 
 	column SORT
 		dataType: double
+		isHidden
 		lineageTag: 93954f5c-3f6a-440b-822a-bc20f69ee418
 		summarizeBy: sum
 		sourceColumn: SORT

@@ -23,10 +23,10 @@
                       "Entity": "DIM_SRE_PROPERTY"
                     }
                   },
-                  "Property": "PROPERTY_NAME"
+                  "Property": "Property Name"
                 }
               },
-              "queryRef": "DIM_SRE_PROPERTY.PROPERTY_NAME",
+              "queryRef": "DIM_SRE_PROPERTY.Property Name",
               "nativeQueryRef": "Eiendom",
               "active": true,
               "displayName": "Eiendom"
@@ -140,7 +140,7 @@
                 "Entity": "DIM_SRE_PROPERTY"
               }
             },
-            "Property": "PROPERTY_NAME"
+            "Property": "Property Name"
           }
         },
         "type": "Advanced",
@@ -168,7 +168,7 @@
                                   "Source": "d"
                                 }
                               },
-                              "Property": "PROPERTY_NAME"
+                              "Property": "Property Name"
                             }
                           },
                           "Right": {
@@ -191,7 +191,7 @@
                                   "Source": "d"
                                 }
                               },
-                              "Property": "PROPERTY_NAME"
+                              "Property": "Property Name"
                             }
                           },
                           "Right": {

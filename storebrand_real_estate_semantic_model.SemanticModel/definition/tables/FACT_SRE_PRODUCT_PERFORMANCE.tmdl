@@ -243,6 +243,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 	column S_PK_FACT_SRE_PRODUCT_PERFORMANCE
 		dataType: string
+		isHidden
 		lineageTag: 922570fc-9500-4887-b423-092068be4340
 		summarizeBy: none
 		sourceColumn: S_PK_FACT_SRE_PRODUCT_PERFORMANCE
@@ -251,6 +252,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 	column S_DK_SUB_PORTFOLIO_ID
 		dataType: string
+		isHidden
 		lineageTag: a72a33ea-5c54-4257-b6cb-460065c0fdb3
 		summarizeBy: none
 		sourceColumn: S_DK_SUB_PORTFOLIO_ID
@@ -259,6 +261,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 	column S_DK_PERFORMANCE_DATE
 		dataType: dateTime
+		isHidden
 		formatString: Long Date
 		lineageTag: 6d6157a0-3fb0-469a-8955-46d1b68a7cfb
 		summarizeBy: none
@@ -275,6 +278,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 	column S_FK_DIM_SRE_PRODUCT
 		dataType: string
+		isHidden
 		lineageTag: d32d59cb-77a4-4386-95dc-4d916319a640
 		summarizeBy: none
 		sourceColumn: S_FK_DIM_SRE_PRODUCT
@@ -283,6 +287,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 	column S_FK_DIM_DATE_PERFORMANCE_DATE
 		dataType: string
+		isHidden
 		lineageTag: 2e505722-bd0a-4221-9f4a-03d82ccbb308
 		summarizeBy: none
 		sourceColumn: S_FK_DIM_DATE_PERFORMANCE_DATE
@@ -291,6 +296,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 	column S_FK_DIM_CURRENCY
 		dataType: string
+		isHidden
 		lineageTag: 0e926423-5c6f-4edd-a795-a18d9038d7fa
 		summarizeBy: none
 		sourceColumn: S_FK_DIM_CURRENCY
@@ -299,13 +305,14 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 	column S_FK_DIM_COUNTRY
 		dataType: string
+		isHidden
 		lineageTag: ebd28899-041e-48f1-a912-df49a70aed8f
 		summarizeBy: none
 		sourceColumn: S_FK_DIM_COUNTRY
 
 		annotation SummarizationSetBy = Automatic
 
-	column CHANGE_IN_VALUE_QUARTER
+	column 'Change in Value (Quarter)'
 		dataType: double
 		lineageTag: 48f03a08-380c-43a8-a4c1-d6aa386ab284
 		summarizeBy: sum
@@ -315,7 +322,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column DEBT
+	column 'Debt'
 		dataType: double
 		lineageTag: 807d3e7a-82c2-4f2c-9181-72a8b0429650
 		summarizeBy: sum
@@ -325,7 +332,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column DIRECT_RETURN_QUARTER
+	column 'Direct Return (Quarter)'
 		dataType: double
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: c2760298-af9f-4c4a-a7e0-342e40bdc943
@@ -334,7 +341,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 		annotation SummarizationSetBy = Automatic
 
-	column DIRECT_RETURN_YEAR
+	column 'Direct Return (Year)'
 		dataType: double
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 6ffcfaaa-5159-4c2f-9e2f-1930f1becb11
@@ -343,7 +350,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 		annotation SummarizationSetBy = Automatic
 
-	column ENTERPRISE_VALUE
+	column 'Enterprise Value'
 		dataType: double
 		lineageTag: 9c6f8068-15bb-4201-83dc-e1c6463c9dc9
 		summarizeBy: sum
@@ -353,7 +360,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column FINANCE_GAIN_LOSS_QUARTER
+	column 'Finance Gain/Loss (Quarter)'
 		dataType: double
 		lineageTag: a7320de1-c1d6-4f6e-93b8-712e171945af
 		summarizeBy: sum
@@ -363,7 +370,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column PROFIT_LOSS_QUARTER
+	column 'Profit/Loss (Quarter)'
 		dataType: double
 		lineageTag: 90c2df9b-c2f8-46c6-ba70-2b88d128d4e0
 		summarizeBy: sum
@@ -373,7 +380,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column TOTAL_RETURN_QUARTER
+	column 'Total Return (Quarter)'
 		dataType: double
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 045d56e2-7157-4f12-9943-8f8a20749f4b
@@ -382,7 +389,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 		annotation SummarizationSetBy = Automatic
 
-	column TOTAL_RETURN_YEAR
+	column 'Total Return (Year)'
 		dataType: double
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 126c2e87-055f-4136-a684-e8f126d7bf5b
@@ -391,7 +398,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 		annotation SummarizationSetBy = Automatic
 
-	column VEK
+	column 'Weighted Equity Capital'
 		dataType: double
 		lineageTag: e4c8e160-04ef-467f-9a8c-4123c1437d57
 		summarizeBy: sum

@@ -14,6 +14,7 @@ table RATING_SORT_ORDER
 
 	column RatingSortOrder
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: a297bf37-063a-4d50-bd02-cd8ea27b4bc3
 		summarizeBy: none

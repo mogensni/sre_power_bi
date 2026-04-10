@@ -23,10 +23,10 @@
                       "Entity": "DIM_SRE_PROPERTY"
                     }
                   },
-                  "Property": "BUILDING_NAME"
+                  "Property": "Building Name"
                 }
               },
-              "queryRef": "DIM_SRE_PROPERTY.BUILDING_NAME",
+              "queryRef": "DIM_SRE_PROPERTY.Building Name",
               "nativeQueryRef": "Bygg",
               "displayName": "Bygg"
             },
@@ -38,10 +38,10 @@
                       "Entity": "DIM_SRE_PROPERTY"
                     }
                   },
-                  "Property": "ADDRESS"
+                  "Property": "Address"
                 }
               },
-              "queryRef": "DIM_SRE_PROPERTY.ADDRESS",
+              "queryRef": "DIM_SRE_PROPERTY.Address",
               "nativeQueryRef": "Adresse",
               "displayName": "Adresse"
             },
@@ -53,7 +53,7 @@
                       "Entity": "DIM_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "BUILDING_CATEGORY"
+                  "Property": "Building Category"
                 }
               },
               "queryRef": "DIM_SRE_ENOVA_CERTIFICATE.BUILDING_CATEGORY",
@@ -68,10 +68,10 @@
                       "Entity": "FACT_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "Mål_heated_area"
+                  "Property": "Heated Area"
                 }
               },
-              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Mål_heated_area",
+              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Heated Area",
               "nativeQueryRef": "Oppv. areal",
               "displayName": "Oppv. areal"
             },
@@ -83,10 +83,10 @@
                       "Entity": "FACT_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "Mål_certified_value"
+                  "Property": "Certified Value"
                 }
               },
-              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Mål_certified_value",
+              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Certified Value",
               "nativeQueryRef": "Sertifisert verdi",
               "displayName": "Sertifisert verdi"
             },
@@ -98,10 +98,10 @@
                       "Entity": "DIM_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "ENERGY_CHARACTER"
+                  "Property": "Energy Character"
                 }
               },
-              "queryRef": "DIM_SRE_ENOVA_CERTIFICATE.ENERGY_CHARACTER",
+              "queryRef": "DIM_SRE_ENOVA_CERTIFICATE.Energy Character",
               "nativeQueryRef": "Energikarakter",
               "displayName": "Energikarakter"
             },
@@ -133,10 +133,10 @@
                       "Entity": "DIM_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "HEATING_CHARACTER"
+                  "Property": "Heating Character"
                 }
               },
-              "queryRef": "DIM_SRE_ENOVA_CERTIFICATE.HEATING_CHARACTER",
+              "queryRef": "DIM_SRE_ENOVA_CERTIFICATE.Heating Character",
               "nativeQueryRef": "Oppv.karakter",
               "displayName": "Oppv.karakter"
             },
@@ -148,7 +148,7 @@
                       "Entity": "DIM_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "CERT_DATE"
+                  "Property": "Certification Date"
                 }
               },
               "queryRef": "DIM_SRE_ENOVA_CERTIFICATE.CERT_DATE",
@@ -164,7 +164,7 @@
                       "Entity": "DIM_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "CERT_UNTIL_DATE_CALC"
+                  "Property": "Calculated Valid Until Date"
                 }
               },
               "queryRef": "DIM_SRE_ENOVA_CERTIFICATE.CERT_UNTIL_DATE_CALC",
@@ -185,7 +185,7 @@
                     "Entity": "DIM_SRE_PROPERTY"
                   }
                 },
-                "Property": "BUILDING_NAME"
+                "Property": "Building Name"
               }
             },
             "direction": "Ascending"
@@ -206,7 +206,7 @@
             }
           },
           "selector": {
-            "metadata": "DIM_SRE_PROPERTY.BUILDING_NAME"
+            "metadata": "DIM_SRE_PROPERTY.Building Name"
           }
         },
         {
@@ -220,7 +220,7 @@
             }
           },
           "selector": {
-            "metadata": "FACT_SRE_ENOVA_CERTIFICATE.Mål_heated_area"
+            "metadata": "FACT_SRE_ENOVA_CERTIFICATE.Heated Area"
           }
         },
         {
@@ -234,7 +234,7 @@
             }
           },
           "selector": {
-            "metadata": "FACT_SRE_ENOVA_CERTIFICATE.Mål_certified_value"
+            "metadata": "FACT_SRE_ENOVA_CERTIFICATE.Certified Value"
           }
         },
         {
@@ -276,7 +276,7 @@
             }
           },
           "selector": {
-            "metadata": "DIM_SRE_ENOVA_CERTIFICATE.ENERGY_CHARACTER"
+            "metadata": "DIM_SRE_ENOVA_CERTIFICATE.Energy Character"
           }
         },
         {
@@ -290,7 +290,7 @@
             }
           },
           "selector": {
-            "metadata": "DIM_SRE_ENOVA_CERTIFICATE.HEATING_CHARACTER"
+            "metadata": "DIM_SRE_ENOVA_CERTIFICATE.Heating Character"
           }
         },
         {
@@ -304,7 +304,7 @@
             }
           },
           "selector": {
-            "metadata": "DIM_SRE_PROPERTY.ADDRESS"
+            "metadata": "DIM_SRE_PROPERTY.Address"
           }
         }
       ],
@@ -320,7 +320,7 @@
             }
           },
           "selector": {
-            "metadata": "DIM_SRE_ENOVA_CERTIFICATE.ENERGY_CHARACTER"
+            "metadata": "DIM_SRE_ENOVA_CERTIFICATE.Energy Character"
           }
         }
       ]

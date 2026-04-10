@@ -23,10 +23,10 @@
                       "Entity": "DIM_SRE_PROPERTY"
                     }
                   },
-                  "Property": "MAIN_BUILDING_SEGMENT"
+                  "Property": "Main Building Segment"
                 }
               },
-              "queryRef": "DIM_SRE_PROPERTY.MAIN_BUILDING_SEGMENT",
+              "queryRef": "DIM_SRE_PROPERTY.Main Building Segment",
               "nativeQueryRef": "Segment",
               "active": true,
               "displayName": "Segment"
@@ -133,7 +133,7 @@
                 "Entity": "DIM_SRE_PROPERTY"
               }
             },
-            "Property": "MAIN_BUILDING_SEGMENT"
+            "Property": "Main Building Segment"
           }
         },
         "type": "Advanced",
@@ -161,7 +161,7 @@
                                   "Source": "d"
                                 }
                               },
-                              "Property": "MAIN_BUILDING_SEGMENT"
+                              "Property": "Main Building Segment"
                             }
                           },
                           "Right": {
@@ -184,7 +184,7 @@
                                   "Source": "d"
                                 }
                               },
-                              "Property": "MAIN_BUILDING_SEGMENT"
+                              "Property": "Main Building Segment"
                             }
                           },
                           "Right": {

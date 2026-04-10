@@ -38,10 +38,10 @@
                       "Entity": "DIM_SRE_PROPERTY"
                     }
                   },
-                  "Property": "ADDRESS"
+                  "Property": "Address"
                 }
               },
-              "queryRef": "DIM_SRE_PROPERTY.ADDRESS",
+              "queryRef": "DIM_SRE_PROPERTY.Address",
               "nativeQueryRef": "ADDRESS",
               "active": true
             }
@@ -59,7 +59,7 @@
                           "Entity": "FACT_SRE_BREEAM_CERTIFICATE"
                         }
                       },
-                      "Property": "TOTAL_BUILDING_CATEGORY_HEATED_AREA"
+                      "Property": "Total Building Category Heated Area (m²)"
                     }
                   },
                   "Function": 0
@@ -79,7 +79,7 @@
                           "Entity": "FACT_SRE_BREEAM_CERTIFICATE"
                         }
                       },
-                      "Property": "HEATED_AREA_INUSE"
+                      "Property": "Heated Area In-Use (m²)"
                     }
                   },
                   "Function": 0
@@ -99,7 +99,7 @@
                           "Entity": "FACT_SRE_BREEAM_CERTIFICATE"
                         }
                       },
-                      "Property": "HEATED_AREA_NOR"
+                      "Property": "Heated Area NOR (m²)"
                     }
                   },
                   "Function": 0
@@ -119,7 +119,7 @@
                           "Entity": "FACT_SRE_BUILDING"
                         }
                       },
-                      "Property": "VALUATION_NOK"
+                      "Property": "Valuation (NOK)"
                     }
                   },
                   "Function": 0
@@ -139,7 +139,7 @@
                           "Entity": "FACT_SRE_BREEAM_CERTIFICATE"
                         }
                       },
-                      "Property": "CERTIFIED_VALUE"
+                      "Property": "Certified Building Value"
                     }
                   },
                   "Function": 0
@@ -175,7 +175,7 @@
                     "Entity": "DIM_SRE_PROPERTY"
                   }
                 },
-                "Property": "ADDRESS"
+                "Property": "Address"
               }
             },
             "direction": "Ascending"

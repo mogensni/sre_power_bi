@@ -23,7 +23,7 @@
                       "Entity": "DIM_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "BUILDING_CATEGORY"
+                  "Property": "Building Category"
                 }
               },
               "queryRef": "DIM_SRE_ENOVA_CERTIFICATE.BUILDING_CATEGORY",
@@ -140,7 +140,7 @@
                 "Entity": "DIM_SRE_ENOVA_CERTIFICATE"
               }
             },
-            "Property": "BUILDING_CATEGORY"
+            "Property": "Building Category"
           }
         },
         "type": "Advanced",
@@ -168,7 +168,7 @@
                                   "Source": "d"
                                 }
                               },
-                              "Property": "BUILDING_CATEGORY"
+                              "Property": "Building Category"
                             }
                           },
                           "Right": {
@@ -191,7 +191,7 @@
                                   "Source": "d"
                                 }
                               },
-                              "Property": "BUILDING_CATEGORY"
+                              "Property": "Building Category"
                             }
                           },
                           "Right": {
