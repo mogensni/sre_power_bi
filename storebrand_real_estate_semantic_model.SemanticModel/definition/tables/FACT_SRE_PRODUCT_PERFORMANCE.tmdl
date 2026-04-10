@@ -243,6 +243,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 	column S_PK_FACT_SRE_PRODUCT_PERFORMANCE
 		dataType: string
+		isHidden
 		lineageTag: 922570fc-9500-4887-b423-092068be4340
 		summarizeBy: none
 		sourceColumn: S_PK_FACT_SRE_PRODUCT_PERFORMANCE
@@ -251,6 +252,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 	column S_DK_SUB_PORTFOLIO_ID
 		dataType: string
+		isHidden
 		lineageTag: a72a33ea-5c54-4257-b6cb-460065c0fdb3
 		summarizeBy: none
 		sourceColumn: S_DK_SUB_PORTFOLIO_ID
@@ -259,6 +261,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 	column S_DK_PERFORMANCE_DATE
 		dataType: dateTime
+		isHidden
 		formatString: Long Date
 		lineageTag: 6d6157a0-3fb0-469a-8955-46d1b68a7cfb
 		summarizeBy: none
@@ -275,6 +278,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 	column S_FK_DIM_SRE_PRODUCT
 		dataType: string
+		isHidden
 		lineageTag: d32d59cb-77a4-4386-95dc-4d916319a640
 		summarizeBy: none
 		sourceColumn: S_FK_DIM_SRE_PRODUCT
@@ -283,6 +287,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 	column S_FK_DIM_DATE_PERFORMANCE_DATE
 		dataType: string
+		isHidden
 		lineageTag: 2e505722-bd0a-4221-9f4a-03d82ccbb308
 		summarizeBy: none
 		sourceColumn: S_FK_DIM_DATE_PERFORMANCE_DATE
@@ -291,6 +296,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 	column S_FK_DIM_CURRENCY
 		dataType: string
+		isHidden
 		lineageTag: 0e926423-5c6f-4edd-a795-a18d9038d7fa
 		summarizeBy: none
 		sourceColumn: S_FK_DIM_CURRENCY
@@ -299,6 +305,7 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 
 	column S_FK_DIM_COUNTRY
 		dataType: string
+		isHidden
 		lineageTag: ebd28899-041e-48f1-a912-df49a70aed8f
 		summarizeBy: none
 		sourceColumn: S_FK_DIM_COUNTRY
