@@ -23,10 +23,10 @@
                       "Entity": "DIM_SRE_PROPERTY"
                     }
                   },
-                  "Property": "BUILDING_NAME"
+                  "Property": "Building Name"
                 }
               },
-              "queryRef": "DIM_SRE_PROPERTY.BUILDING_NAME",
+              "queryRef": "DIM_SRE_PROPERTY.Building Name",
               "nativeQueryRef": "Bygningsnavn",
               "displayName": "Bygningsnavn"
             },
@@ -88,10 +88,10 @@
                       "Entity": "FACT_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "Mål_heated_area"
+                  "Property": "Heated Area"
                 }
               },
-              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Mål_heated_area",
+              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Heated Area",
               "nativeQueryRef": "Sert. oppv. areal",
               "displayName": "Sert. oppv. areal"
             },
@@ -103,10 +103,10 @@
                       "Entity": "FACT_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "Mål_heated_andel"
+                  "Property": "Heated Area Share"
                 }
               },
-              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Mål_heated_andel",
+              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Heated Area Share",
               "nativeQueryRef": "Andel areal",
               "displayName": "Andel areal"
             },
@@ -158,10 +158,10 @@
                       "Entity": "FACT_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "Mål_certified_andel"
+                  "Property": "Certified Value Share"
                 }
               },
-              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Mål_certified_andel",
+              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Certified Value Share",
               "nativeQueryRef": "Andel sertifisert",
               "displayName": "Andel sertifisert"
             }

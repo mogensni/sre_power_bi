@@ -38,10 +38,10 @@
                       "Entity": "DIM_SRE_PROPERTY"
                     }
                   },
-                  "Property": "ADDRESS"
+                  "Property": "Address"
                 }
               },
-              "queryRef": "DIM_SRE_PROPERTY.ADDRESS",
+              "queryRef": "DIM_SRE_PROPERTY.Address",
               "nativeQueryRef": "ADDRESS",
               "active": true
             }
@@ -175,7 +175,7 @@
                     "Entity": "DIM_SRE_PROPERTY"
                   }
                 },
-                "Property": "ADDRESS"
+                "Property": "Address"
               }
             },
             "direction": "Ascending"

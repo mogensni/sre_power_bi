@@ -39,10 +39,10 @@
                       "Entity": "DIM_SRE_PROPERTY"
                     }
                   },
-                  "Property": "BUILDING_NAME"
+                  "Property": "Building Name"
                 }
               },
-              "queryRef": "DIM_SRE_PROPERTY.BUILDING_NAME",
+              "queryRef": "DIM_SRE_PROPERTY.Building Name",
               "nativeQueryRef": "Byggnavn",
               "active": false,
               "displayName": "Byggnavn"
@@ -55,10 +55,10 @@
                       "Entity": "DIM_SRE_PROPERTY"
                     }
                   },
-                  "Property": "ADDRESS"
+                  "Property": "Address"
                 }
               },
-              "queryRef": "DIM_SRE_PROPERTY.ADDRESS",
+              "queryRef": "DIM_SRE_PROPERTY.Address",
               "nativeQueryRef": "ADDRESS",
               "active": false
             }
@@ -114,10 +114,10 @@
                       "Entity": "FACT_SRE_ENOVA_CERTIFICATE"
                     }
                   },
-                  "Property": "Mål_heated_area"
+                  "Property": "Heated Area"
                 }
               },
-              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Mål_heated_area",
+              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Heated Area",
               "nativeQueryRef": "Oppv. areal",
               "displayName": "Oppv. areal"
             }
@@ -180,7 +180,7 @@
                       "Entity": "DIM_SRE_PROPERTY"
                     }
                   },
-                  "Property": "BUILDING_NAME"
+                  "Property": "Building Name"
                 }
               }
             ],

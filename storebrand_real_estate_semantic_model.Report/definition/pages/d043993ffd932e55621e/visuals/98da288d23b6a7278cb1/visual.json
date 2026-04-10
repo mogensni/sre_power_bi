@@ -23,10 +23,10 @@
                       "Entity": "DIM_SRE_PROPERTY"
                     }
                   },
-                  "Property": "BUILDING_NAME"
+                  "Property": "Building Name"
                 }
               },
-              "queryRef": "DIM_SRE_PROPERTY.BUILDING_NAME",
+              "queryRef": "DIM_SRE_PROPERTY.Building Name",
               "nativeQueryRef": "Bygg",
               "displayName": "Bygg"
             },
@@ -38,10 +38,10 @@
                       "Entity": "DIM_SRE_PROPERTY"
                     }
                   },
-                  "Property": "ADDRESS"
+                  "Property": "Address"
                 }
               },
-              "queryRef": "DIM_SRE_PROPERTY.ADDRESS",
+              "queryRef": "DIM_SRE_PROPERTY.Address",
               "nativeQueryRef": "Adresse",
               "displayName": "Adresse"
             },
@@ -201,7 +201,7 @@
                     "Entity": "DIM_SRE_PROPERTY"
                   }
                 },
-                "Property": "BUILDING_NAME"
+                "Property": "Building Name"
               }
             },
             "direction": "Ascending"
@@ -250,7 +250,7 @@
             }
           },
           "selector": {
-            "metadata": "DIM_SRE_PROPERTY.BUILDING_NAME"
+            "metadata": "DIM_SRE_PROPERTY.Building Name"
           }
         },
         {
@@ -278,7 +278,7 @@
             }
           },
           "selector": {
-            "metadata": "DIM_SRE_PROPERTY.ADDRESS"
+            "metadata": "DIM_SRE_PROPERTY.Address"
           }
         },
         {
