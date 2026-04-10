@@ -3,6 +3,7 @@ table DIM_SRE_BREEAM_CERTIFICATE
 
 	column S_PK_DIM_SRE_BREEAM_CERTIFICATE
 		dataType: string
+		isHidden
 		lineageTag: 4bf87016-8b93-4960-969c-7cad0ec71ebe
 		summarizeBy: none
 		sourceColumn: S_PK_DIM_SRE_BREEAM_CERTIFICATE
@@ -11,6 +12,7 @@ table DIM_SRE_BREEAM_CERTIFICATE
 
 	column S_DK_CERTIFICATE_NO
 		dataType: string
+		isHidden
 		lineageTag: 1701379f-964c-49d0-82cb-68b00b80db6d
 		summarizeBy: none
 		sourceColumn: S_DK_CERTIFICATE_NO
@@ -133,6 +135,7 @@ table DIM_SRE_BREEAM_CERTIFICATE
 
 	column DBT_LAST_LOADED_DATETIME
 		dataType: dateTime
+		isHidden
 		formatString: General Date
 		lineageTag: c9748bb9-3d99-41bc-8d4e-ff353dcf5e61
 		summarizeBy: none
