@@ -1,0 +1,338 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "98da288d23b6a7278cb1",
+  "position": {
+    "x": 181.09150837752753,
+    "y": 531.59120201145174,
+    "z": 0,
+    "height": 188.39358532823428,
+    "width": 1088.9830759154008,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_SRE_PROPERTY"
+                    }
+                  },
+                  "Property": "BUILDING_NAME"
+                }
+              },
+              "queryRef": "DIM_SRE_PROPERTY.BUILDING_NAME",
+              "nativeQueryRef": "Bygg",
+              "displayName": "Bygg"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_SRE_PROPERTY"
+                    }
+                  },
+                  "Property": "ADDRESS"
+                }
+              },
+              "queryRef": "DIM_SRE_PROPERTY.ADDRESS",
+              "nativeQueryRef": "Adresse",
+              "displayName": "Adresse"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_SRE_BREEAM_CERTIFICATE"
+                    }
+                  },
+                  "Property": "BUILDING_CATEGORY"
+                }
+              },
+              "queryRef": "DIM_SRE_BREEAM_CERTIFICATE.BUILDING_CATEGORY",
+              "nativeQueryRef": "Bygningskat.",
+              "displayName": "Bygningskat."
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FACT_SRE_BREEAM_CERTIFICATE"
+                        }
+                      },
+                      "Property": "HEATED_AREA_INUSE"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(FACT_SRE_BREEAM_CERTIFICATE.HEATED_AREA_INUSE)",
+              "nativeQueryRef": "Oppv.BIU",
+              "displayName": "Oppv.BIU"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FACT_SRE_BREEAM_CERTIFICATE"
+                        }
+                      },
+                      "Property": "HEATED_AREA_NOR"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(FACT_SRE_BREEAM_CERTIFICATE.HEATED_AREA_NOR)",
+              "nativeQueryRef": "Oppv.NOR",
+              "displayName": "Oppv.NOR"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FACT_SRE_BREEAM_CERTIFICATE"
+                        }
+                      },
+                      "Property": "CERTIFIED_VALUE"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(FACT_SRE_BREEAM_CERTIFICATE.CERTIFIED_VALUE)",
+              "nativeQueryRef": "Sertifisert verdi",
+              "displayName": "Sertifisert verdi"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_SRE_BREEAM_CERTIFICATE"
+                    }
+                  },
+                  "Property": "RATING"
+                }
+              },
+              "queryRef": "DIM_SRE_BREEAM_CERTIFICATE.RATING",
+              "nativeQueryRef": "Vurdering",
+              "displayName": "Vurdering"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FACT_SRE_BREEAM_CERTIFICATE"
+                        }
+                      },
+                      "Property": "SCORE"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(FACT_SRE_BREEAM_CERTIFICATE.SCORE)",
+              "nativeQueryRef": "Score",
+              "displayName": "Score",
+              "format": "0.00"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_SRE_BREEAM_CERTIFICATE"
+                    }
+                  },
+                  "Property": "CERT_DATE"
+                }
+              },
+              "queryRef": "DIM_SRE_BREEAM_CERTIFICATE.CERT_DATE",
+              "nativeQueryRef": "Sert. dato",
+              "displayName": "Sert. dato",
+              "format": "d"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_SRE_BREEAM_CERTIFICATE"
+                    }
+                  },
+                  "Property": "CERT_UNTIL_DATE_CALC"
+                }
+              },
+              "queryRef": "DIM_SRE_BREEAM_CERTIFICATE.CERT_UNTIL_DATE_CALC",
+              "nativeQueryRef": "Utløpsdato",
+              "displayName": "Utløpsdato",
+              "format": "d"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DIM_SRE_PROPERTY"
+                  }
+                },
+                "Property": "BUILDING_NAME"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "118.30576410058589D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DIM_SRE_BREEAM_CERTIFICATE.RATING"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "85.82194750298802D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DIM_SRE_BREEAM_CERTIFICATE.CERT_DATE"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "161.1412803717792D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DIM_SRE_PROPERTY.BUILDING_NAME"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "59.80156801363239D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(FACT_SRE_BREEAM_CERTIFICATE.SCORE)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "157.72525456435238D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DIM_SRE_PROPERTY.ADDRESS"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "115.35299696572811D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DIM_SRE_BREEAM_CERTIFICATE.BUILDING_CATEGORY"
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "styleValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(FACT_SRE_BREEAM_CERTIFICATE.SCORE)"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

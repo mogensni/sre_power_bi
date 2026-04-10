@@ -1,0 +1,267 @@
+table FACT_SRE_BREEAM_CERTIFICATE
+	lineageTag: 821d7a91-b774-42b4-917a-1f8a0f98bf92
+
+	column S_PK_FACT_SRE_BREEAM_CERTIFICATE
+		dataType: string
+		lineageTag: f10bc827-c1cd-4670-9f88-6b33326be98b
+		summarizeBy: none
+		sourceColumn: S_PK_FACT_SRE_BREEAM_CERTIFICATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_DK_BUILDING_ID
+		dataType: double
+		lineageTag: 75d1c0a5-8d18-4510-9c25-683a1ecc2141
+		summarizeBy: count
+		sourceColumn: S_DK_BUILDING_ID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column S_DK_VALUATION_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 450f6bc5-01f4-4f1c-913f-5ac1e3e1350e
+		summarizeBy: none
+		sourceColumn: S_DK_VALUATION_DATE
+
+		variation Variasjon
+			isDefault
+			relationship: 478a3f9e-b803-4abd-8e96-1bc8ff8ef818
+			defaultHierarchy: LocalDateTable_6d51e042-5975-4207-940a-1e68db35d6e6.Datohierarki
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column S_DK_CERTIFICATE_NO
+		dataType: string
+		lineageTag: 2faaba31-0711-4fec-a0e0-739f35290e15
+		summarizeBy: none
+		sourceColumn: S_DK_CERTIFICATE_NO
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_FK_DIM_SRE_PROPERTY
+		dataType: string
+		lineageTag: 6ae0075d-539e-4a28-82fa-eab769d1aabf
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_SRE_PROPERTY
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_FK_DIM_SRE_BREEAM_CERTIFICATE
+		dataType: string
+		lineageTag: 9137d734-33e2-47cf-a935-29bc9216f149
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_SRE_BREEAM_CERTIFICATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_FK_DIM_DATE
+		dataType: string
+		lineageTag: 94b2b544-70fe-4681-b9fb-fb1bf8591149
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column SCORE
+		dataType: double
+		lineageTag: acd62090-a84d-466c-aef2-9cc61f50091f
+		summarizeBy: sum
+		sourceColumn: SCORE
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column INUSE_SCORE_HEALTH_WELLBEING
+		dataType: double
+		lineageTag: 8cca6055-bc92-44aa-b7c4-7dede283aa31
+		summarizeBy: sum
+		sourceColumn: INUSE_SCORE_HEALTH_WELLBEING
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column INUSE_SCORE_ENERGY
+		dataType: double
+		lineageTag: 11d3f179-2bd9-4ae8-80cb-e1fc6f642bae
+		summarizeBy: sum
+		sourceColumn: INUSE_SCORE_ENERGY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column INUSE_SCORE_TRANSPORT
+		dataType: double
+		lineageTag: 82796bd5-dacf-48de-8f28-5272b1e84379
+		summarizeBy: sum
+		sourceColumn: INUSE_SCORE_TRANSPORT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column INUSE_SCORE_WATER
+		dataType: double
+		lineageTag: 2e0e748a-e43e-4ad0-a81d-2d65e462bb47
+		summarizeBy: sum
+		sourceColumn: INUSE_SCORE_WATER
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column INUSE_SCORE_RESOURCES
+		dataType: double
+		lineageTag: 3ab53dc9-3505-4e20-826d-db36592417a0
+		summarizeBy: sum
+		sourceColumn: INUSE_SCORE_RESOURCES
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column INUSE_SCORE_RESILIENCE
+		dataType: double
+		lineageTag: 6a3ad836-005d-474d-a6c8-fa03c01f5403
+		summarizeBy: sum
+		sourceColumn: INUSE_SCORE_RESILIENCE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column INUSE_SCORE_LAND_USE_AND_ECOLOGY
+		dataType: double
+		lineageTag: a96f8d98-533f-469c-9381-794d986594e1
+		summarizeBy: sum
+		sourceColumn: INUSE_SCORE_LAND_USE_AND_ECOLOGY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column INUSE_SCORE_POLLUTION
+		dataType: double
+		lineageTag: cf1089fe-69a8-4d12-81fc-f137ff633c90
+		summarizeBy: sum
+		sourceColumn: INUSE_SCORE_POLLUTION
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column INUSE_SCORE_EXEMPLARY
+		dataType: double
+		lineageTag: e160d096-0e22-4991-82c2-3723e2cca83f
+		summarizeBy: sum
+		sourceColumn: INUSE_SCORE_EXEMPLARY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TOTAL_AREA_ASSESSED
+		dataType: double
+		lineageTag: 2c754c17-d3fc-4d45-984f-405656393c5e
+		summarizeBy: sum
+		sourceColumn: TOTAL_AREA_ASSESSED
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TOTAL_BUILDING_HEATED_AREA
+		dataType: double
+		lineageTag: a22c5ea0-6153-4e91-b831-c301de9efbfd
+		summarizeBy: sum
+		sourceColumn: TOTAL_BUILDING_HEATED_AREA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TOTAL_BUILDING_CATEGORY_HEATED_AREA
+		dataType: double
+		formatString: #,0
+		lineageTag: 73586f30-1e56-4e2a-90fc-9eed86e75023
+		summarizeBy: sum
+		sourceColumn: TOTAL_BUILDING_CATEGORY_HEATED_AREA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column HEATED_AREA_INUSE
+		dataType: double
+		formatString: #,0
+		lineageTag: 769517f6-dd48-4f29-b291-ac056f747128
+		summarizeBy: sum
+		sourceColumn: HEATED_AREA_INUSE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column HEATED_AREA_NOR
+		dataType: double
+		formatString: #,0
+		lineageTag: 2607fce2-5333-4f65-ae08-459916cf3aee
+		summarizeBy: sum
+		sourceColumn: HEATED_AREA_NOR
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column BUILDING_VALUE
+		dataType: double
+		formatString: #,0
+		lineageTag: ac43e451-c32c-4390-a815-6070a34e5026
+		summarizeBy: sum
+		sourceColumn: BUILDING_VALUE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column CERTIFIED_VALUE
+		dataType: double
+		formatString: #,0
+		lineageTag: 9af75016-82af-4844-a88b-54b5f9e7bead
+		summarizeBy: sum
+		sourceColumn: CERTIFIED_VALUE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column S_FK_DIM_SRE_PRODUCT
+		dataType: string
+		lineageTag: 89200a5c-e080-4bdb-8084-8e0861f52128
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_SRE_PRODUCT
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FACT_SRE_BREEAM_CERTIFICATE = m
+		mode: import
+		source =
+				let
+				  Kilde = Snowflake.Databases("cb20535.west-europe.azure.snowflakecomputing.com", "ANALYSIS_SAM_WH", [Implementation = "2.0"]),
+				  #"Navigering 1" = Kilde{[Name = "DWH_SAM", Kind = "Database"]}[Data],
+				  #"Navigering 2" = #"Navigering 1"{[Name = "REAL_ESTATE", Kind = "Schema"]}[Data],
+				  #"Navigering 3" = #"Navigering 2"{[Name = "FACT_SRE_BREEAM_CERTIFICATE", Kind = "View"]}[Data]
+				in
+				  #"Navigering 3"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigasjon
+

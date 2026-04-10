@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "storebrand_real_estate_semantic_model"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "b5a5554a-2f25-40a9-acca-fe6320b37d10"
+  }
+}
