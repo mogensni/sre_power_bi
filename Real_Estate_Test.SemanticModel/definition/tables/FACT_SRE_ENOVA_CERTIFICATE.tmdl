@@ -45,11 +45,6 @@ table FACT_SRE_ENOVA_CERTIFICATE
 		summarizeBy: none
 		sourceColumn: S_DK_VALUATION_DATE
 
-		variation Variasjon
-			isDefault
-			relationship: 2a43bad5-e953-4ad4-a0c1-301f4924c1d3
-			defaultHierarchy: LocalDateTable_ec461a17-820a-4d4c-8043-ab05f19e8df0.Datohierarki
-
 		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic

@@ -34,11 +34,6 @@ table DIM_CURRENCY
 		summarizeBy: none
 		sourceColumn: CREATED_DATE
 
-		variation Variasjon
-			isDefault
-			relationship: d195aee6-a6c2-46ff-bfea-495099ed8200
-			defaultHierarchy: LocalDateTable_734b92a1-126d-4681-8f20-9ac36a9cbbfe.Datohierarki
-
 		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
@@ -97,11 +92,6 @@ table DIM_CURRENCY
 		summarizeBy: none
 		sourceColumn: LAST_CHANGE_TS
 
-		variation Variasjon
-			isDefault
-			relationship: 04c0cacf-6bc4-4287-8b1a-942d8360455e
-			defaultHierarchy: LocalDateTable_0b1f4ba6-c9e9-453f-892a-70bd7523cb07.Datohierarki
-
 		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
@@ -126,11 +116,6 @@ table DIM_CURRENCY
 		lineageTag: b7dfab02-25e4-44ec-9a08-f2b033d10d26
 		summarizeBy: none
 		sourceColumn: DBT_LAST_LOADED_DATETIME
-
-		variation Variasjon
-			isDefault
-			relationship: d139872c-8b96-4293-9a99-88e429a18d7d
-			defaultHierarchy: LocalDateTable_b3273fac-fda8-4db2-805b-52c58aa69dd1.Datohierarki
 
 		changedProperty = IsHidden
 

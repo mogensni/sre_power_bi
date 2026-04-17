@@ -240,11 +240,6 @@ table Enova
 		summarizeBy: none
 		sourceColumn: Certification Date
 
-		variation Variasjon
-			isDefault
-			relationship: 20714c42-1be4-49c8-894c-594fb008d8b6
-			defaultHierarchy: LocalDateTable_9af9cedd-cae4-42a2-a15d-cc78732b53a0.Datohierarki
-
 		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
@@ -257,11 +252,6 @@ table Enova
 		lineageTag: 4336133b-4119-4bfc-b242-03a24e0e324c
 		summarizeBy: none
 		sourceColumn: Certification Valid Until Date
-
-		variation Variasjon
-			isDefault
-			relationship: bb4f2dd6-263c-4a92-a609-fccaa072ac07
-			defaultHierarchy: LocalDateTable_bd44100e-aac3-46b2-bb62-a0499fe8eb71.Datohierarki
 
 		changedProperty = IsHidden
 
@@ -286,11 +276,6 @@ table Enova
 		summarizeBy: none
 		sourceColumn: Leakage Value Date
 
-		variation Variasjon
-			isDefault
-			relationship: 5acf1acf-45af-4e3c-93b4-d146a4a53d1a
-			defaultHierarchy: LocalDateTable_75c469ac-9535-4b5f-979d-7f7e748890d6.Datohierarki
-
 		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
@@ -305,11 +290,6 @@ table Enova
 		summarizeBy: none
 		sourceColumn: DBT_LAST_LOADED_DATETIME
 
-		variation Variasjon
-			isDefault
-			relationship: a97340e1-fb13-45bb-aadb-338093d38051
-			defaultHierarchy: LocalDateTable_9a4665c4-4d33-47f2-a434-ef631a898f4b.Datohierarki
-
 		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
@@ -320,11 +300,6 @@ table Enova
 		lineageTag: c42c3167-97f7-4cb4-9ab4-7740fff29c50
 		summarizeBy: none
 		sourceColumn: Certification Expiry Date
-
-		variation Variasjon
-			isDefault
-			relationship: 7ab8ff3b-dcee-4941-b0ae-961b6f059c27
-			defaultHierarchy: LocalDateTable_0e2ff862-1a64-4ec9-b861-6fca89e0c0b1.Datohierarki
 
 		annotation SummarizationSetBy = Automatic
 

@@ -32,11 +32,6 @@ table FACT_SRE_PRODUCT_PERFORMANCE
 		summarizeBy: none
 		sourceColumn: S_DK_PERFORMANCE_DATE
 
-		variation Variasjon
-			isDefault
-			relationship: 0e64a3b5-86e0-4d29-bc28-e328ef2bcf18
-			defaultHierarchy: LocalDateTable_f89fc23d-ea0b-48cf-be85-fff01a5153b6.Datohierarki
-
 		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic

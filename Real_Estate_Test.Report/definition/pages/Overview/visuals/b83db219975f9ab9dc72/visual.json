@@ -458,6 +458,20 @@
           }
         },
         "type": "Categorical"
+      },
+      {
+        "name": "fffa60016dee2ed4e373",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Enova"
+              }
+            },
+            "Property": "Certification Expiry Date"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

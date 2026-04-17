@@ -34,11 +34,6 @@ table FACT_SRE_BREEAM_CERTIFICATE
 		summarizeBy: none
 		sourceColumn: S_DK_VALUATION_DATE
 
-		variation Variasjon
-			isDefault
-			relationship: 478a3f9e-b803-4abd-8e96-1bc8ff8ef818
-			defaultHierarchy: LocalDateTable_6d51e042-5975-4207-940a-1e68db35d6e6.Datohierarki
-
 		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic

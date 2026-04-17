@@ -113,11 +113,6 @@ table DIM_COUNTRY
 		summarizeBy: none
 		sourceColumn: CREATED_DATE
 
-		variation Variasjon
-			isDefault
-			relationship: 160134f0-e44c-4489-9ae4-b1ff6911d213
-			defaultHierarchy: LocalDateTable_ab5cd758-de6e-4702-8fea-eeb5934d7fd9.Datohierarki
-
 		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
@@ -129,11 +124,6 @@ table DIM_COUNTRY
 		lineageTag: 8f5fd36a-6197-4e87-ac18-81f9cf4a82d4
 		summarizeBy: none
 		sourceColumn: LAST_CHANGE_TS
-
-		variation Variasjon
-			isDefault
-			relationship: bcd045b7-4cb3-4e82-b994-c8cbf1c528fe
-			defaultHierarchy: LocalDateTable_53959f2d-ddfa-4304-a60b-16a415297314.Datohierarki
 
 		changedProperty = IsHidden
 

@@ -20,11 +20,6 @@ table Date
 		summarizeBy: none
 		sourceColumn: S_DK_DATE_TIME
 
-		variation Variasjon
-			isDefault
-			relationship: 245b9624-9585-40ea-ac95-baf2a84a50a6
-			defaultHierarchy: LocalDateTable_194e6480-e259-4d10-8938-9cdc2bf64bfc.Datohierarki
-
 		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
@@ -37,11 +32,6 @@ table Date
 		lineageTag: 472b4dcd-3021-43e4-99c9-d32b096f7ba0
 		summarizeBy: none
 		sourceColumn: Date
-
-		variation Variasjon
-			isDefault
-			relationship: 9bf62953-f16b-4655-887a-181c5837171c
-			defaultHierarchy: LocalDateTable_fd53aa05-1511-4ad5-9d65-6cace0214d8f.Datohierarki
 
 		changedProperty = IsHidden
 
@@ -237,11 +227,6 @@ table Date
 		summarizeBy: none
 		sourceColumn: FIRST_DAY_OF_WEEK
 
-		variation Variasjon
-			isDefault
-			relationship: 1652234f-fcd0-4e6c-80b7-e40639ada9d9
-			defaultHierarchy: LocalDateTable_7462c2b0-b8c9-4273-abad-30bb6c4d926c.Datohierarki
-
 		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
@@ -255,11 +240,6 @@ table Date
 		lineageTag: f6fd06b0-b034-4b75-b301-e4dc035da89b
 		summarizeBy: none
 		sourceColumn: LAST_DAY_OF_WEEK
-
-		variation Variasjon
-			isDefault
-			relationship: 135c1165-3b06-492b-9331-a455e7906cb0
-			defaultHierarchy: LocalDateTable_5b68623b-9a7a-4eae-a34a-e47757e29870.Datohierarki
 
 		changedProperty = IsHidden
 
@@ -275,11 +255,6 @@ table Date
 		summarizeBy: none
 		sourceColumn: FIRST_DAY_OF_MONTH
 
-		variation Variasjon
-			isDefault
-			relationship: dc264f43-b931-42d8-9c55-b80c3a5f1ffb
-			defaultHierarchy: LocalDateTable_0e2f5dc0-6a61-42dd-9020-d896eb70aaca.Datohierarki
-
 		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
@@ -293,11 +268,6 @@ table Date
 		lineageTag: 0d5a6e8c-027d-4ece-b8ed-4a34d16f976b
 		summarizeBy: none
 		sourceColumn: LAST_DAY_OF_MONTH
-
-		variation Variasjon
-			isDefault
-			relationship: 39952ceb-90bb-4eeb-9807-e4cc04dae431
-			defaultHierarchy: LocalDateTable_7ba85b53-9628-4f71-a882-68f6f0a9df66.Datohierarki
 
 		changedProperty = IsHidden
 
@@ -313,11 +283,6 @@ table Date
 		summarizeBy: none
 		sourceColumn: FIRST_DAY_OF_QUARTER
 
-		variation Variasjon
-			isDefault
-			relationship: 43e925f7-53cd-4dad-8a08-28b6760e1ff5
-			defaultHierarchy: LocalDateTable_df59e1ba-d817-46ee-8f77-7a7213dd2db0.Datohierarki
-
 		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
@@ -331,11 +296,6 @@ table Date
 		lineageTag: 76031fad-c9df-4402-a0bf-d0590b521e2d
 		summarizeBy: none
 		sourceColumn: LAST_DAY_OF_QUARTER
-
-		variation Variasjon
-			isDefault
-			relationship: 3263b05b-3553-404e-a89e-540cd7ce9fed
-			defaultHierarchy: LocalDateTable_6738b94c-718d-4f3d-8c8f-57db9f17b36d.Datohierarki
 
 		changedProperty = IsHidden
 
@@ -351,11 +311,6 @@ table Date
 		summarizeBy: none
 		sourceColumn: FIRST_DAY_OF_YEAR
 
-		variation Variasjon
-			isDefault
-			relationship: 3b56d784-27d6-421d-8eef-abc23c2f6e31
-			defaultHierarchy: LocalDateTable_e6a4d02c-19ed-466a-b759-fa461f744977.Datohierarki
-
 		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
@@ -369,11 +324,6 @@ table Date
 		lineageTag: 56ccd5e3-9b76-434c-8b2c-df129d467cc5
 		summarizeBy: none
 		sourceColumn: LAST_DAY_OF_YEAR
-
-		variation Variasjon
-			isDefault
-			relationship: d51a851f-fe75-4b5d-8135-c9932e7afd63
-			defaultHierarchy: LocalDateTable_5046b371-d563-4c46-9440-7f47b29114e7.Datohierarki
 
 		changedProperty = IsHidden
 
