@@ -1,0 +1,616 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "7ce4be9e2fd3b52fcb91",
+  "position": {
+    "x": 161.57377049180329,
+    "y": 15.387978142076502,
+    "z": 4000,
+    "height": 695.25683060109293,
+    "width": 747.016393442623,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Sort Order Enova Rating"
+                    }
+                  },
+                  "Property": "Rating"
+                }
+              },
+              "queryRef": "RATING_SORT_ORDER.Rating",
+              "nativeQueryRef": "Rating1",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Property"
+                    }
+                  },
+                  "Property": "Address"
+                }
+              },
+              "queryRef": "DIM_SRE_PROPERTY.ADDRESS",
+              "nativeQueryRef": "ADDRESS",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FACT_SRE_BREEAM_CERTIFICATE"
+                        }
+                      },
+                      "Property": "TOTAL_BUILDING_CATEGORY_HEATED_AREA"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(FACT_SRE_BREEAM_CERTIFICATE.TOTAL_BUILDING_CATEGORY_HEATED_AREA)",
+              "nativeQueryRef": "Oppv. areal",
+              "displayName": "Oppv. areal"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FACT_SRE_BREEAM_CERTIFICATE"
+                        }
+                      },
+                      "Property": "Heated area InUse"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(FACT_SRE_BREEAM_CERTIFICATE.HEATED_AREA_INUSE)",
+              "nativeQueryRef": "Oppv. areal BiU",
+              "displayName": "Oppv. areal BiU"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FACT_SRE_BREEAM_CERTIFICATE"
+                        }
+                      },
+                      "Property": "Heated area NOR"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(FACT_SRE_BREEAM_CERTIFICATE.HEATED_AREA_NOR)",
+              "nativeQueryRef": "Oppv. areal NOR",
+              "displayName": "Oppv. areal NOR"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "Share Of Heated Area GIA Breeam"
+                }
+              },
+              "queryRef": "FACT_SRE_BREEAM_CERTIFICATE.Share heated area Breeam",
+              "nativeQueryRef": "Andel oppv. areal",
+              "displayName": "Andel oppv. areal"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FACT_SRE_BUILDING"
+                        }
+                      },
+                      "Property": "VALUATION_NOK"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(FACT_SRE_BUILDING.VALUATION_NOK)",
+              "nativeQueryRef": "Verdivurdering",
+              "displayName": "Verdivurdering"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FACT_SRE_BREEAM_CERTIFICATE"
+                        }
+                      },
+                      "Property": "CERTIFIED_VALUE"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(FACT_SRE_BREEAM_CERTIFICATE.CERTIFIED_VALUE)",
+              "nativeQueryRef": "Sertifisert verdi",
+              "displayName": "Sertifisert verdi"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "Share Of Certified Value Breeam"
+                }
+              },
+              "queryRef": "FACT_SRE_BREEAM_CERTIFICATE.Share certified Breeam",
+              "nativeQueryRef": "Andel sert. verdi",
+              "displayName": "Andel sert. verdi"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "FACT_SRE_BREEAM_CERTIFICATE"
+                      }
+                    },
+                    "Property": "Heated area InUse"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "RATING_SORT_ORDER.Rating"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Sort Order Enova Rating"
+                    }
+                  },
+                  "Property": "Rating"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "DIM_SRE_PROPERTY.ADDRESS"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Excellent'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Good'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Ikke sertifiserbar'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Very good'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Ikke sertifisert'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Pass'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Outstanding'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
+      }
+    ],
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "108.24337804392327D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(FACT_SRE_BREEAM_CERTIFICATE.CERTIFIED_VALUE)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "75.22025047496045D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(FACT_SRE_BREEAM_CERTIFICATE.HEATED_AREA_NOR)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "172.22861241784506D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "RATING_SORT_ORDER.Rating"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "81.54891906634893D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "FACT_SRE_BREEAM_CERTIFICATE.Share heated area Breeam"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "81.12568306010928D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "FACT_SRE_BREEAM_CERTIFICATE.Share certified Breeam"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "68.34158088448291D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(FACT_SRE_BREEAM_CERTIFICATE.HEATED_AREA_INUSE)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "72.90710382513662D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(FACT_SRE_BREEAM_CERTIFICATE.TOTAL_BUILDING_CATEGORY_HEATED_AREA)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "107.39890710382514D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(FACT_SRE_BUILDING.VALUATION_NOK)"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "0e543b007762e28de0a6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sort Order Enova Rating"
+              }
+            },
+            "Property": "Rating"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "22f9ffe82e1678ac5b90",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Property"
+              }
+            },
+            "Property": "Address"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e733b8fd5213095a46d0",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FACT_SRE_BREEAM_CERTIFICATE"
+                  }
+                },
+                "Property": "TOTAL_BUILDING_CATEGORY_HEATED_AREA"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4a3c9e55b612768e03a7",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FACT_SRE_BREEAM_CERTIFICATE"
+                  }
+                },
+                "Property": "Heated area InUse"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0db692e2a405237b2ac8",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FACT_SRE_BREEAM_CERTIFICATE"
+                  }
+                },
+                "Property": "Heated area NOR"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d2cb6174b9500e9b513d",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FACT_SRE_BUILDING"
+                  }
+                },
+                "Property": "VALUATION_NOK"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "871af2800c1025ed99bd",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FACT_SRE_BREEAM_CERTIFICATE"
+                  }
+                },
+                "Property": "CERTIFIED_VALUE"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f305ee6436d07a684be1",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Key Measures"
+              }
+            },
+            "Property": "Share Of Heated Area GIA Breeam"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "610079c3134a8aa0cb56",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Key Measures"
+              }
+            },
+            "Property": "Share Of Certified Value Breeam"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

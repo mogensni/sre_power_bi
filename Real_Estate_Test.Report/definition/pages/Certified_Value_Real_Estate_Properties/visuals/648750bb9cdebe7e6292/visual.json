@@ -1,0 +1,186 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "648750bb9cdebe7e6292",
+  "position": {
+    "x": 39.746981023576765,
+    "y": 41.219091431857386,
+    "z": 0,
+    "height": 644.04830362277164,
+    "width": 1209.33870040253,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Product"
+                    }
+                  },
+                  "Property": "SUB_PORTFOLIO_ID"
+                }
+              },
+              "queryRef": "DIM_SRE_PRODUCT.SUB_PORTFOLIO_ID",
+              "nativeQueryRef": "Portfolio",
+              "displayName": "Portfolio"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Product"
+                    }
+                  },
+                  "Property": "Subportfolio ID"
+                }
+              },
+              "queryRef": "DIM_SRE_PRODUCT.S_DK_SUB_PORTFOLIO_ID",
+              "nativeQueryRef": "Subportfolio",
+              "displayName": "Subportfolio"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Property"
+                    }
+                  },
+                  "Property": "Building Name"
+                }
+              },
+              "queryRef": "DIM_SRE_PROPERTY.BUILDING_NAME",
+              "nativeQueryRef": "Bygningsnavn",
+              "displayName": "Bygningsnavn"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FACT_SRE_BUILDING"
+                        }
+                      },
+                      "Property": "AREA_GFA"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(FACT_SRE_BUILDING.AREA_GFA)",
+              "nativeQueryRef": "Leieareal BTA",
+              "displayName": "Leieareal BTA"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "Heated Area GIA"
+                }
+              },
+              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Mål_heated_area",
+              "nativeQueryRef": "Oppv. areal",
+              "displayName": "Oppv. areal"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "Share Of Heated Area"
+                }
+              },
+              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Mål_heated_andel",
+              "nativeQueryRef": "Andel areal",
+              "displayName": "Andel areal"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FACT_SRE_BUILDING"
+                        }
+                      },
+                      "Property": "VALUATION_NOK"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(FACT_SRE_BUILDING.VALUATION_NOK)",
+              "nativeQueryRef": "Verdivurdering",
+              "displayName": "Verdivurdering"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "Certified Value"
+                }
+              },
+              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Mål_certified_value",
+              "nativeQueryRef": "Sert. verdi",
+              "displayName": "Sert. verdi"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "Share Of Certified Value"
+                }
+              },
+              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Mål_certified_andel",
+              "nativeQueryRef": "Andel sert. verdi",
+              "displayName": "Andel sert. verdi"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Property"
+                  }
+                },
+                "Property": "Building Name"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

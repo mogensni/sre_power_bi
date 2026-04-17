@@ -1,0 +1,43 @@
+table 'Sort Order Enova Rating'
+	lineageTag: 58642e61-337d-43e4-9cc1-87aa97597d83
+
+	column Rating
+		dataType: string
+		lineageTag: c0f95859-9621-456a-a807-6249dc54b10f
+		summarizeBy: none
+		sourceColumn: Rating
+		sortByColumn: 'Rating Sort Order'
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rating Sort Order'
+		dataType: int64
+		formatString: 0
+		lineageTag: a297bf37-063a-4d50-bd02-cd8ea27b4bc3
+		summarizeBy: none
+		sourceColumn: Rating Sort Order
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Sort Order Enova Rating' = m
+		mode: import
+		source =
+				let
+				    Kilde = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("bcm7DsIwDIXhV7E8Vl24wwMgxAIssEQZ0satrAa3SoIEb48JYmM6+s9nDO6fLYVAkrHGOdra4PmRU3biWXr9ZuW7UXxBP45en0V5Dt9Ylri4lDRWJY7DQJAoZu74Mwrrf9C4qLQpVFVwGjO4aQrcuiaQyvYnV/HUsZAHFvB8V9uhtW8=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Rating = _t, RatingSortOrder = _t]),
+				    #"Endret type" = Table.TransformColumnTypes(Kilde,{{"Rating", type text}, {"RatingSortOrder", Int64.Type}}),
+				    #"Kolonner med nye navn" = Table.RenameColumns(#"Endret type",{{"RatingSortOrder", "Rating Sort Order"}})
+				in
+				    #"Kolonner med nye navn"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigasjon
+

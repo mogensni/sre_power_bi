@@ -1,0 +1,279 @@
+table FACT_SRE_ENOVA_CERTIFICATE
+	isHidden
+	lineageTag: b1769385-77f6-463e-815d-a4a408c40fb0
+
+	column S_PK_FACT_SRE_ENOVA_CERTIFICATE
+		dataType: string
+		isHidden
+		lineageTag: 387ca562-0b0b-4e1a-9982-7fc3681a2648
+		summarizeBy: none
+		sourceColumn: S_PK_FACT_SRE_ENOVA_CERTIFICATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_DK_BUILDING_ID
+		dataType: double
+		isHidden
+		lineageTag: 09ef8705-1811-4421-9745-0279c1359f2a
+		summarizeBy: count
+		sourceColumn: S_DK_BUILDING_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column S_DK_CERTIFICATE_NO
+		dataType: string
+		isHidden
+		lineageTag: 6dea9493-f87f-4d3c-9ae4-cc26c6aa2cf9
+		summarizeBy: none
+		sourceColumn: S_DK_CERTIFICATE_NO
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_DK_VALUATION_DATE
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: ffa774f5-abbe-4e03-836d-5d3ce829f01b
+		summarizeBy: none
+		sourceColumn: S_DK_VALUATION_DATE
+
+		variation Variasjon
+			isDefault
+			relationship: 2a43bad5-e953-4ad4-a0c1-301f4924c1d3
+			defaultHierarchy: LocalDateTable_ec461a17-820a-4d4c-8043-ab05f19e8df0.Datohierarki
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column S_FK_DIM_SRE_PROPERTY
+		dataType: string
+		isHidden
+		lineageTag: ab5840f0-ded5-4b47-b08d-2e218812f986
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_SRE_PROPERTY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_FK_DIM_SRE_ENOVA_CERTIFICATE
+		dataType: string
+		isHidden
+		lineageTag: 38d462df-5044-43d9-a1aa-47cd133475b1
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_SRE_ENOVA_CERTIFICATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_FK_DIM_DATE
+		dataType: string
+		isHidden
+		lineageTag: 785aa84a-d2c5-4ad4-8a82-3e9a17ab9f19
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Calc Delivered Energy Total KWHM2'
+		dataType: double
+		isHidden
+		lineageTag: f76c5189-681d-4307-82e9-a4ff4e50f2d6
+		summarizeBy: sum
+		sourceColumn: Calc Delivered Energy Total KWHM2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Area Outer Walls'
+		dataType: double
+		isHidden
+		lineageTag: a21b82bb-7529-4ca5-bab2-cdd5bec34a5b
+		summarizeBy: sum
+		sourceColumn: Area Outer Walls
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Area Roof'
+		dataType: double
+		isHidden
+		lineageTag: 07baf0ef-107e-486d-9f93-0f5f934bea87
+		summarizeBy: sum
+		sourceColumn: Area Roof
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Area Floor'
+		dataType: double
+		isHidden
+		lineageTag: 590c8daf-3276-4180-bdbd-eefd2b68fd25
+		summarizeBy: sum
+		sourceColumn: Area Floor
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Area Windows Doors Glass Fields'
+		dataType: double
+		isHidden
+		lineageTag: ccffce68-a6c9-491a-967a-2d31c99e6f73
+		summarizeBy: sum
+		sourceColumn: Area Windows Doors Glass Fields
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Heated Air Volume'
+		dataType: double
+		isHidden
+		lineageTag: 2dd8950a-efe5-40ef-bc76-fa220c166cb3
+		summarizeBy: sum
+		sourceColumn: Heated Air Volume
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Leakage Value'
+		dataType: double
+		isHidden
+		lineageTag: 636a8df5-2983-471a-821b-883d1279ce81
+		summarizeBy: sum
+		sourceColumn: Leakage Value
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BUILDING_VALUE
+		dataType: double
+		isHidden
+		formatString: #,0
+		lineageTag: 659759d0-cace-4deb-b74a-4e1c427efbd8
+		summarizeBy: sum
+		sourceColumn: BUILDING_VALUE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column TOTAL_HEATED_AREA
+		dataType: double
+		isHidden
+		formatString: #,0
+		lineageTag: ad346f36-9953-4557-a783-b78a4fa606a7
+		summarizeBy: sum
+		sourceColumn: TOTAL_HEATED_AREA
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column CERTIFIED_VALUE
+		dataType: double
+		isHidden
+		formatString: #,0
+		lineageTag: fc20b08c-c975-436e-b111-a805a7284984
+		summarizeBy: sum
+		sourceColumn: CERTIFIED_VALUE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column S_FK_DIM_SRE_PRODUCT
+		dataType: string
+		isHidden
+		lineageTag: e2d389e8-51af-4c49-85f6-400c22404e78
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_SRE_PRODUCT
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column HEATED_GIA
+		dataType: double
+		isHidden
+		lineageTag: 9c6153c7-fadc-44f3-aa6f-f09587e2c54a
+		summarizeBy: sum
+		sourceColumn: HEATED_GIA
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TOTAL_GIA
+		dataType: double
+		isHidden
+		lineageTag: b8742afc-0723-40e9-92af-dbcc11a8979b
+		summarizeBy: sum
+		sourceColumn: TOTAL_GIA
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition FACT_SRE_ENOVA_CERTIFICATE = m
+		mode: import
+		source =
+				let
+				    Kilde = Snowflake.Databases("cb20535.west-europe.azure.snowflakecomputing.com","ANALYSIS_SAM_WH",[Implementation="2.0"]),
+				    DWH_SAM_Database = Kilde{[Name="DWH_SAM",Kind="Database"]}[Data],
+				    REAL_ESTATE_Schema = DWH_SAM_Database{[Name="REAL_ESTATE",Kind="Schema"]}[Data],
+				    FACT_SRE_ENOVA_CERTIFICATE_View = REAL_ESTATE_Schema{[Name="FACT_SRE_ENOVA_CERTIFICATE",Kind="View"]}[Data],
+				    #"Kolonner med nye navn" = Table.RenameColumns(FACT_SRE_ENOVA_CERTIFICATE_View,{{"AREA_FLOOR", "Area Floor"}, {"AREA_OUTER_WALLS", "Area Outer Walls"}, {"AREA_ROOF", "Area Roof"}, {"AREA_WINDOWS_DOORS_GLASS_FIELDS", "Area Windows Doors Glass Fields"}, {"CALC_DELIVERED_ENERGY_TOTAL_KWHM2", "Calc Delivered Energy Total KWHM2"}, {"HEATED_AIR_VOLUME", "Heated Air Volume"}, {"LEAKAGE_VALUE", "Leakage Value"}})
+				in
+				    #"Kolonner med nye navn"
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigasjon
+

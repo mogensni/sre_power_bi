@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Real_Estate_Test"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "95b32705-ed92-49e2-9d11-6fa83270f0ba"
+  }
+}

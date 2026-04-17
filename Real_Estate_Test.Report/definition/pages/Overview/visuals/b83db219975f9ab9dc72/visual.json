@@ -1,0 +1,464 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "b83db219975f9ab9dc72",
+  "position": {
+    "x": 181.09150837752753,
+    "y": 248.75742145407679,
+    "z": 6000,
+    "height": 252.16505736440661,
+    "width": 1088.9830759154008,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Property"
+                    }
+                  },
+                  "Property": "Building Name"
+                }
+              },
+              "queryRef": "DIM_SRE_PROPERTY.BUILDING_NAME",
+              "nativeQueryRef": "Bygg",
+              "displayName": "Bygg"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Property"
+                    }
+                  },
+                  "Property": "Address"
+                }
+              },
+              "queryRef": "DIM_SRE_PROPERTY.ADDRESS",
+              "nativeQueryRef": "Adresse",
+              "displayName": "Adresse"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Enova"
+                    }
+                  },
+                  "Property": "Building Category"
+                }
+              },
+              "queryRef": "DIM_SRE_ENOVA_CERTIFICATE.BUILDING_CATEGORY",
+              "nativeQueryRef": "Bygningskat.",
+              "displayName": "Bygningskat."
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "Heated Area GIA"
+                }
+              },
+              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Mål_heated_area",
+              "nativeQueryRef": "Oppv. areal",
+              "displayName": "Oppv. areal"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "Certified Value"
+                }
+              },
+              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Mål_certified_value",
+              "nativeQueryRef": "Sertifisert verdi",
+              "displayName": "Sertifisert verdi"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Enova"
+                    }
+                  },
+                  "Property": "Energy Character"
+                }
+              },
+              "queryRef": "DIM_SRE_ENOVA_CERTIFICATE.ENERGY_CHARACTER",
+              "nativeQueryRef": "Energikarakter",
+              "displayName": "Energikarakter"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FACT_SRE_ENOVA_CERTIFICATE"
+                        }
+                      },
+                      "Property": "Calc Delivered Energy Total KWHM2"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(FACT_SRE_ENOVA_CERTIFICATE.CALC_DELIVERED_ENERGY_TOTAL_KWHM2)",
+              "nativeQueryRef": "Kalk.lev.KWHM2",
+              "displayName": "Kalk.lev.KWHM2"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Enova"
+                    }
+                  },
+                  "Property": "Heating Character"
+                }
+              },
+              "queryRef": "DIM_SRE_ENOVA_CERTIFICATE.HEATING_CHARACTER",
+              "nativeQueryRef": "Oppv.karakter",
+              "displayName": "Oppv.karakter"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Enova"
+                    }
+                  },
+                  "Property": "Certification Date"
+                }
+              },
+              "queryRef": "DIM_SRE_ENOVA_CERTIFICATE.CERT_DATE",
+              "nativeQueryRef": "Sert. dato",
+              "displayName": "Sert. dato",
+              "format": "d"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Enova"
+                    }
+                  },
+                  "Property": "Certification Expiry Date"
+                }
+              },
+              "queryRef": "Enova.Certification Expiry Date",
+              "nativeQueryRef": "Utløpsdato",
+              "displayName": "Utløpsdato"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Property"
+                  }
+                },
+                "Property": "Building Name"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "162.39056964478098D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DIM_SRE_PROPERTY.BUILDING_NAME"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "80.85760726920033D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "FACT_SRE_ENOVA_CERTIFICATE.Mål_heated_area"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "106.49571101187429D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "FACT_SRE_ENOVA_CERTIFICATE.Mål_certified_value"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "114.47193891828769D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DIM_SRE_ENOVA_CERTIFICATE.BUILDING_CATEGORY"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "107.82747667597961D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(FACT_SRE_ENOVA_CERTIFICATE.CALC_DELIVERED_ENERGY_TOTAL_KWHM2)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "96.16876620769722D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DIM_SRE_ENOVA_CERTIFICATE.ENERGY_CHARACTER"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "94.46521953246128D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DIM_SRE_ENOVA_CERTIFICATE.HEATING_CHARACTER"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "156.27007509921154D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DIM_SRE_PROPERTY.ADDRESS"
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DIM_SRE_ENOVA_CERTIFICATE.ENERGY_CHARACTER"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "62145506358edaa4428e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Property"
+              }
+            },
+            "Property": "Building Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e5b80d6d29e6c3b94469",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Property"
+              }
+            },
+            "Property": "Address"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e032933b10440b217b49",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Enova"
+              }
+            },
+            "Property": "Building Category"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4ef0665ebd0cc6d4c823",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Key Measures"
+              }
+            },
+            "Property": "Heated Area GIA"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "792cf7bd013003a37d8a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Key Measures"
+              }
+            },
+            "Property": "Certified Value"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "37c4d3fad80a18027d87",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Enova"
+              }
+            },
+            "Property": "Energy Character"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e8e7a1373d0133c7d743",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FACT_SRE_ENOVA_CERTIFICATE"
+                  }
+                },
+                "Property": "Calc Delivered Energy Total KWHM2"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4facdfd06ca77cce13a6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Enova"
+              }
+            },
+            "Property": "Heating Character"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "03ce9d6ee0e35475ae69",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Enova"
+              }
+            },
+            "Property": "Certification Date"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

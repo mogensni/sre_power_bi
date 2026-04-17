@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Real_Estate_Test"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "6ea74177-ae4b-49f3-94f2-c5ad8d56a907"
+  }
+}

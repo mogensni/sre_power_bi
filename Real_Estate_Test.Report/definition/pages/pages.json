@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/pagesMetadata/1.0.0/schema.json",
+  "pageOrder": [
+    "Overview",
+    "Certified_Value",
+    "Energy_Certification",
+    "Environment_Certification",
+    "Property_Value",
+    "d5da630981c2b8251919"
+  ],
+  "activePageName": "Overview"
+}

@@ -1,0 +1,346 @@
+table FACT_SRE_BREEAM_CERTIFICATE
+	isHidden
+	lineageTag: 821d7a91-b774-42b4-917a-1f8a0f98bf92
+
+	column S_PK_FACT_SRE_BREEAM_CERTIFICATE
+		dataType: string
+		isHidden
+		lineageTag: f10bc827-c1cd-4670-9f88-6b33326be98b
+		summarizeBy: none
+		sourceColumn: S_PK_FACT_SRE_BREEAM_CERTIFICATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_DK_BUILDING_ID
+		dataType: double
+		isHidden
+		lineageTag: 75d1c0a5-8d18-4510-9c25-683a1ecc2141
+		summarizeBy: count
+		sourceColumn: S_DK_BUILDING_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column S_DK_VALUATION_DATE
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: 450f6bc5-01f4-4f1c-913f-5ac1e3e1350e
+		summarizeBy: none
+		sourceColumn: S_DK_VALUATION_DATE
+
+		variation Variasjon
+			isDefault
+			relationship: 478a3f9e-b803-4abd-8e96-1bc8ff8ef818
+			defaultHierarchy: LocalDateTable_6d51e042-5975-4207-940a-1e68db35d6e6.Datohierarki
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column S_DK_CERTIFICATE_NO
+		dataType: string
+		isHidden
+		lineageTag: 2faaba31-0711-4fec-a0e0-739f35290e15
+		summarizeBy: none
+		sourceColumn: S_DK_CERTIFICATE_NO
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_FK_DIM_SRE_PROPERTY
+		dataType: string
+		isHidden
+		lineageTag: 6ae0075d-539e-4a28-82fa-eab769d1aabf
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_SRE_PROPERTY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_FK_DIM_SRE_BREEAM_CERTIFICATE
+		dataType: string
+		isHidden
+		lineageTag: 9137d734-33e2-47cf-a935-29bc9216f149
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_SRE_BREEAM_CERTIFICATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_FK_DIM_DATE
+		dataType: string
+		isHidden
+		lineageTag: 94b2b544-70fe-4681-b9fb-fb1bf8591149
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Score
+		dataType: double
+		isHidden
+		lineageTag: acd62090-a84d-466c-aef2-9cc61f50091f
+		summarizeBy: sum
+		sourceColumn: Score
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Score Health Wellbeing InUse'
+		dataType: double
+		isHidden
+		lineageTag: 8cca6055-bc92-44aa-b7c4-7dede283aa31
+		summarizeBy: sum
+		sourceColumn: Score Health Wellbeing InUse
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Score Energy InUse'
+		dataType: double
+		isHidden
+		lineageTag: 11d3f179-2bd9-4ae8-80cb-e1fc6f642bae
+		summarizeBy: sum
+		sourceColumn: Score Energy InUse
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Score Transport InUse'
+		dataType: double
+		isHidden
+		lineageTag: 82796bd5-dacf-48de-8f28-5272b1e84379
+		summarizeBy: sum
+		sourceColumn: Score Transport InUse
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Score Water InUse'
+		dataType: double
+		isHidden
+		lineageTag: 2e0e748a-e43e-4ad0-a81d-2d65e462bb47
+		summarizeBy: sum
+		sourceColumn: Score Water InUse
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Score Resources InUse'
+		dataType: double
+		isHidden
+		lineageTag: 3ab53dc9-3505-4e20-826d-db36592417a0
+		summarizeBy: sum
+		sourceColumn: Score Resources InUse
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Score Resilience InUse'
+		dataType: double
+		isHidden
+		lineageTag: 6a3ad836-005d-474d-a6c8-fa03c01f5403
+		summarizeBy: sum
+		sourceColumn: Score Resilience InUse
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Score Land Use And Ecology InUse'
+		dataType: double
+		isHidden
+		lineageTag: a96f8d98-533f-469c-9381-794d986594e1
+		summarizeBy: sum
+		sourceColumn: Score Land Use And Ecology InUse
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Score Pollution InUse'
+		dataType: double
+		isHidden
+		lineageTag: cf1089fe-69a8-4d12-81fc-f137ff633c90
+		summarizeBy: sum
+		sourceColumn: Score Pollution InUse
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Score Exemplary InUse'
+		dataType: double
+		isHidden
+		lineageTag: e160d096-0e22-4991-82c2-3723e2cca83f
+		summarizeBy: sum
+		sourceColumn: Score Exemplary InUse
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Total Area Assessed'
+		dataType: double
+		isHidden
+		lineageTag: 2c754c17-d3fc-4d45-984f-405656393c5e
+		summarizeBy: sum
+		sourceColumn: Total Area Assessed
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Total Building Heated Area'
+		dataType: double
+		isHidden
+		lineageTag: a22c5ea0-6153-4e91-b831-c301de9efbfd
+		summarizeBy: sum
+		sourceColumn: Total Building Heated Area
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TOTAL_BUILDING_CATEGORY_HEATED_AREA
+		dataType: double
+		isHidden
+		formatString: #,0
+		lineageTag: 73586f30-1e56-4e2a-90fc-9eed86e75023
+		summarizeBy: sum
+		sourceColumn: TOTAL_BUILDING_CATEGORY_HEATED_AREA
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column 'Heated area InUse'
+		dataType: double
+		isHidden
+		formatString: #,0
+		lineageTag: 769517f6-dd48-4f29-b291-ac056f747128
+		summarizeBy: sum
+		sourceColumn: Heated area InUse
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column 'Heated area NOR'
+		dataType: double
+		isHidden
+		formatString: #,0
+		lineageTag: 2607fce2-5333-4f65-ae08-459916cf3aee
+		summarizeBy: sum
+		sourceColumn: Heated area NOR
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column BUILDING_VALUE
+		dataType: double
+		isHidden
+		formatString: #,0
+		lineageTag: ac43e451-c32c-4390-a815-6070a34e5026
+		summarizeBy: sum
+		sourceColumn: BUILDING_VALUE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column CERTIFIED_VALUE
+		dataType: double
+		isHidden
+		formatString: #,0
+		lineageTag: 9af75016-82af-4844-a88b-54b5f9e7bead
+		summarizeBy: sum
+		sourceColumn: CERTIFIED_VALUE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column S_FK_DIM_SRE_PRODUCT
+		dataType: string
+		isHidden
+		lineageTag: 89200a5c-e080-4bdb-8084-8e0861f52128
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_SRE_PRODUCT
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FACT_SRE_BREEAM_CERTIFICATE = m
+		mode: import
+		source =
+				let
+				  Kilde = Snowflake.Databases("cb20535.west-europe.azure.snowflakecomputing.com", "ANALYSIS_SAM_WH", [Implementation = "2.0"]),
+				  #"Navigering 1" = Kilde{[Name = "DWH_SAM", Kind = "Database"]}[Data],
+				  #"Navigering 2" = #"Navigering 1"{[Name = "REAL_ESTATE", Kind = "Schema"]}[Data],
+				  #"Navigering 3" = #"Navigering 2"{[Name = "FACT_SRE_BREEAM_CERTIFICATE", Kind = "View"]}[Data],
+				    #"Kolonner med nye navn" = Table.RenameColumns(#"Navigering 3",{{"SCORE", "Score"}, {"INUSE_SCORE_WATER", "Score Water InUse"}, {"INUSE_SCORE_ENERGY", "Score Energy InUse"}, {"INUSE_SCORE_EXEMPLARY", "Score Exemplary InUse"}, {"HEATED_AREA_INUSE", "Heated area InUse"}, {"HEATED_AREA_NOR", "Heated area NOR"}, {"INUSE_SCORE_HEALTH_WELLBEING", "Score Health Wellbeing InUse"}, {"INUSE_SCORE_LAND_USE_AND_ECOLOGY", "Score Land Use And Ecology InUse"}, {"INUSE_SCORE_POLLUTION", "Score Pollution InUse"}, {"INUSE_SCORE_RESILIENCE", "Score Resilience InUse"}, {"INUSE_SCORE_TRANSPORT", "Score Transport InUse"}, {"INUSE_SCORE_RESOURCES", "Score Resources InUse"}, {"TOTAL_AREA_ASSESSED", "Total Area Assessed"}, {"TOTAL_BUILDING_HEATED_AREA", "Total Building Heated Area"}})
+				in
+				  #"Kolonner med nye navn"
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigasjon
+

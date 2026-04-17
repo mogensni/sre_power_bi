@@ -1,0 +1,525 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "2e871fa0660ceb8199c4",
+  "position": {
+    "x": 168.86597938144328,
+    "y": 24.742268041237114,
+    "z": 0,
+    "height": 685.979381443299,
+    "width": 687.8350515463917,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Enova"
+                    }
+                  },
+                  "Property": "Energy Character"
+                }
+              },
+              "queryRef": "DIM_SRE_ENOVA_CERTIFICATE.ENERGY_CHARACTER",
+              "nativeQueryRef": "Karakter",
+              "active": true,
+              "displayName": "Karakter"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Property"
+                    }
+                  },
+                  "Property": "Address"
+                }
+              },
+              "queryRef": "DIM_SRE_PROPERTY.ADDRESS",
+              "nativeQueryRef": "ADDRESS",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "Heated Area GIA"
+                }
+              },
+              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Mål_heated_area",
+              "nativeQueryRef": "Oppvarmet areal",
+              "displayName": "Oppvarmet areal"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "Share Of Heated Area"
+                }
+              },
+              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Mål_heated_andel",
+              "nativeQueryRef": "Andel oppv. areal",
+              "displayName": "Andel oppv. areal"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FACT_SRE_BUILDING"
+                        }
+                      },
+                      "Property": "VALUATION_NOK"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(FACT_SRE_BUILDING.VALUATION_NOK)",
+              "nativeQueryRef": "Verdivurdering",
+              "displayName": "Verdivurdering"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "Certified Value"
+                }
+              },
+              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Certified value",
+              "nativeQueryRef": "Sertifisert verdi",
+              "displayName": "Sertifisert verdi"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Measures"
+                    }
+                  },
+                  "Property": "Share Of Certified Value"
+                }
+              },
+              "queryRef": "FACT_SRE_ENOVA_CERTIFICATE.Mål_certified_andel",
+              "nativeQueryRef": "Andel sert. verdi1",
+              "displayName": "Andel sert. verdi"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Enova"
+                  }
+                },
+                "Property": "Energy Character"
+              }
+            },
+            "direction": "Ascending"
+          },
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Property"
+                  }
+                },
+                "Property": "Address"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "DIM_SRE_ENOVA_CERTIFICATE.ENERGY_CHARACTER"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Enova"
+                    }
+                  },
+                  "Property": "Energy Character"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "DIM_SRE_PROPERTY.ADDRESS"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'F'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'E'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'D'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'C'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'B'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'A'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Ikke sertifisert'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Ikke sertifiserbart'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
+      }
+    ],
+    "objects": {
+      "rowTotal": [
+        {
+          "properties": {
+            "applyToHeaders": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "200.576737884286D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DIM_SRE_ENOVA_CERTIFICATE.ENERGY_CHARACTER"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "105.59681182597328D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(FACT_SRE_BUILDING.VALUATION_NOK)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "88.86365150854044D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "FACT_SRE_ENOVA_CERTIFICATE.Mål_heated_andel"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "87.5759339746939D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "FACT_SRE_ENOVA_CERTIFICATE.Mål_heated_area"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "78.23648556010178D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "FACT_SRE_ENOVA_CERTIFICATE.Mål_certified_andel"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "106.58508220904119D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "FACT_SRE_ENOVA_CERTIFICATE.Certified value"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(FACT_SRE_BUILDING.VALUATION_NOK)"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c8e30bee8b7967e77e00",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Enova"
+              }
+            },
+            "Property": "Energy Character"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6c26884a1d8dc45b4175",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Property"
+              }
+            },
+            "Property": "Address"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ae075c333edba4316762",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Key Measures"
+              }
+            },
+            "Property": "Heated Area GIA"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8753f84533246714d295",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Key Measures"
+              }
+            },
+            "Property": "Share Of Heated Area"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "282374d0e050763a34c6",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FACT_SRE_BUILDING"
+                  }
+                },
+                "Property": "VALUATION_NOK"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9ca13eb255843c02a290",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Key Measures"
+              }
+            },
+            "Property": "Share Of Certified Value"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6867d00cd84cc3027d70",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Key Measures"
+              }
+            },
+            "Property": "Certified Value"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

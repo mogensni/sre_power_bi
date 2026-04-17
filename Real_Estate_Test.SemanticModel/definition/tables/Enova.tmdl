@@ -1,0 +1,349 @@
+table Enova
+	lineageTag: 6f2da375-9da1-4325-bcef-fb28eef98d20
+
+	column S_PK_DIM_SRE_ENOVA_CERTIFICATE
+		dataType: string
+		isHidden
+		lineageTag: abbd78b5-327a-4f55-b899-517c9d1555f8
+		summarizeBy: none
+		sourceColumn: S_PK_DIM_SRE_ENOVA_CERTIFICATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_DK_CERTIFICATE_NO
+		dataType: string
+		isHidden
+		lineageTag: 7b61ad9d-24cd-4d30-bb47-fcf8ffcee2cd
+		summarizeBy: none
+		sourceColumn: S_DK_CERTIFICATE_NO
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Municipality Number'
+		dataType: double
+		lineageTag: 02fc2eb3-949e-4025-b43d-37864ef21ba4
+		summarizeBy: sum
+		sourceColumn: Municipality Number
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Farm Number (Matrikkel Gårdsnummer)'
+		dataType: double
+		lineageTag: 7b90ca83-b54e-4e38-a1c4-cb3c01fb3266
+		summarizeBy: sum
+		sourceColumn: Farm Number (Matrikkel Gårdsnummer)
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Parcel Number (Matrikkel Bruksnummer)'
+		dataType: double
+		lineageTag: f708cfc0-6da9-4497-a453-85be004bb9ae
+		summarizeBy: sum
+		sourceColumn: Parcel Number (Matrikkel Bruksnummer)
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Section Number (Matrikkel Seksjonsnummer)'
+		dataType: double
+		lineageTag: 68b4d7f0-4c95-45b6-a7f9-f69ba32efca5
+		summarizeBy: sum
+		sourceColumn: Section Number (Matrikkel Seksjonsnummer)
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column F_NO
+		dataType: double
+		lineageTag: 1269dfec-1184-4f49-b438-4a57e1c3cbfd
+		summarizeBy: sum
+		sourceColumn: F_NO
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Share Number (Matrikkel Andelsnummer)'
+		dataType: double
+		lineageTag: 22ec7cc2-85ea-46fb-8629-9bbe385fb057
+		summarizeBy: sum
+		sourceColumn: Share Number (Matrikkel Andelsnummer)
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Usage Unit Number (Matrikkel Bruksenhets Nummer)'
+		dataType: string
+		lineageTag: 7f0d633d-2517-4f51-98d3-7c2bbbc0b157
+		summarizeBy: none
+		sourceColumn: Usage Unit Number (Matrikkel Bruksenhets Nummer)
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Building Number (External)'
+		dataType: double
+		lineageTag: febb0bb1-4ecb-42b3-8b6c-6c075f090154
+		summarizeBy: sum
+		sourceColumn: Building Number (External)
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Street Address'
+		dataType: string
+		lineageTag: 1f896129-425c-4d82-a972-27695f9579b5
+		summarizeBy: none
+		sourceColumn: Street Address
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Postal Code'
+		dataType: double
+		lineageTag: 55f56d4d-b215-4373-b89c-2370361de7be
+		summarizeBy: count
+		sourceColumn: Postal Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Postal Area'
+		dataType: string
+		lineageTag: 577caaec-6c98-45b5-98f0-6efcae206752
+		summarizeBy: none
+		sourceColumn: Postal Area
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Organisation Number'
+		dataType: double
+		lineageTag: 028bd787-15d0-455e-870a-7018298c4518
+		summarizeBy: sum
+		sourceColumn: Organisation Number
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Building Category'
+		dataType: string
+		lineageTag: 3afc77c0-a0d3-4078-9091-36a7c9241c55
+		summarizeBy: none
+		sourceColumn: Building Category
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Building Type'
+		dataType: string
+		lineageTag: 0afb70ec-3dd5-4271-b8cc-ae8fa268b86c
+		summarizeBy: none
+		sourceColumn: Building Type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Type Of Building'
+		dataType: string
+		lineageTag: d040aaae-5420-47c3-af33-13e011971dc1
+		summarizeBy: none
+		sourceColumn: Type Of Building
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TEK Standard'
+		dataType: string
+		lineageTag: 117f4d32-9363-4438-9c50-8445af241088
+		summarizeBy: none
+		sourceColumn: TEK Standard
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Year Built'
+		dataType: double
+		lineageTag: 55bf5da6-300a-4550-b0e2-feede858b3cb
+		summarizeBy: sum
+		sourceColumn: Year Built
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Energy Character'
+		dataType: string
+		lineageTag: a7317efa-d947-435e-87bb-118f06d94278
+		summarizeBy: none
+		sourceColumn: Energy Character
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Heating Character'
+		dataType: string
+		lineageTag: e3739479-08b7-4fbc-9de0-9586e5d64f16
+		summarizeBy: none
+		sourceColumn: Heating Character
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Certification Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3183a6de-0a78-4650-a7ac-c727abdd232c
+		summarizeBy: none
+		sourceColumn: Certification Date
+
+		variation Variasjon
+			isDefault
+			relationship: 20714c42-1be4-49c8-894c-594fb008d8b6
+			defaultHierarchy: LocalDateTable_9af9cedd-cae4-42a2-a15d-cc78732b53a0.Datohierarki
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Certification Valid Until Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4336133b-4119-4bfc-b242-03a24e0e324c
+		summarizeBy: none
+		sourceColumn: Certification Valid Until Date
+
+		variation Variasjon
+			isDefault
+			relationship: bb4f2dd6-263c-4a92-a609-fccaa072ac07
+			defaultHierarchy: LocalDateTable_bd44100e-aac3-46b2-bb62-a0499fe8eb71.Datohierarki
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Certificate Number'
+		dataType: string
+		lineageTag: 1b4104f5-7451-4d90-9752-1bff6527f827
+		summarizeBy: none
+		sourceColumn: Certificate Number
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Leakage Value Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6fac891c-30a7-4a16-9d1a-2b058467add5
+		summarizeBy: none
+		sourceColumn: Leakage Value Date
+
+		variation Variasjon
+			isDefault
+			relationship: 5acf1acf-45af-4e3c-93b4-d146a4a53d1a
+			defaultHierarchy: LocalDateTable_75c469ac-9535-4b5f-979d-7f7e748890d6.Datohierarki
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DBT_LAST_LOADED_DATETIME
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: f5f93148-f9ff-4c6c-9623-d389486f5c5a
+		summarizeBy: none
+		sourceColumn: DBT_LAST_LOADED_DATETIME
+
+		variation Variasjon
+			isDefault
+			relationship: a97340e1-fb13-45bb-aadb-338093d38051
+			defaultHierarchy: LocalDateTable_9a4665c4-4d33-47f2-a434-ef631a898f4b.Datohierarki
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Certification Expiry Date'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: c42c3167-97f7-4cb4-9ab4-7740fff29c50
+		summarizeBy: none
+		sourceColumn: Certification Expiry Date
+
+		variation Variasjon
+			isDefault
+			relationship: 7ab8ff3b-dcee-4941-b0ae-961b6f059c27
+			defaultHierarchy: LocalDateTable_0e2ff862-1a64-4ec9-b861-6fca89e0c0b1.Datohierarki
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition Enova = m
+		mode: import
+		source =
+				let
+				    Kilde = Snowflake.Databases("cb20535.west-europe.azure.snowflakecomputing.com","ANALYSIS_SAM_WH",[Implementation="2.0"]),
+				    DWH_SAM_Database = Kilde{[Name="DWH_SAM",Kind="Database"]}[Data],
+				    REAL_ESTATE_Schema = DWH_SAM_Database{[Name="REAL_ESTATE",Kind="Schema"]}[Data],
+				    DIM_SRE_ENOVA_CERTIFICATE_View = REAL_ESTATE_Schema{[Name="DIM_SRE_ENOVA_CERTIFICATE",Kind="View"]}[Data],
+				    #"Egendefinert lagt til" = Table.TransformColumnTypes(Table.AddColumn(DIM_SRE_ENOVA_CERTIFICATE_View, "CERT_UNTIL_DATE_CALC", each Date.AddYears([CERT_DATE], 3)), {{"CERT_UNTIL_DATE_CALC", type date}}),
+				    #"Kolonner med nye navn" = Table.RenameColumns(#"Egendefinert lagt til",{{"ANDELSNUMMER", "Share Number (Matrikkel Andelsnummer)"}, {"B_NO", "Parcel Number (Matrikkel Bruksnummer)"}, {"BRUKS_ENHETS_NUMMER", "Usage Unit Number (Matrikkel Bruksenhets Nummer)"}, {"BUILDING_CATEGORY", "Building Category"}, {"BUILDING_NUMBER", "Building Number (External)"}, {"BUILDING_TYPE", "Building Type"}, {"CERT_DATE", "Certification Date"}, {"CERTIFICATE_NO", "Certificate Number"}, {"VALID_UNTIL_DATE", "Certification Valid Until Date"}, {"YEAR_BUILT", "Year Built"}, {"TYPE_OF_BUILDING", "Type Of Building"}, {"TEK_STANDARD", "TEK Standard"}, {"STREET_ADDRESS", "Street Address"}, {"S_NO", "Section Number (Matrikkel Seksjonsnummer)"}, {"POSTAL_CODE", "Postal Code"}, {"POSTAL_AREA", "Postal Area"}, {"ORGANIZATION_NO", "Organisation Number"}, {"K_NO", "Municipality Number"}, {"HEATING_CHARACTER", "Heating Character"}, {"G_NO", "Farm Number (Matrikkel Gårdsnummer)"}, {"ENERGY_CHARACTER", "Energy Character"}, {"DATE_LEAKAGE_VALUE", "Leakage Value Date"}, {"CERT_UNTIL_DATE_CALC", "Certification Expiry Date"}})
+				in
+				    #"Kolonner med nye navn"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigasjon
+

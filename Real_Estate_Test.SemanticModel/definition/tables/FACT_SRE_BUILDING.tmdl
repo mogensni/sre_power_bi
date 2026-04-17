@@ -1,0 +1,147 @@
+table FACT_SRE_BUILDING
+	isHidden
+	lineageTag: 5a939af5-6882-4c3d-b2a5-1be1ebed47c8
+
+	column S_PK_FACT_SRE_BUILDING
+		dataType: string
+		isHidden
+		lineageTag: 0878be12-1f22-474e-9a02-9691183d716d
+		summarizeBy: none
+		sourceColumn: S_PK_FACT_SRE_BUILDING
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_DK_BUILDING_ID
+		dataType: double
+		isHidden
+		lineageTag: 07ff3424-aace-4505-a5b7-05500c83d134
+		summarizeBy: count
+		sourceColumn: S_DK_BUILDING_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column S_DK_VALUATION_DATE
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: 921abe0f-fc1f-49fd-a133-5e95ad7ff0e6
+		summarizeBy: none
+		sourceColumn: S_DK_VALUATION_DATE
+
+		variation Variasjon
+			isDefault
+			relationship: 2534c879-7000-4c20-8622-68df29e40034
+			defaultHierarchy: LocalDateTable_8740628d-2bc5-435a-bf30-551c1e4d607e.Datohierarki
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column S_FK_DIM_SRE_PROPERTY
+		dataType: string
+		isHidden
+		lineageTag: 4e3024b9-6c07-4102-9520-78479901b6b3
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_SRE_PROPERTY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_FK_DIM_COUNTRY_PRODUCT_COUNTRY
+		dataType: string
+		isHidden
+		lineageTag: ff6bc587-b397-42e4-856a-db27a8fdb5fa
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_COUNTRY_PRODUCT_COUNTRY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_FK_DIM_CURRENCY_PRODUCT_CURRENCY
+		dataType: string
+		isHidden
+		lineageTag: aa06893a-2774-4d8e-bed5-4055525e2710
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_CURRENCY_PRODUCT_CURRENCY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_FK_DIM_DATE_VALUATION_DATE
+		dataType: string
+		isHidden
+		lineageTag: 4de85725-0d9d-4677-8554-c70379fa8192
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_DATE_VALUATION_DATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_FK_DIM_SRE_PRODUCT
+		dataType: string
+		isHidden
+		lineageTag: a02fc215-37f7-46c8-866e-708adfbca155
+		summarizeBy: none
+		sourceColumn: S_FK_DIM_SRE_PRODUCT
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column VALUATION_NOK
+		dataType: double
+		isHidden
+		formatString: #,0
+		lineageTag: 38b6d8c2-9f0a-45de-9497-99efce4ef4e0
+		summarizeBy: sum
+		sourceColumn: VALUATION_NOK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column AREA_GFA
+		dataType: double
+		isHidden
+		formatString: #,0
+		lineageTag: a8f8ae7c-7ffa-4e97-8cba-b5b860bf44c2
+		summarizeBy: sum
+		sourceColumn: AREA_GFA
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	partition FACT_SRE_BUILDING = m
+		mode: import
+		source =
+				let
+				    Kilde = Snowflake.Databases("cb20535.west-europe.azure.snowflakecomputing.com","ANALYSIS_SAM_WH",[Implementation="2.0"]),
+				    DWH_SAM_Database = Kilde{[Name="DWH_SAM",Kind="Database"]}[Data],
+				    REAL_ESTATE_Schema = DWH_SAM_Database{[Name="REAL_ESTATE",Kind="Schema"]}[Data],
+				    FACT_SRE_BUILDING_View = REAL_ESTATE_Schema{[Name="FACT_SRE_BUILDING",Kind="View"]}[Data]
+				in
+				    FACT_SRE_BUILDING_View
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigasjon
+

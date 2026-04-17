@@ -1,0 +1,204 @@
+table DIM_COUNTRY
+	isHidden
+	lineageTag: 22864518-8fd4-4bdd-ae43-600351cd1023
+
+	column S_PK_DIM_COUNTRY
+		dataType: string
+		isHidden
+		lineageTag: 0e34249c-ae00-4c25-ab4f-87cb56be8f23
+		summarizeBy: none
+		sourceColumn: S_PK_DIM_COUNTRY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column S_DK_COUNTRY
+		dataType: string
+		isHidden
+		lineageTag: ff46d6d4-72e2-43ce-877b-31706d67672b
+		summarizeBy: none
+		sourceColumn: S_DK_COUNTRY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column COUNTRY_CODE_ALFA2
+		dataType: string
+		isHidden
+		lineageTag: 68886d1d-f41c-45db-82ea-d9d6d2617223
+		summarizeBy: none
+		sourceColumn: COUNTRY_CODE_ALFA2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column COUNTRY_CODE_ALFA3
+		dataType: string
+		isHidden
+		lineageTag: 6d188aa0-aa40-4190-8999-a7846f6a35d6
+		summarizeBy: none
+		sourceColumn: COUNTRY_CODE_ALFA3
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column COUNTRY_NO
+		dataType: double
+		isHidden
+		lineageTag: 91c81f1f-bafd-416b-867b-939f8fdcfb61
+		summarizeBy: sum
+		sourceColumn: COUNTRY_NO
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column COUNTRY_IK
+		dataType: double
+		isHidden
+		lineageTag: f3e560bb-2c19-4bfc-8c3a-c88cdc2faade
+		summarizeBy: sum
+		sourceColumn: COUNTRY_IK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column COUNTRY_NAME
+		dataType: string
+		isHidden
+		lineageTag: 233269d1-2068-43d3-b0d9-329af6fc2551
+		summarizeBy: none
+		sourceColumn: COUNTRY_NAME
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column COUNTRY_NAME_LONG
+		dataType: string
+		isHidden
+		lineageTag: 5cd2bd0d-1e4d-4957-a47b-6c8c924ec8dc
+		summarizeBy: none
+		sourceColumn: COUNTRY_NAME_LONG
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column COUNTRY_NAME_SE
+		dataType: string
+		isHidden
+		lineageTag: c8b38875-6785-46a0-adf8-75c84dfd75d3
+		summarizeBy: none
+		sourceColumn: COUNTRY_NAME_SE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CREATED_DATE
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: bcbbff5e-060c-42c3-9fbe-354adbe0124c
+		summarizeBy: none
+		sourceColumn: CREATED_DATE
+
+		variation Variasjon
+			isDefault
+			relationship: 160134f0-e44c-4489-9ae4-b1ff6911d213
+			defaultHierarchy: LocalDateTable_ab5cd758-de6e-4702-8fea-eeb5934d7fd9.Datohierarki
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column LAST_CHANGE_TS
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: 8f5fd36a-6197-4e87-ac18-81f9cf4a82d4
+		summarizeBy: none
+		sourceColumn: LAST_CHANGE_TS
+
+		variation Variasjon
+			isDefault
+			relationship: bcd045b7-4cb3-4e82-b994-c8cbf1c528fe
+			defaultHierarchy: LocalDateTable_53959f2d-ddfa-4304-a60b-16a415297314.Datohierarki
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ORIGINATING_SYSTEM_NO
+		dataType: double
+		isHidden
+		lineageTag: b342c132-f8f8-48f8-8f03-7e5f73f03b82
+		summarizeBy: sum
+		sourceColumn: ORIGINATING_SYSTEM_NO
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PARTICIPATING_IN_EEA
+		dataType: string
+		isHidden
+		lineageTag: 3cc66a16-98b3-4de9-9061-84ba7996e6ab
+		summarizeBy: none
+		sourceColumn: PARTICIPATING_IN_EEA
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SOURCE
+		dataType: string
+		isHidden
+		lineageTag: 8208bff9-516c-4472-b807-4e5747342895
+		summarizeBy: none
+		sourceColumn: SOURCE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SORT
+		dataType: double
+		isHidden
+		lineageTag: 93954f5c-3f6a-440b-822a-bc20f69ee418
+		summarizeBy: sum
+		sourceColumn: SORT
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition DIM_COUNTRY = m
+		mode: import
+		source =
+				let
+				  Kilde = Snowflake.Databases("cb20535.west-europe.azure.snowflakecomputing.com", "ANALYSIS_SAM_WH", [Role = null, CreateNavigationProperties = null, ConnectionTimeout = null, CommandTimeout = null, Implementation = "2.0"]),
+				  #"Navigering 1" = Kilde{[Name = "DWH_SAM", Kind = "Database"]}[Data],
+				  #"Navigering 2" = #"Navigering 1"{[Name = "CONFORMED_DIMENSION", Kind = "Schema"]}[Data],
+				  #"Navigering 3" = #"Navigering 2"{[Name = "DIM_COUNTRY", Kind = "View"]}[Data]
+				in
+				  #"Navigering 3"
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+

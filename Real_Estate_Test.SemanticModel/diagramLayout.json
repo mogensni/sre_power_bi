@@ -1,0 +1,185 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 1.25
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 697,
+            "y": 34.09375
+          },
+          "nodeIndex": "FACT_SRE_BUILDING",
+          "nodeLineageTag": "5a939af5-6882-4c3d-b2a5-1be1ebed47c8",
+          "size": {
+            "height": 347,
+            "width": 244
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 698.75,
+            "y": 459.84375
+          },
+          "nodeIndex": "FACT_SRE_ENOVA_CERTIFICATE",
+          "nodeLineageTag": "b1769385-77f6-463e-815d-a4a408c40fb0",
+          "size": {
+            "height": 378.75,
+            "width": 244
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 698,
+            "y": 894.34375
+          },
+          "nodeIndex": "FACT_SRE_BREEAM_CERTIFICATE",
+          "nodeLineageTag": "821d7a91-b774-42b4-917a-1f8a0f98bf92",
+          "size": {
+            "height": 400,
+            "width": 242.75
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 107.5,
+            "y": 491.25
+          },
+          "nodeIndex": "DIM_COUNTRY",
+          "nodeLineageTag": "22864518-8fd4-4bdd-ae43-600351cd1023",
+          "size": {
+            "height": 312.5,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 111.5,
+            "y": 27.09375
+          },
+          "nodeIndex": "DIM_CURRENCY",
+          "nodeLineageTag": "fd1b6fb6-3b49-4bcf-8ffa-cf71f10f19ff",
+          "size": {
+            "height": 327.5,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 1845,
+            "y": 519.69957256317139
+          },
+          "nodeIndex": "Key Measures",
+          "nodeLineageTag": "4a9d6862-e65a-4140-9b0b-ebddeca49a33",
+          "size": {
+            "height": 145,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 108.75,
+            "y": 906.84375
+          },
+          "nodeIndex": "Date",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1335,
+            "y": 1156.34375
+          },
+          "nodeIndex": "Breeam",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1333.75,
+            "y": 796.09375
+          },
+          "nodeIndex": "Enova",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1333,
+            "y": 431.34375
+          },
+          "nodeIndex": "Property",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1331,
+            "y": 0
+          },
+          "nodeIndex": "Product",
+          "size": {
+            "height": 312.25,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1831,
+            "y": 1234.96875
+          },
+          "nodeIndex": "Sort Order Enova Rating",
+          "nodeLineageTag": "58642e61-337d-43e4-9cc1-87aa97597d83",
+          "size": {
+            "height": 145,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 651.81818962097168,
+            "y": 1345.8991451263428
+          },
+          "nodeIndex": "FACT_SRE_PRODUCT_PERFORMANCE",
+          "size": {
+            "height": 300,
+            "width": 321.5
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Alle tabeller",
+      "zoomValue": 80,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Alle tabeller",
+  "defaultDiagram": "Alle tabeller"
+}

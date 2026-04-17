@@ -1,0 +1,712 @@
+table 'Key Measures'
+	lineageTag: 4a9d6862-e65a-4140-9b0b-ebddeca49a33
+
+	measure 'Building Value Enova' = sum( FACT_SRE_ENOVA_CERTIFICATE[BUILDING_VALUE])
+		displayFolder: Enova
+		lineageTag: dd309dd1-80b1-4047-9bd2-c9f7c47a25fc
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Certified Value' = sum( FACT_SRE_ENOVA_CERTIFICATE[CERTIFIED_VALUE])
+		formatString: #,0
+		displayFolder: Enova
+		lineageTag: 9a79f07d-389d-4e1b-98af-6cf9458de837
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Heated Area GIA' = sum( FACT_SRE_ENOVA_CERTIFICATE[HEATED_GIA])
+		formatString: #,0
+		displayFolder: Enova
+		lineageTag: 710ace9d-f1a4-4cde-87c0-0161d357f524
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Share Of Certified Value' = [Certified Value]/[Total Certified Value]
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Enova
+		lineageTag: 72b0f081-0517-4b4d-9b86-5fe97c84e487
+
+		changedProperty = IsHidden
+
+	measure 'Share Of Heated Area' = [Heated Area GIA]/[Total Heated Area GIA]
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Enova
+		lineageTag: 1508cb18-7abd-4889-9594-05b6fea63340
+
+		changedProperty = IsHidden
+
+	measure 'Direct Return Quarter' = SUM(FACT_SRE_PRODUCT_PERFORMANCE[DIRECT_RETURN_QUARTER])
+		formatString: Percent
+		displayFolder: Performance
+		lineageTag: 24aef545-a934-470e-b7f6-4b8e3a06b553
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Direct Return Quarter Change In %' = ```
+			
+			VAR CY = [Direct Return Quarter]
+			VAR PY = 
+			    CALCULATE(
+			        [Direct Return Quarter],
+			        OFFSET(
+			            -1,
+			            ALL('Date'[Year Quarter Name]),
+			            ORDERBY( 'Date'[Year Quarter Name], ASC)
+			        )
+			    )
+			VAR _perc =  CY-PY
+			VAR _format_CY = FORMAT( CY, "0.00 %;0.00 %" )
+			VAR _format_PY = FORMAT( PY, "0.00 %;0.00 %" )
+			RETURN
+			IF(
+			    _perc > 0,
+			    _format_CY & " " & UNICHAR(129029) & " (" & _format_PY & ")",
+			    IF(
+			        _perc < 0,
+			        _format_CY & " " & UNICHAR(129031) & " (" & _format_PY & ")",
+			        _format_CY & " " & UNICHAR(129030) & " (" & _format_PY & ")"
+			    )
+			)
+			```
+		displayFolder: Performance
+		lineageTag: ad29d27f-a57e-4fb0-bf76-eeb223ae3533
+
+		changedProperty = IsHidden
+
+	measure 'Direct Return Quarter Change In % Color Format' = ```
+			
+			VAR CY = [Direct Return Quarter]
+			VAR PY = 
+			    CALCULATE(
+			        [Direct Return Quarter],
+			        OFFSET(
+			            -1,
+			            ALL('Date'[Year Quarter Name]),
+			            ORDERBY( 'Date'[Year Quarter Name], ASC)
+			        )
+			    )
+			VAR _perc =  CY-PY
+			RETURN
+			IF(
+			    _perc > 0,
+			    "Green",
+			    IF(
+			        _perc < 0,
+			        "Red",
+			        "Automatic"
+			    )
+			)
+			```
+		displayFolder: Performance
+		lineageTag: d3f88114-29cb-4d45-bb41-dd17e58fc1e9
+
+		changedProperty = IsHidden
+
+	measure 'Total Return Quarter' = SUM(FACT_SRE_PRODUCT_PERFORMANCE[TOTAL_RETURN_QUARTER])
+		formatString: Percent
+		displayFolder: Performance
+		lineageTag: 7b00eb6e-dbd9-4c1e-83a1-66bff04d2c87
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Total Return Quarter Change In %' = ```
+			
+			VAR CY = [Total Return Quarter]
+			VAR PY = 
+			    CALCULATE(
+			        [Total Return Quarter],
+			        OFFSET(
+			            -1,
+			            ALL('Date'[Year Quarter Name]),
+			            ORDERBY( 'Date'[Year Quarter Name], ASC)
+			        )
+			    )
+			VAR _perc =  CY-PY
+			VAR _format_CY = FORMAT( CY, "0.00 %;0.00 %" )
+			VAR _format_PY = FORMAT( PY, "0.00 %;0.00 %" )
+			RETURN
+			IF(
+			    _perc > 0,
+			    _format_CY & " " & UNICHAR(129029) & " (" & _format_PY & ")",
+			    IF(
+			        _perc < 0,
+			        _format_CY & " " & UNICHAR(129031) & " (" & _format_PY & ")",
+			        _format_CY & " " & UNICHAR(129030) & " (" & _format_PY & ")"
+			    )
+			)
+			```
+		displayFolder: Performance
+		lineageTag: ae29d479-f5df-46c1-b155-e3ff818b543d
+
+		changedProperty = IsHidden
+
+	measure 'Direct Return Year' = SUM(FACT_SRE_PRODUCT_PERFORMANCE[DIRECT_RETURN_YEAR])
+		formatString: Percent
+		displayFolder: Performance
+		lineageTag: 717a6134-cdd9-41de-8eb3-73a7bc8b501a
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Total Return Quarter Change In % Color Format' = ```
+			
+			VAR CY = [Total Return Quarter]
+			VAR PY = 
+			    CALCULATE(
+			        [Total Return Quarter],
+			        OFFSET(
+			            -1,
+			            ALL('Date'[Year Quarter Name]),
+			            ORDERBY( 'Date'[Year Quarter Name], ASC)
+			        )
+			    )
+			VAR _perc =  CY-PY
+			RETURN
+			IF(
+			    _perc > 0,
+			    "Green",
+			    IF(
+			        _perc < 0,
+			        "Red",
+			        "Automatic"
+			    )
+			)
+			```
+		displayFolder: Performance
+		lineageTag: 347ed321-2c03-48b9-950f-d66c70b361cf
+
+		changedProperty = IsHidden
+
+	measure 'Direct Return Year Change In %' = ```
+			
+			VAR CY = [Direct Return Year]
+			VAR PY = 
+			    CALCULATE(
+			        [Direct Return Year],
+			        OFFSET(
+			            -4,
+			            ALL('Date'[Year Quarter Name]),
+			            ORDERBY( 'Date'[Year Quarter Name], ASC)
+			        )
+			    )
+			VAR _perc =  CY-PY
+			VAR _format_CY = FORMAT( CY, "0.00 %;0.00 %" )
+			VAR _format_PY = FORMAT( PY, "0.00 %;0.00 %" )
+			RETURN
+			IF(
+			    _perc > 0,
+			    _format_CY & " " & UNICHAR(129029) & " (" & _format_PY & ")",
+			    IF(
+			        _perc < 0,
+			        _format_CY & " " & UNICHAR(129031) & " (" & _format_PY & ")",
+			        _format_CY & " " & UNICHAR(129030) & " (" & _format_PY & ")"
+			    )
+			)
+			```
+		displayFolder: Performance
+		lineageTag: b83a2b2e-5f63-4af9-a122-1e34767eec8b
+
+		changedProperty = IsHidden
+
+	measure 'Direct Return Year Change in % Color Format' = ```
+			
+			VAR CY = [Direct Return Year]
+			VAR PY = 
+			    CALCULATE(
+			        [Direct Return Year],
+			        OFFSET(
+			            -4,
+			            ALL('Date'[Year Quarter Name]),
+			            ORDERBY( 'Date'[Year Quarter Name], ASC)
+			        )
+			    )
+			VAR _perc =  CY-PY
+			RETURN
+			IF(
+			    _perc > 0,
+			    "Green",
+			    IF(
+			        _perc < 0,
+			        "Red",
+			        "Automatic"
+			    )
+			)
+			```
+		displayFolder: Performance
+		lineageTag: cd1b8c26-3dab-4a12-b840-63a6e2ca3dc4
+
+		changedProperty = IsHidden
+
+	measure 'Total Return Year' = SUM(FACT_SRE_PRODUCT_PERFORMANCE[TOTAL_RETURN_YEAR])
+		formatString: Percent
+		displayFolder: Performance
+		lineageTag: 7cd1f1c5-cc73-4672-9c74-e26f97023ea7
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Total Return Year Change In %' = ```
+			
+			VAR CY = [Total Return Year]
+			VAR PY = 
+			    CALCULATE(
+			        [Total Return Year],
+			        OFFSET(
+			            -4,
+			            ALL('Date'[Year Quarter Name]),
+			            ORDERBY( 'Date'[Year Quarter Name], ASC)
+			        )
+			    )
+			VAR _perc =  CY-PY
+			VAR _format_CY = FORMAT( CY, "0.00 %;0.00 %" )
+			VAR _format_PY = FORMAT( PY, "0.00 %;0.00 %" )
+			RETURN
+			IF(
+			    _perc > 0,
+			    _format_CY & " " & UNICHAR(129029) & " (" & _format_PY & ")",
+			    IF(
+			        _perc < 0,
+			        _format_CY & " " & UNICHAR(129031) & " (" & _format_PY & ")",
+			        _format_CY & " " & UNICHAR(129030) & " (" & _format_PY & ")"
+			    )
+			)
+			```
+		displayFolder: Performance
+		lineageTag: 46c7ab50-7c58-47f5-b52b-60f445db941f
+
+		changedProperty = IsHidden
+
+	measure 'Total Return Year Change In % Color Format' = ```
+			
+			VAR CY = [Total Return Year]
+			VAR PY = 
+			    CALCULATE(
+			        [Total Return Year],
+			        OFFSET(
+			            -4,
+			            ALL('Date'[Year Quarter Name]),
+			            ORDERBY( 'Date'[Year Quarter Name], ASC)
+			        )
+			    )
+			VAR _perc =  CY-PY
+			RETURN
+			IF(
+			    _perc > 0,
+			    "Green",
+			    IF(
+			        _perc < 0,
+			        "Red",
+			        "Automatic"
+			    )
+			)
+			```
+		displayFolder: Performance
+		lineageTag: 0bd68879-08e7-4285-a8d1-450d4ed16f0c
+
+		changedProperty = IsHidden
+
+	measure 'Share Location' = ```
+			
+			    DIVIDE(
+			        SUM(FACT_SRE_BUILDING[VALUATION_NOK]),
+			        CALCULATE(
+			            SUM(FACT_SRE_BUILDING[VALUATION_NOK]),
+			            REMOVEFILTERS('Property'[Location])
+			        )
+			)
+			```
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Property
+		lineageTag: 88bc5e80-7dfe-4db3-a204-8015a38cabf0
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Share Segment' = ```
+			
+			    DIVIDE(
+			        SUM(FACT_SRE_BUILDING[VALUATION_NOK]),
+			        CALCULATE(
+			            SUM(FACT_SRE_BUILDING[VALUATION_NOK]),
+			            REMOVEFILTERS('Property'[Main Building Segment])
+			        )
+			)
+			```
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Property
+		lineageTag: acce8c39-4d97-4b2b-ab63-4aac53e5e21c
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Share Subportfolio' = ```
+			
+			    DIVIDE(
+			        SUM(FACT_SRE_BUILDING[VALUATION_NOK]),
+			        CALCULATE(
+			            SUM(FACT_SRE_BUILDING[VALUATION_NOK]),
+			            REMOVEFILTERS(Product[SUB_PORTFOLIO_ID])
+			        )
+			)
+			```
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Property
+		lineageTag: 8372d6ed-7971-458f-a2ed-4416507f7533
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Share Property' =
+			CALCULATE (
+			            DISTINCTCOUNT ( 'Property'[Property Name] ),
+			            FILTER ( 'FACT_SRE_BUILDING', [VALUATION_NOK] > 0 )
+			        )
+		formatString: 0
+		displayFolder: Property
+		lineageTag: 72ca50f5-61d1-415d-812f-94acf57a4df2
+
+		changedProperty = IsHidden
+
+	measure 'Market Value' = ```
+			
+			    calculate(
+			        sum(FACT_SRE_BUILDING[VALUATION_NOK]),
+			        FACT_SRE_BUILDING[VALUATION_NOK] > 0
+			    )
+			```
+		displayFolder: Performance
+		lineageTag: 6122fb15-aca4-42f2-bcab-4dbff4f03f19
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Market Value Previous Quarter' =
+			CALCULATE(
+			        [Market Value],
+			        OFFSET(
+			            -1,
+			            ALL('Date'[Year Quarter Name]),
+			            ORDERBY( 'Date'[Year Quarter Name], ASC)
+			        )
+			    )
+		displayFolder: Performance
+		lineageTag: d71b8dee-e959-4578-b802-ca3295003f7b
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Market Value Previous Year' =
+			CALCULATE(
+			        [Market Value],
+			        OFFSET(
+			            -4,
+			            ALL('Date'[Year Quarter Name]),
+			            ORDERBY( 'Date'[Year Quarter Name], ASC)
+			        )
+			    )
+		displayFolder: Performance
+		lineageTag: 5b942c51-7117-4812-95b0-880a2d072917
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Market Value Quarter Change In %' = ```
+			
+			VAR CY = [Market Value]
+			VAR PY = 
+			    CALCULATE(
+			        [Market Value],
+			        OFFSET(
+			            -1,
+			            ALL('Date'[Year Quarter Name]),
+			            ORDERBY( 'Date'[Year Quarter Name], ASC)
+			        )
+			    )
+			VAR _perc = DIVIDE( CY-PY, PY )
+			VAR _format = FORMAT( _perc, "0.00 %;0.00 %" )
+			RETURN
+			IF(
+			    ISBLANK(PY),
+			    "",
+			    IF(
+			        _perc > 0,
+			        _format & " " & UNICHAR(129029),
+			        IF(
+			            _perc < 0,
+			            _format & "  " & UNICHAR(129031),
+			            _format & "  " & UNICHAR(129030)
+			        )
+			    )
+			)
+			```
+		displayFolder: Performance
+		lineageTag: 05d45fb7-b955-4c27-9d99-d90b359f81ee
+
+		changedProperty = IsHidden
+
+	measure 'Market Value Quarter Change In % Color Format' = ```
+			
+			VAR CY = [Market Value]
+			VAR PY = 
+			    CALCULATE(
+			        [Market Value],
+			        OFFSET(
+			            -1,
+			            ALL('Date'[Year Quarter Name]),
+			            ORDERBY( 'Date'[Year Quarter Name], ASC)
+			        )
+			    )
+			VAR _perc = DIVIDE( CY-PY, PY )
+			VAR _format = FORMAT( _perc, "0.0%;0.0%" )
+			RETURN
+			IF(
+			    _perc > 0,
+			    "Green",
+			    IF(
+			        _perc < 0,
+			        "Red",
+			        "Automatic"
+			    )
+			)
+			```
+		displayFolder: Performance
+		lineageTag: a52947a9-bd27-4c9f-adf7-e0553aec3eab
+
+		changedProperty = IsHidden
+
+	measure 'Market Value Year Change In %' = ```
+			
+			VAR CY = [Market Value]
+			VAR PY = 
+			    CALCULATE(
+			        [Market Value],
+			        OFFSET(
+			            -4,
+			            ALL('Date'[Year Quarter Name]),
+			            ORDERBY( 'Date'[Year Quarter Name], ASC)
+			        )
+			    )
+			VAR _perc = DIVIDE( CY-PY, PY )
+			VAR _format = FORMAT( _perc, "0.00 %;0.00 %" )
+			RETURN
+			IF(
+			    ISBLANK(PY),
+			    "",
+			    IF(
+			        _perc > 0,
+			        _format & " " & UNICHAR(129029),
+			        IF(
+			            _perc < 0,
+			            _format & "  " & UNICHAR(129031),
+			            _format & "  " & UNICHAR(129030)
+			        )
+			    )
+			)
+			```
+		displayFolder: Performance
+		lineageTag: 6f788e80-77d7-4b8e-b4d2-b2dbe8e496a2
+
+		changedProperty = IsHidden
+
+	measure 'Market Value Year Change In % Color Format' = ```
+			
+			VAR CY = [Market Value]
+			VAR PY = 
+			    CALCULATE(
+			        [Market Value],
+			        OFFSET(
+			            -4,
+			            ALL('Date'[Year Quarter Name]),
+			            ORDERBY( 'Date'[Year Quarter Name], ASC)
+			        )
+			    )
+			VAR _perc = DIVIDE( CY-PY, PY )
+			VAR _format = FORMAT( _perc, "0.0%;0.0%" )
+			RETURN
+			IF(
+			    _perc > 0,
+			    "Green",
+			    "Red"
+			)
+			```
+		displayFolder: Performance
+		lineageTag: a8763ef2-760b-4b4c-bf7f-b8a090ac3433
+
+		changedProperty = IsHidden
+
+	measure 'Certified Value Breeam' = sum( FACT_SRE_BREEAM_CERTIFICATE[CERTIFIED_VALUE])
+		displayFolder: Breeam
+		lineageTag: 8145c96b-f5c9-4038-a470-e42eba23b11f
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Certified Value' = calculate( [Certified Value], ALLSELECTED() )
+		displayFolder: Enova
+		lineageTag: 51411235-131d-46c5-ba5d-f5bf10656a84
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Heated Area GIA' = calculate( [Heated Area GIA], ALLSELECTED( ))
+		displayFolder: Enova
+		lineageTag: 68a3fb70-13d3-418d-b4a5-8ad39c7e675b
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Heated Area Breeam' = sum( FACT_SRE_BREEAM_CERTIFICATE[TOTAL_BUILDING_CATEGORY_HEATED_AREA])
+		displayFolder: Breeam
+		lineageTag: 5e19a027-4947-470f-a12d-578b8ac9d87d
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Share Of Certified Value Breeam' = [Certified Value Breeam]/[Total Certified Value Breeam]
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Breeam
+		lineageTag: 1e9ddffe-b87a-4004-bf5a-5637e7107cc6
+
+		changedProperty = IsHidden
+
+	measure 'Share Of Heated Area GIA Breeam' = [Heated Area Breeam]/[Total Heated Area GIA Breeam]
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Breeam
+		lineageTag: d1df9a43-a840-4ca4-8efb-e0730ce614a1
+
+		changedProperty = IsHidden
+
+	measure 'Total Certified Value Breeam' = calculate( [Certified Value Breeam], ALLSELECTED() )
+		displayFolder: Breeam
+		lineageTag: 6c609115-fa79-45c3-bf7f-0d4763522a01
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Heated Area GIA Breeam' = calculate( [Heated Area Breeam], ALLSELECTED( ))
+		displayFolder: Breeam
+		lineageTag: 6d3bb64d-c7a2-4801-a7c5-7776667b8e35
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Rental Area GIA' = sum(FACT_SRE_BUILDING[AREA_GFA])
+		displayFolder: Property
+		lineageTag: 33790e67-e057-4fe1-b611-3afe78ffad03
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Building Value' = sum(FACT_SRE_BUILDING[VALUATION_NOK])
+		displayFolder: Property
+		lineageTag: 2f28478a-3473-4abb-bbc0-04cc97808e20
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Area Floor Enova' = sum(FACT_SRE_ENOVA_CERTIFICATE[Area Floor])
+		displayFolder: Enova
+		lineageTag: 1b0c7d18-c392-4a91-8101-c1fa609c2a15
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Area Outer Walls Enova' = sum(FACT_SRE_ENOVA_CERTIFICATE[Area Outer Walls])
+		displayFolder: Enova
+		lineageTag: 08a70f2f-68b8-42c0-943d-9c0be9a99d1e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Area Roof Enova' = sum(FACT_SRE_ENOVA_CERTIFICATE[Area Roof])
+		displayFolder: Enova
+		lineageTag: ff32025e-3345-48ee-ba8f-6ee37a5d6ba9
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Area Windows Doors Glass Fields Enova' = sum(FACT_SRE_ENOVA_CERTIFICATE[Area Windows Doors Glass Fields])
+		displayFolder: Enova
+		lineageTag: 4c35f4e1-f77b-43af-9de8-afe7d725464e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Calc Delivered Energy Total KWHM2 Average' = sum(FACT_SRE_ENOVA_CERTIFICATE[Calc Delivered Energy Total KWHM2])
+		displayFolder: Enova
+		lineageTag: 1f4439ea-9641-4907-a7b9-041f0576ea48
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Change In Value Quarter' = sum(FACT_SRE_PRODUCT_PERFORMANCE[CHANGE_IN_VALUE_QUARTER])
+		displayFolder: Performance
+		lineageTag: 8dfbab1c-a28d-4931-a42b-a278c7bfb058
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Debt = sum(FACT_SRE_PRODUCT_PERFORMANCE[DEBT FACT])
+		displayFolder: Performance
+		lineageTag: 83ec40d2-5267-422d-9b38-9c97d9337a6b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Enterprise Value' = sum(FACT_SRE_PRODUCT_PERFORMANCE[ENTERPRISE_VALUE])
+		displayFolder: Performance
+		lineageTag: ee96f8ef-8f7b-447f-9893-5195f4ec2c93
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Finance Gain Loss Quarter' = sum(FACT_SRE_PRODUCT_PERFORMANCE[FINANCE_GAIN_LOSS_QUARTER])
+		displayFolder: Performance
+		lineageTag: 33810fe1-8c67-47d2-9657-6588a1950334
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Profit Loss Quarter' = sum(FACT_SRE_PRODUCT_PERFORMANCE[PROFIT_LOSS_QUARTER])
+		displayFolder: Performance
+		lineageTag: a758a478-4be1-4d7c-92ba-5a5d696bf1bf
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Key Measures' = m
+		mode: import
+		source =
+				let
+				    Kilde = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Kolonne1 = _t]),
+				    #"Endret type" = Table.TransformColumnTypes(Kilde,{{"Kolonne1", type text}}),
+				    #"Fjernede kolonner" = Table.RemoveColumns(#"Endret type",{"Kolonne1"})
+				in
+				    #"Fjernede kolonner"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigasjon
+
